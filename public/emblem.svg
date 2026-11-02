@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" width="100%" height="100%">
+  <defs>
+    <!-- Ben-Day Halftone Pattern -->
+    <pattern id="halftoneDots" x="0" y="0" width="12" height="12" patternUnits="userSpaceOnUse">
+      <circle cx="6" cy="6" r="2.5" fill="#0B5E2E" opacity="0.35"/>
+    </pattern>
+    <pattern id="halftoneInk" x="0" y="0" width="10" height="10" patternUnits="userSpaceOnUse">
+      <circle cx="5" cy="5" r="2" fill="#141414" opacity="0.25"/>
+    </pattern>
+  </defs>
+
+  <!-- Comic Burst Action Background -->
+  <g id="comic-burst">
+    <!-- Starburst polygons behind -->
+    <polygon points="250,250 120,30 250,50" fill="#EAE5D9" stroke="#141414" stroke-width="2"/>
+    <polygon points="250,250 380,30 250,50" fill="#EAE5D9" stroke="#141414" stroke-width="2"/>
+    <polygon points="250,250 480,180 440,250" fill="#EAE5D9" stroke="#141414" stroke-width="2"/>
+    <polygon points="250,250 480,320 440,250" fill="#EAE5D9" stroke="#141414" stroke-width="2"/>
+    <polygon points="250,250 380,470 250,450" fill="#EAE5D9" stroke="#141414" stroke-width="2"/>
+    <polygon points="250,250 120,470 250,450" fill="#EAE5D9" stroke="#141414" stroke-width="2"/>
+    <polygon points="250,250 20,320 60,250" fill="#EAE5D9" stroke="#141414" stroke-width="2"/>
+    <polygon points="250,250 20,180 60,250" fill="#EAE5D9" stroke="#141414" stroke-width="2"/>
+  </g>
+
+  <!-- Hard Shadow for Outer Hexagon -->
+  <polygon points="250,48 428,148 428,348 250,448 72,348 72,148" fill="#141414" transform="translate(10, 10)" />
+
+  <!-- Outer Willpower Hexagon Badge with Halftone Fill -->
+  <polygon points="250,48 428,148 428,348 250,448 72,348 72,148" fill="#FAF8F2" stroke="#141414" stroke-width="5" stroke-linejoin="round"/>
+  <polygon points="250,48 428,148 428,348 250,448 72,348 72,148" fill="url(#halftoneDots)" />
+
+  <!-- Inner Inked Offset Panel Frame -->
+  <polygon points="250,66 410,158 410,338 250,430 90,338 90,158" fill="#0B5E2E" stroke="#141414" stroke-width="4" stroke-linejoin="round"/>
+
+  <!-- Dramatic Inked Hatching across Green Panel -->
+  <path d="M 120,160 L 380,160 M 110,180 L 390,180 M 105,200 L 395,200" stroke="#073B1D" stroke-width="3" stroke-linecap="round"/>
+
+  <!-- Comic Inked Green Lantern Ring / Battery Icon -->
+  <!-- Top Battery Crossbar with Hard Ink Shadow -->
+  <rect x="155" y="115" width="190" height="34" rx="4" fill="#141414"/>
+  <rect x="150" y="110" width="190" height="34" rx="4" fill="#FAF8F2" stroke="#141414" stroke-width="4"/>
+  <!-- Highlight Stripe -->
+  <rect x="160" y="116" width="170" height="8" rx="2" fill="#2ECC71"/>
+
+  <!-- Bottom Battery Crossbar with Hard Ink Shadow -->
+  <rect x="155" y="345" width="190" height="34" rx="4" fill="#141414"/>
+  <rect x="150" y="340" width="190" height="34" rx="4" fill="#FAF8F2" stroke="#141414" stroke-width="4"/>
+  <!-- Bottom Accent Stripe -->
+  <rect x="160" y="356" width="170" height="8" rx="2" fill="#2ECC71"/>
+
+  <!-- Center Circle Power Core Shadow -->
+  <circle cx="256" cy="248" r="92" fill="#141414"/>
+  <!-- Center Main Power Ring Body -->
+  <circle cx="250" cy="242" r="92" fill="#FAF8F2" stroke="#141414" stroke-width="5"/>
+  <!-- Inner Ring Void / Green Inset -->
+  <circle cx="250" cy="242" r="62" fill="#0B5E2E" stroke="#141414" stroke-width="5"/>
+
+  <!-- Comic Center Spark / White Core with Inked Starburst -->
+  <circle cx="250" cy="242" r="24" fill="#FFFFFF" stroke="#141414" stroke-width="3"/>
+
+  <!-- Comic Speed & Energy Shockwaves -->
+  <path d="M 60,110 L 100,135" stroke="#141414" stroke-width="4" stroke-linecap="round"/>
+  <path d="M 440,110 L 400,135" stroke="#141414" stroke-width="4" stroke-linecap="round"/>
+  <path d="M 50,380 L 100,355" stroke="#141414" stroke-width="4" stroke-linecap="round"/>
+  <path d="M 450,380 L 400,355" stroke="#141414" stroke-width="4" stroke-linecap="round"/>
+
+  <!-- Small Comic Text Badge Stamped at Bottom -->
+  <g transform="translate(160, 420)">
+    <rect x="-10" y="-12" width="200" height="28" fill="#F5B700" stroke="#141414" stroke-width="3" rx="3" transform="rotate(-2)"/>
+    <text x="90" y="8" font-family="'Anton', 'Impact', sans-serif" font-size="14" font-weight="900" fill="#141414" text-anchor="middle" letter-spacing="2" transform="rotate(-2)">WILLPOWER CORPS XVI</text>
+  </g>
+</svg>

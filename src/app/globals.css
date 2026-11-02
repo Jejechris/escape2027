@@ -1,0 +1,96 @@
+@import "tailwindcss";
+
+@theme {
+  --color-paper: #FAF8F2;
+  --color-paper-tint: #F7F5EF;
+  --color-paper-muted: #F0EEE8;
+  --color-paper-dark: #EAE5D9;
+
+  --color-ink: #141414;
+  --color-ink-soft: #262626;
+  --color-ink-muted: #404940;
+
+  --color-willpower: #0B5E2E;
+  --color-willpower-dark: #00441E;
+  --color-willpower-light: #1E8449;
+  --color-willpower-mint: #A7F4B5;
+  --color-willpower-lime: #2ECC71;
+
+  --color-comic-gold: #F5B700;
+  --color-comic-yellow: #FFDEA0;
+  --color-comic-red: #BA1A1A;
+
+  --font-display: var(--font-comic-display), Anton, Impact, sans-serif;
+  --font-body: var(--font-comic-body), "Plus Jakarta Sans", sans-serif;
+
+  --shadow-comic: 4px 4px 0px #141414;
+  --shadow-comic-sm: 2px 2px 0px #141414;
+  --shadow-comic-lg: 8px 8px 0px #141414;
+  --shadow-comic-willpower: 4px 4px 0px #0B5E2E;
+  --shadow-comic-gold: 4px 4px 0px #F5B700;
+}
+
+/* Comic Halftone Ben-Day Dots Pattern */
+.benday-dots {
+  background-image: radial-gradient(#141414 18%, transparent 19%);
+  background-size: 8px 8px;
+}
+
+.benday-emerald {
+  background-image: radial-gradient(#0B5E2E 20%, transparent 21%);
+  background-size: 8px 8px;
+}
+
+.benday-gold {
+  background-image: radial-gradient(#F5B700 22%, transparent 23%);
+  background-size: 8px 8px;
+}
+
+/* Comic Inked Borders */
+.border-comic {
+  border: 3px solid #141414;
+}
+
+.border-comic-2 {
+  border: 2px solid #141414;
+}
+
+.border-comic-4 {
+  border: 4px solid #141414;
+}
+
+/* Comic Inked Hard Shadows */
+.shadow-comic {
+  box-shadow: 4px 4px 0px #141414;
+}
+
+.shadow-comic-sm {
+  box-shadow: 2px 2px 0px #141414;
+}
+
+.shadow-comic-lg {
+  box-shadow: 8px 8px 0px #141414;
+}
+
+.shadow-comic-willpower {
+  box-shadow: 4px 4px 0px #0B5E2E;
+}
+
+.shadow-comic-gold {
+  box-shadow: 4px 4px 0px #F5B700;
+}
+
+/* Selection Color */
+::selection {
+  background-color: #F5B700;
+  color: #141414;
+}
+
+/* Global Comic Typography & Paper Tone */
+body {
+  background-color: #FAF8F2;
+  color: #141414;
+  font-family: var(--font-comic-body), "Plus Jakarta Sans", sans-serif;
+  margin: 0;
+  padding: 0;
+}

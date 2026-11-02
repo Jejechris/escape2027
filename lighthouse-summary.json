@@ -1,0 +1,77 @@
+{
+  "rundown": {
+    "categories": {
+      "performance": 86,
+      "accessibility": 100,
+      "best-practices": 100,
+      "seo": 100
+    },
+    "metrics": {
+      "fcp": "0.8 s",
+      "lcp": "3.0 s",
+      "tbt": "130 ms",
+      "cls": "0.166",
+      "speedIndex": "1.3 s"
+    }
+  },
+  "database-kampus": {
+    "categories": {
+      "performance": 90,
+      "accessibility": 100,
+      "best-practices": 100,
+      "seo": 100
+    },
+    "metrics": {
+      "fcp": "0.8 s",
+      "lcp": "3.0 s",
+      "tbt": "140 ms",
+      "cls": "0.106",
+      "speedIndex": "1.2 s"
+    }
+  },
+  "denah-acara": {
+    "categories": {
+      "performance": 93,
+      "accessibility": 94,
+      "best-practices": 100,
+      "seo": 100
+    },
+    "metrics": {
+      "fcp": "0.9 s",
+      "lcp": "0.9 s",
+      "tbt": "120 ms",
+      "cls": "0.147",
+      "speedIndex": "1.1 s"
+    }
+  },
+  "alumni": {
+    "categories": {
+      "performance": 97,
+      "accessibility": 94,
+      "best-practices": 100,
+      "seo": 100
+    },
+    "metrics": {
+      "fcp": "0.8 s",
+      "lcp": "0.8 s",
+      "tbt": "70 ms",
+      "cls": "0.094",
+      "speedIndex": "1.0 s"
+    }
+  },
+  "tanya-jawab": {
+    "categories": {
+      "performance": 98,
+      "accessibility": 94,
+      "best-practices": 100,
+      "seo": 100
+    },
+    "metrics": {
+      "fcp": "0.8 s",
+      "lcp": "0.8 s",
+      "tbt": "60 ms",
+      "cls": "0.094",
+      "speedIndex": "0.9 s"
+    }
+  }
+}
