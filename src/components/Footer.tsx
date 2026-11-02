@@ -24,7 +24,7 @@ export default function Footer() {
                   ESCAPE 2027
                 </span>
               </div>
-              <span className="font-display text-xs bg-[#F5B700] text-[#141414] px-2 py-0.5 border border-[#141414] font-bold uppercase tracking-wider">
+              <span className="font-body text-xs bg-[#F5B700] text-[#141414] px-2 py-0.5 border border-[#141414] font-extrabold uppercase tracking-wider">
                 ISSUE XVI
               </span>
             </div>
@@ -39,7 +39,7 @@ export default function Footer() {
 
           {/* Navigasi Cepat & Info Kampus */}
           <div className="md:col-span-4 flex flex-col gap-3">
-            <span className="font-display text-sm uppercase text-[#0B5E2E] border-b-2 border-[#141414] pb-1 tracking-wider">
+            <span className="font-body font-extrabold text-xs sm:text-sm uppercase text-[#0B5E2E] border-b-2 border-[#141414] pb-1 tracking-wider">
               NAVIGASI EDISI
             </span>
             <div className="grid grid-cols-2 gap-2 text-xs font-semibold">
@@ -70,7 +70,7 @@ export default function Footer() {
 
           {/* Media Sosial & Kontak */}
           <div className="md:col-span-3 flex flex-col gap-3">
-            <span className="font-display text-sm uppercase text-[#0B5E2E] border-b-2 border-[#141414] pb-1 tracking-wider">
+            <span className="font-body font-extrabold text-xs sm:text-sm uppercase text-[#0B5E2E] border-b-2 border-[#141414] pb-1 tracking-wider">
               SALURAN RESMI
             </span>
             <div className="flex flex-col gap-2 text-xs font-medium">
@@ -80,7 +80,7 @@ export default function Footer() {
                 rel="noreferrer"
                 className="flex items-center gap-2 p-1.5 bg-white border border-[#141414] shadow-comic-sm hover:bg-[#F5B700] transition-colors"
               >
-                <span className="font-display text-xs text-[#0B5E2E]">IG</span>
+                <span className="font-body font-black text-xs text-[#0B5E2E]">IG</span>
                 <span className="font-semibold text-[11px]">@escapesman16</span>
               </a>
               <a
@@ -89,7 +89,7 @@ export default function Footer() {
                 rel="noreferrer"
                 className="flex items-center gap-2 p-1.5 bg-white border border-[#141414] shadow-comic-sm hover:bg-[#F5B700] transition-colors"
               >
-                <span className="font-display text-xs text-[#0B5E2E]">TT</span>
+                <span className="font-body font-black text-xs text-[#0B5E2E]">TT</span>
                 <span className="font-semibold text-[11px]">@escapesman16</span>
               </a>
               <a
@@ -98,7 +98,7 @@ export default function Footer() {
                 rel="noreferrer"
                 className="flex items-center gap-2 p-1.5 bg-white border border-[#141414] shadow-comic-sm hover:bg-[#F5B700] transition-colors"
               >
-                <span className="font-display text-xs text-[#0B5E2E]">YT</span>
+                <span className="font-body font-black text-xs text-[#0B5E2E]">YT</span>
                 <span className="font-semibold text-[11px]">SMAN 16 Surabaya</span>
               </a>
             </div>
@@ -111,13 +111,13 @@ export default function Footer() {
             © 2027 SMAN 16 SURABAYA • ESCAPE ISSUE XVI • ALL RIGHTS RESERVED
           </p>
           <div className="flex items-center gap-2 flex-wrap justify-center">
-            <span className="font-display text-[10px] bg-[#0B5E2E] text-white px-2 py-0.5 border border-[#141414] uppercase tracking-wider shadow-comic-sm">
+            <span className="font-body font-extrabold text-[10px] bg-[#0B5E2E] text-white px-2 py-0.5 border border-[#141414] uppercase tracking-wider shadow-comic-sm">
               AKREDITASI A
             </span>
-            <span className="font-display text-[10px] bg-[#F5B700] text-[#141414] px-2 py-0.5 border border-[#141414] uppercase tracking-wider shadow-comic-sm">
+            <span className="font-body font-extrabold text-[10px] bg-[#F5B700] text-[#141414] px-2 py-0.5 border border-[#141414] uppercase tracking-wider shadow-comic-sm">
               CETAKAN 01/2027
             </span>
-            <span className="font-display text-[10px] bg-white text-[#141414] px-2 py-0.5 border border-[#141414] uppercase tracking-wider shadow-comic-sm">
+            <span className="font-body font-extrabold text-[10px] bg-white text-[#141414] px-2 py-0.5 border border-[#141414] uppercase tracking-wider shadow-comic-sm">
               LIGHT MODE EDITION
             </span>
           </div>

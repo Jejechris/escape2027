@@ -575,17 +575,17 @@ export default function DatabaseKampusPage() {
     <div className="w-full bg-[#FAF8F2] min-h-screen pb-16 selection:bg-[#F5B700] selection:text-[#141414]">
       {/* ================= TOP COMIC ISSUE RIBBON ================= */}
       <section className="bg-[#F5B700] border-b-4 border-[#141414] py-2 px-4 shadow-[0px_3px_0px_#141414] relative overflow-hidden">
-        <div className="max-w-7xl mx-auto flex items-center justify-between font-display text-sm tracking-wide text-[#141414]">
+        <div className="max-w-7xl mx-auto flex items-center justify-between font-body font-bold text-xs sm:text-sm tracking-wide text-[#141414]">
           <div className="flex items-center gap-3">
-            <span className="bg-[#141414] text-[#FAF8F2] px-2 py-0.5 text-xs font-bold uppercase tracking-wider">
+            <span className="bg-[#141414] text-[#FAF8F2] px-2.5 py-1 text-xs font-extrabold uppercase tracking-wider">
               DATABASE RESMI
             </span>
-            <span className="hidden sm:inline">
+            <span className="hidden sm:inline font-bold">
               ESCAPE 2027 • DIREKTORI AKADEMIK KAMPUS, DAYA TAMPUNG &amp; TARGET UTBK ALUMNI SIXTEEN
             </span>
-            <span className="sm:hidden">DATABASE KAMPUS SIXTEEN</span>
+            <span className="sm:hidden font-bold">DATABASE KAMPUS SIXTEEN</span>
           </div>
-          <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-widest bg-[#FAF8F2] px-3 py-1 border-2 border-[#141414] shadow-[2px_2px_0px_#141414]">
+          <div className="flex items-center gap-2 text-xs font-extrabold uppercase tracking-wider bg-[#FAF8F2] px-3 py-1 border-2 border-[#141414] shadow-[2px_2px_0px_#141414]">
             <span className="w-2.5 h-2.5 rounded-full bg-[#0B5E2E] animate-pulse"></span>
             <span>EDISI AKADEMIK 2027</span>
           </div>
@@ -595,20 +595,20 @@ export default function DatabaseKampusPage() {
       {/* ================= PAGE MASTHEAD BANNER ================= */}
       <main className="max-w-7xl mx-auto px-4 sm:px-6 py-8 flex flex-col gap-8">
         <div className="w-full bg-[#EAE5D9] border-comic-4 p-6 sm:p-8 shadow-comic-lg relative overflow-hidden">
-          <div className="absolute -top-3 left-6 bg-[#F5B700] text-[#141414] px-3 py-0.5 border-2 border-[#141414] font-display text-xs uppercase shadow-[2px_2px_0px_#141414] flex items-center gap-1.5">
+          <div className="absolute -top-3 left-6 bg-[#F5B700] text-[#141414] px-3 py-1 border-2 border-[#141414] font-body text-xs uppercase font-extrabold shadow-[2px_2px_0px_#141414] flex items-center gap-1.5 tracking-wider">
             <BookOpen className="w-3.5 h-3.5" />
             <span>ARSIP AKADEMIK PERGURUAN TINGGI SMAN 16 SURABAYA</span>
           </div>
 
           <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-6 pt-2 relative z-10">
             <div className="max-w-3xl">
-              <span className="inline-block bg-[#0B5E2E] text-[#FAF8F2] px-2.5 py-0.5 font-display text-xs uppercase border border-[#141414] mb-2">
+              <span className="inline-block bg-[#0B5E2E] text-[#FAF8F2] px-3 py-1 font-body text-xs uppercase border-2 border-[#141414] mb-2 font-bold tracking-wide shadow-comic-sm">
                 15+ PERGURUAN TINGGI TERVERIFIKASI • 280+ ALUMNI SIXTEEN TERLACAK
               </span>
               <h1 className="font-display text-3xl sm:text-5xl uppercase text-[#141414] tracking-tight leading-none">
                 DATABASE KAMPUS &amp; PANDUAN MASUK PTN
               </h1>
-              <p className="font-body text-sm sm:text-base text-[#404940] mt-3 font-medium leading-relaxed">
+              <p className="font-body text-sm sm:text-base text-[#404940] mt-3 font-semibold leading-relaxed">
                 Katalog komprehensif data perguruan tinggi negeri, sekolah kedinasan, dan swasta unggulan. Menampilkan informasi aktual: <strong>daya tampung jurusan</strong>, <strong>rentang skor aman UTBK-SNBT</strong>, <strong>rerata nilai rapor SNBP</strong>, <strong>biaya UKT</strong>, serta <strong>sebaran alumni SMAN 16 Surabaya</strong> yang aktif berkuliah.
               </p>
             </div>
@@ -651,7 +651,7 @@ export default function DatabaseKampusPage() {
 
             {/* Sort Select */}
             <div className="flex items-center gap-2">
-              <label htmlFor="sort-campus" className="font-display text-xs uppercase text-[#141414] whitespace-nowrap flex items-center gap-1">
+              <label htmlFor="sort-campus" className="font-body font-bold text-xs uppercase text-[#141414] whitespace-nowrap flex items-center gap-1 tracking-wider">
                 <ArrowUpDown className="w-3.5 h-3.5" />
                 <span>Urutkan:</span>
               </label>
@@ -670,7 +670,7 @@ export default function DatabaseKampusPage() {
               {searchQuery && (
                 <button
                   onClick={() => setSearchQuery("")}
-                  className="px-3 py-2 bg-[#F5B700] text-[#141414] font-display text-xs uppercase border-2 border-[#141414] shadow-[2px_2px_0px_#141414] hover:bg-white cursor-pointer"
+                  className="px-3.5 py-2 bg-[#F5B700] text-[#141414] font-body font-bold text-xs uppercase border-2 border-[#141414] shadow-[2px_2px_0px_#141414] hover:bg-white cursor-pointer tracking-wider"
                 >
                   Reset ✕
                 </button>
@@ -692,7 +692,7 @@ export default function DatabaseKampusPage() {
                 <button
                   key={cat.key}
                   onClick={() => setSelectedCategory(cat.key as CategoryFilter)}
-                  className={`comic-btn font-display text-xs uppercase px-4 py-2 border-2 border-[#141414] whitespace-nowrap transition-all cursor-pointer ${
+                  className={`comic-btn font-body font-bold text-xs uppercase px-4 py-2 border-2 border-[#141414] whitespace-nowrap transition-all cursor-pointer tracking-wide ${
                     isSelected
                       ? "bg-[#0B5E2E] text-white shadow-[3px_3px_0px_#141414] -translate-y-0.5"
                       : "bg-[#FAF8F2] text-[#141414] hover:bg-[#F5B700] shadow-[2px_2px_0px_#141414]"
@@ -704,7 +704,7 @@ export default function DatabaseKampusPage() {
             })}
           </div>
 
-          <div className="text-xs font-display uppercase text-[#404940] flex justify-between items-center px-1">
+          <div className="text-xs font-body font-bold uppercase text-[#404940] flex justify-between items-center px-1 tracking-wider">
             <span>Ditemukan {filteredAndSortedCampuses.length} kampus terverifikasi</span>
             <span>SMAN 16 Surabaya • Edisi XVI</span>
           </div>
@@ -727,11 +727,11 @@ export default function DatabaseKampusPage() {
                 <div>
                   {/* Card Header Strip */}
                   <div className="bg-[#0B5E2E] text-white p-3 sm:p-3.5 border-b-2 border-[#141414] flex justify-between items-center">
-                    <span className="font-display text-xs sm:text-sm uppercase tracking-wide flex items-center gap-1.5 font-bold">
+                    <span className="font-body text-xs sm:text-sm uppercase tracking-wider flex items-center gap-1.5 font-bold">
                       <Building className="w-4 h-4 text-[#F5B700]" />
                       <span>{campus.categoryLabel}</span>
                     </span>
-                    <span className="bg-[#F5B700] text-[#141414] font-display text-xs uppercase px-2.5 py-0.5 border border-[#141414] font-bold">
+                    <span className="bg-[#F5B700] text-[#141414] font-body text-xs uppercase px-2.5 py-1 border border-[#141414] font-extrabold tracking-wide">
                       {campus.badge}
                     </span>
                   </div>
@@ -739,7 +739,7 @@ export default function DatabaseKampusPage() {
                   <div className="p-5 sm:p-6 flex flex-col gap-4">
                     {/* Title & Location */}
                     <div>
-                      <div className="flex items-center gap-1 text-xs font-bold text-[#404940] uppercase">
+                      <div className="flex items-center gap-1 text-xs font-bold text-[#404940] uppercase tracking-wider font-body">
                         <MapPin className="w-3.5 h-3.5 text-[#BA1A1A]" />
                         <span>{campus.location}</span>
                       </div>
@@ -747,7 +747,7 @@ export default function DatabaseKampusPage() {
                         {campus.name}
                       </h3>
                       {campus.nationalRank && (
-                        <div className="inline-block mt-2 bg-[#EAE5D9] text-[#141414] text-xs font-display uppercase px-2.5 py-1 border border-[#141414] font-bold">
+                        <div className="inline-block mt-2 bg-[#EAE5D9] text-[#141414] text-xs font-body font-bold px-3 py-1 border border-[#141414] shadow-comic-sm">
                           {campus.nationalRank}
                         </div>
                       )}
@@ -756,20 +756,20 @@ export default function DatabaseKampusPage() {
                     {/* Telemetry Metric Grid */}
                     <div className="grid grid-cols-2 gap-2 bg-white p-3.5 border-2 border-[#141414] shadow-[3px_3px_0px_#141414]">
                       <div className="border-r border-[#141414] pr-2">
-                        <span className="block font-display text-xs uppercase text-[#404940] font-bold">ALUMNI SIXTEEN:</span>
-                        <span className="font-display text-xl text-[#0B5E2E] leading-tight font-bold">
+                        <span className="block font-body text-xs uppercase text-[#404940] font-bold tracking-wider">ALUMNI SIXTEEN:</span>
+                        <span className="font-body font-extrabold text-lg sm:text-xl text-[#0B5E2E] leading-tight">
                           {campus.alumniSixteenCount} Mahasiswa
                         </span>
                       </div>
                       <div className="pl-2">
-                        <span className="block font-display text-xs uppercase text-[#404940] font-bold">TARGET UTBK:</span>
-                        <span className="font-display text-lg text-[#141414] leading-tight font-bold">
+                        <span className="block font-body text-xs uppercase text-[#404940] font-bold tracking-wider">TARGET UTBK:</span>
+                        <span className="font-body font-extrabold text-lg text-[#141414] leading-tight">
                           {campus.utbkTargetScore}
                         </span>
                       </div>
-                      <div className="col-span-2 pt-2.5 border-t border-[#141414] flex justify-between items-center text-xs sm:text-sm font-bold">
+                      <div className="col-span-2 pt-2.5 border-t border-[#141414] flex justify-between items-center text-xs sm:text-sm font-bold font-body">
                         <span className="text-[#404940]">Nilai Rapor SNBP Aman:</span>
-                        <span className="font-display text-[#0B5E2E] text-base">{campus.snbpRaporTarget}</span>
+                        <span className="font-body font-extrabold text-[#0B5E2E] text-base">{campus.snbpRaporTarget}</span>
                       </div>
                     </div>
 
@@ -780,7 +780,7 @@ export default function DatabaseKampusPage() {
 
                     {/* Top Majors Quick List */}
                     <div className="space-y-1.5">
-                      <span className="font-display text-xs uppercase text-[#141414] block font-bold">
+                      <span className="font-body text-xs uppercase text-[#141414] block font-bold tracking-wider">
                         JURUSAN FAVORIT &amp; KEKETATAN:
                       </span>
                       <div className="flex flex-wrap gap-1.5">
@@ -797,10 +797,10 @@ export default function DatabaseKampusPage() {
 
                     {/* Admission Paths */}
                     <div className="space-y-1">
-                      <span className="font-display text-xs uppercase text-[#404940] block font-bold">
+                      <span className="font-body text-xs uppercase text-[#404940] block font-bold tracking-wider">
                         JALUR MASUK TERBUKA:
                       </span>
-                      <div className="flex flex-wrap gap-1.5 text-xs font-bold text-[#0B5E2E]">
+                      <div className="flex flex-wrap gap-1.5 text-xs font-bold text-[#0B5E2E] font-body">
                         {campus.admissionPaths.slice(0, 3).join(" • ")}
                       </div>
                     </div>
@@ -811,7 +811,7 @@ export default function DatabaseKampusPage() {
                 <div className="p-5 sm:p-6 pt-0">
                   <button
                     onClick={() => setSelectedCampusModal(campus)}
-                    className="w-full comic-btn bg-[#FAF8F2] text-[#141414] hover:bg-[#F5B700] font-display text-xs sm:text-sm uppercase py-3 border-2 border-[#141414] shadow-[3px_3px_0px_#141414] flex items-center justify-center gap-2 cursor-pointer font-bold"
+                    className="w-full comic-btn bg-[#FAF8F2] text-[#141414] hover:bg-[#F5B700] font-body text-xs sm:text-sm uppercase py-3 border-2 border-[#141414] shadow-[3px_3px_0px_#141414] flex items-center justify-center gap-2 cursor-pointer font-bold tracking-wider"
                   >
                     <span>Buka Arsip Lengkap &amp; Kuota</span>
                     <ChevronRight className="w-4 h-4" />
@@ -838,7 +838,7 @@ export default function DatabaseKampusPage() {
                 {/* Close Button */}
                 <button
                   onClick={() => setSelectedCampusModal(null)}
-                  className="absolute top-4 right-4 bg-[#F5B700] text-[#141414] font-display text-sm w-8 h-8 border-2 border-[#141414] shadow-[2px_2px_0px_#141414] flex items-center justify-center hover:bg-white cursor-pointer z-20"
+                  className="absolute top-4 right-4 bg-[#F5B700] text-[#141414] font-body font-bold text-sm w-8 h-8 border-2 border-[#141414] shadow-[2px_2px_0px_#141414] flex items-center justify-center hover:bg-white cursor-pointer z-20"
                 >
                   ✕
                 </button>
@@ -847,10 +847,10 @@ export default function DatabaseKampusPage() {
                   {/* Modal Header */}
                   <div>
                     <div className="flex flex-wrap items-center gap-2 mb-2">
-                      <span className="bg-[#0B5E2E] text-[#FAF8F2] font-display text-xs uppercase px-2.5 py-0.5 border border-[#141414]">
+                      <span className="bg-[#0B5E2E] text-[#FAF8F2] font-body font-bold text-xs uppercase px-3 py-1 border border-[#141414] tracking-wide">
                         {selectedCampusModal.categoryLabel}
                       </span>
-                      <span className="bg-[#F5B700] text-[#141414] font-display text-xs uppercase px-2.5 py-0.5 border border-[#141414] font-bold">
+                      <span className="bg-[#F5B700] text-[#141414] font-body font-extrabold text-xs uppercase px-3 py-1 border border-[#141414] tracking-wide">
                         {selectedCampusModal.accreditation}
                       </span>
                       <span className="font-body text-xs font-bold text-[#404940] flex items-center gap-1">
@@ -863,64 +863,64 @@ export default function DatabaseKampusPage() {
                       {selectedCampusModal.name} ({selectedCampusModal.shortName})
                     </h3>
                     {selectedCampusModal.nationalRank && (
-                      <p className="font-display text-xs text-[#0B5E2E] uppercase mt-1">
+                      <p className="font-body font-bold text-xs sm:text-sm text-[#0B5E2E] mt-1.5">
                         {selectedCampusModal.nationalRank}
                       </p>
                     )}
                   </div>
 
                   {/* Quick Telemetry Bar */}
-                  <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 bg-white p-3 border-2 border-[#141414] shadow-[2px_2px_0px_#141414] text-center">
+                  <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 bg-white p-3.5 border-2 border-[#141414] shadow-[2px_2px_0px_#141414] text-center">
                     <div>
-                      <span className="block font-display text-[10px] uppercase text-[#404940]">ALUMNI SIXTEEN:</span>
-                      <span className="font-display text-lg text-[#0B5E2E]">{selectedCampusModal.alumniSixteenCount} Orang</span>
+                      <span className="block font-body font-bold text-[11px] uppercase text-[#404940] tracking-wider">ALUMNI SIXTEEN:</span>
+                      <span className="font-body font-black text-xl text-[#0B5E2E]">{selectedCampusModal.alumniSixteenCount} Orang</span>
                     </div>
                     <div>
-                      <span className="block font-display text-[10px] uppercase text-[#404940]">TARGET UTBK:</span>
-                      <span className="font-display text-base text-[#141414]">{selectedCampusModal.utbkTargetScore}</span>
+                      <span className="block font-body font-bold text-[11px] uppercase text-[#404940] tracking-wider">TARGET UTBK:</span>
+                      <span className="font-body font-black text-lg text-[#141414]">{selectedCampusModal.utbkTargetScore}</span>
                     </div>
                     <div>
-                      <span className="block font-display text-[10px] uppercase text-[#404940]">RAPOR SNBP:</span>
-                      <span className="font-display text-base text-[#0B5E2E]">{selectedCampusModal.snbpRaporTarget}</span>
+                      <span className="block font-body font-bold text-[11px] uppercase text-[#404940] tracking-wider">RAPOR SNBP:</span>
+                      <span className="font-body font-black text-lg text-[#0B5E2E]">{selectedCampusModal.snbpRaporTarget}</span>
                     </div>
                     <div>
-                      <span className="block font-display text-[10px] uppercase text-[#404940]">AKREDITASI:</span>
-                      <span className="font-display text-base text-[#141414]">{selectedCampusModal.accreditation.split(" ")[0]}</span>
+                      <span className="block font-body font-bold text-[11px] uppercase text-[#404940] tracking-wider">AKREDITASI:</span>
+                      <span className="font-body font-black text-lg text-[#141414]">{selectedCampusModal.accreditation.split(" ")[0]}</span>
                     </div>
                   </div>
 
                   {/* Overview */}
                   <div className="p-3.5 bg-[#EAE5D9] border-2 border-[#141414]">
-                    <span className="font-display text-xs uppercase text-[#141414] block mb-1">
+                    <span className="font-body font-bold text-xs sm:text-sm uppercase text-[#141414] block mb-1 tracking-wider">
                       PROFIL &amp; KEUNGGULAN KAMPUS:
                     </span>
-                    <p className="font-body text-xs sm:text-sm text-[#404940] leading-relaxed">
+                    <p className="font-body text-xs sm:text-sm text-[#404940] leading-relaxed font-medium">
                       {selectedCampusModal.overview}
                     </p>
                   </div>
 
                   {/* Program Studi Favorit Table */}
                   <div className="space-y-2">
-                    <span className="font-display text-xs uppercase text-[#141414] block">
+                    <span className="font-body font-bold text-xs sm:text-sm uppercase text-[#141414] block tracking-wider">
                       DATA KEKETATAN &amp; DAYA TAMPUNG PRODI UNGGULAN:
                     </span>
                     <div className="border-2 border-[#141414] overflow-x-auto bg-white shadow-[2px_2px_0px_#141414]">
                       <table className="w-full text-left font-body text-xs">
-                        <thead className="bg-[#0B5E2E] text-white font-display uppercase text-[11px]">
+                        <thead className="bg-[#0B5E2E] text-white font-body font-bold uppercase text-xs tracking-wider">
                           <tr>
-                            <th className="p-2 border-r border-[#141414]">Nama Program Studi</th>
-                            <th className="p-2 border-r border-[#141414]">Keketatan</th>
-                            <th className="p-2 border-r border-[#141414]">Daya Tampung</th>
-                            <th className="p-2">Rerata Rapor Aman</th>
+                            <th className="p-2.5 border-r border-[#141414]">Nama Program Studi</th>
+                            <th className="p-2.5 border-r border-[#141414]">Keketatan</th>
+                            <th className="p-2.5 border-r border-[#141414]">Daya Tampung</th>
+                            <th className="p-2.5">Rerata Rapor Aman</th>
                           </tr>
                         </thead>
                         <tbody className="divide-y divide-[#141414]">
                           {selectedCampusModal.topMajors.map((m, idx) => (
                             <tr key={idx} className={idx % 2 === 0 ? "bg-[#FAF8F2]" : "bg-white"}>
-                              <td className="p-2 font-bold text-[#141414] border-r border-[#141414]">{m.name}</td>
-                              <td className="p-2 text-[#BA1A1A] font-bold border-r border-[#141414]">{m.keketatan}</td>
-                              <td className="p-2 border-r border-[#141414]">{m.kuota}</td>
-                              <td className="p-2 font-display text-[#0B5E2E]">{m.nilaiRaporAman}</td>
+                              <td className="p-2.5 font-bold text-[#141414] border-r border-[#141414]">{m.name}</td>
+                              <td className="p-2.5 text-[#BA1A1A] font-extrabold border-r border-[#141414]">{m.keketatan}</td>
+                              <td className="p-2.5 border-r border-[#141414] font-semibold">{m.kuota}</td>
+                              <td className="p-2.5 font-body font-extrabold text-[#0B5E2E]">{m.nilaiRaporAman}</td>
                             </tr>
                           ))}
                         </tbody>
@@ -931,21 +931,21 @@ export default function DatabaseKampusPage() {
                   {/* Biaya Kuliah & Beasiswa */}
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs">
                     <div className="p-3 bg-white border border-[#141414] space-y-1">
-                      <span className="font-display uppercase text-[#0B5E2E] block">BIAYA KULIAH (UKT):</span>
+                      <span className="font-body font-bold uppercase text-xs text-[#0B5E2E] block tracking-wider">BIAYA KULIAH (UKT):</span>
                       <p className="font-body font-semibold text-[#141414]">{selectedCampusModal.tuitionRange}</p>
                     </div>
                     <div className="p-3 bg-white border border-[#141414] space-y-1">
-                      <span className="font-display uppercase text-[#0B5E2E] block">BEASISWA TERSEDIA:</span>
-                      <p className="font-body text-[#404940]">{selectedCampusModal.scholarships.join(", ")}</p>
+                      <span className="font-body font-bold uppercase text-xs text-[#0B5E2E] block tracking-wider">BEASISWA TERSEDIA:</span>
+                      <p className="font-body font-medium text-[#404940]">{selectedCampusModal.scholarships.join(", ")}</p>
                     </div>
                   </div>
 
                   {/* Jalur Pendaftaran */}
                   <div className="p-3 bg-white border border-[#141414] text-xs">
-                    <span className="font-display uppercase text-[#141414] block mb-1">JALUR SELEKSI PENERIMAAN:</span>
+                    <span className="font-body font-bold uppercase text-xs text-[#141414] block mb-1 tracking-wider">JALUR SELEKSI PENERIMAAN:</span>
                     <div className="flex flex-wrap gap-1.5">
                       {selectedCampusModal.admissionPaths.map((p, idx) => (
-                        <span key={idx} className="bg-[#FAF8F2] px-2 py-0.5 border border-[#141414] font-semibold text-[#0B5E2E]">
+                        <span key={idx} className="bg-[#FAF8F2] px-2.5 py-1 border border-[#141414] font-bold text-[#0B5E2E] font-body text-xs">
                           ✓ {p}
                         </span>
                       ))}
@@ -958,14 +958,14 @@ export default function DatabaseKampusPage() {
                       href={selectedCampusModal.websiteUrl}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex-1 bg-[#0B5E2E] text-white font-display text-xs uppercase py-3 text-center border-2 border-[#141414] shadow-[3px_3px_0px_#141414] hover:bg-[#1E8449] flex items-center justify-center gap-2 cursor-pointer"
+                      className="flex-1 bg-[#0B5E2E] text-white font-body font-bold text-xs sm:text-sm uppercase py-3.5 text-center border-2 border-[#141414] shadow-[3px_3px_0px_#141414] hover:bg-[#1E8449] flex items-center justify-center gap-2 cursor-pointer tracking-wider"
                     >
                       <ExternalLink className="w-3.5 h-3.5" />
                       <span>Buka Portal Resmi PMB {selectedCampusModal.shortName}</span>
                     </a>
                     <Link
                       href="/alumni"
-                      className="px-5 py-3 bg-[#F5B700] text-[#141414] font-display text-xs uppercase text-center border-2 border-[#141414] shadow-[3px_3px_0px_#141414] hover:bg-white flex items-center justify-center gap-1.5"
+                      className="px-5 py-3.5 bg-[#F5B700] text-[#141414] font-body font-bold text-xs sm:text-sm uppercase text-center border-2 border-[#141414] shadow-[3px_3px_0px_#141414] hover:bg-white flex items-center justify-center gap-1.5 tracking-wider"
                     >
                       <Users className="w-3.5 h-3.5" />
                       <span>Tanya Alumni Sixteen</span>

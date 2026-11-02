@@ -24,14 +24,14 @@ export default function Navbar() {
       <div className="w-full bg-[#F5B700] border-b-4 border-[#141414] py-1.5 px-4 overflow-hidden select-none">
         <div className="max-w-7xl mx-auto flex justify-between items-center text-[#141414]">
           <div className="flex items-center gap-2 sm:gap-3 flex-wrap">
-            <span className="bg-[#0B5E2E] text-white px-2 py-0.5 border border-[#141414] text-[10px] sm:text-xs font-display tracking-wider uppercase">
+            <span className="bg-[#0B5E2E] text-white px-2 py-0.5 border border-[#141414] text-[10px] sm:text-xs font-body font-bold tracking-wider uppercase">
               BULETIN RESMI
             </span>
-            <span className="text-[11px] sm:text-xs font-display uppercase tracking-wide truncate">
+            <span className="text-[11px] sm:text-xs font-body font-bold uppercase tracking-wide truncate">
               EXHIBITION SIXTEEN CAMPUS EXPO • SMAN 16 SURABAYA
             </span>
           </div>
-          <div className="hidden md:flex items-center gap-2 text-xs font-display uppercase tracking-wider">
+          <div className="hidden md:flex items-center gap-2 text-xs font-body font-bold uppercase tracking-wider">
             <span>KAMIS, 21 JANUARI 2027</span>
             <span className="w-1.5 h-1.5 bg-[#141414] rounded-full inline-block" />
             <span>07.30 — 15.00 WIB</span>
@@ -60,7 +60,7 @@ export default function Navbar() {
               </span>
             </div>
             <div className="hidden sm:flex flex-col text-left">
-              <span className="font-display text-[10px] bg-[#F5B700] text-[#141414] px-1.5 py-0.2 border border-[#141414] tracking-wider uppercase shadow-[1px_1px_0px_#141414]">
+              <span className="font-body font-extrabold text-[10px] bg-[#F5B700] text-[#141414] px-1.5 py-0.2 border border-[#141414] tracking-wider uppercase shadow-[1px_1px_0px_#141414]">
                 EDISI XVI
               </span>
               <span className="font-body text-[9px] font-bold text-[#404940] tracking-tight">
@@ -77,7 +77,7 @@ export default function Navbar() {
                 <Link
                   key={item.href}
                   href={item.href}
-                  className={`font-display uppercase tracking-wider text-sm transition-all pb-0.5 ${
+                  className={`font-body font-extrabold uppercase tracking-wide text-xs sm:text-sm transition-all pb-0.5 ${
                     isActive
                       ? "text-[#0B5E2E] border-b-4 border-[#0B5E2E]"
                       : "text-[#141414] hover:text-[#0B5E2E] hover:border-b-4 hover:border-[#0B5E2E]"
@@ -93,7 +93,7 @@ export default function Navbar() {
           <div className="flex items-center gap-3">
             <Link
               href="/#tiket"
-              className="hidden sm:inline-flex bg-[#0B5E2E] text-white font-display text-sm uppercase tracking-wider px-4 py-2 border-2 border-[#141414] shadow-comic hover:bg-[#1E8449] active:translate-x-[2px] active:translate-y-[2px] active:shadow-none transition-all items-center gap-2"
+              className="hidden sm:inline-flex bg-[#0B5E2E] text-white font-body font-bold text-xs sm:text-sm uppercase tracking-wide px-4 py-2 border-2 border-[#141414] shadow-comic hover:bg-[#1E8449] active:translate-x-[2px] active:translate-y-[2px] active:shadow-none transition-all items-center gap-2"
             >
               <span>Daftar Tiket / Presensi</span>
             </Link>
@@ -137,7 +137,7 @@ export default function Navbar() {
                     key={item.href}
                     href={item.href}
                     onClick={() => setMobileMenuOpen(false)}
-                    className={`px-3 py-2 border-2 border-[#141414] font-display text-base uppercase tracking-wider transition-all ${
+                    className={`px-3 py-2 border-2 border-[#141414] font-body font-bold text-sm sm:text-base uppercase tracking-wide transition-all ${
                       isActive
                         ? "bg-[#0B5E2E] text-white shadow-comic-sm translate-x-1"
                         : "bg-white text-[#141414] hover:bg-[#F0EEE8]"
@@ -151,7 +151,7 @@ export default function Navbar() {
               <Link
                 href="/#tiket"
                 onClick={() => setMobileMenuOpen(false)}
-                className="mt-2 text-center bg-[#F5B700] text-[#141414] font-display text-base uppercase tracking-wider px-4 py-2.5 border-2 border-[#141414] shadow-comic"
+                className="mt-2 text-center bg-[#F5B700] text-[#141414] font-body font-bold text-sm sm:text-base uppercase tracking-wide px-4 py-2.5 border-2 border-[#141414] shadow-comic"
               >
                 Daftar Tiket / Presensi
               </Link>

@@ -186,9 +186,9 @@ export default function PetaKampusPage() {
     <div className="w-full bg-[#FAF8F2] min-h-screen pb-16 selection:bg-[#F5B700] selection:text-[#141414]">
       {/* ================= TOP COMIC ISSUE RIBBON ================= */}
       <section className="bg-[#F5B700] border-b-4 border-[#141414] py-2 px-4 shadow-[0px_3px_0px_#141414] relative overflow-hidden">
-        <div className="max-w-7xl mx-auto flex items-center justify-between font-display text-sm tracking-wide text-[#141414]">
+        <div className="max-w-7xl mx-auto flex items-center justify-between font-body font-bold text-xs sm:text-sm tracking-wide text-[#141414]">
           <div className="flex items-center gap-3">
-            <span className="bg-[#141414] text-[#FAF8F2] px-2.5 py-1 text-xs sm:text-sm font-bold uppercase tracking-wider">
+            <span className="bg-[#141414] text-[#FAF8F2] px-2.5 py-1 text-xs sm:text-sm font-extrabold uppercase tracking-wider">
               DENAH RESMI ACARA
             </span>
             <span className="hidden sm:inline font-bold">
@@ -196,7 +196,7 @@ export default function PetaKampusPage() {
             </span>
             <span className="sm:hidden font-bold">GK KOSONG ~500 ORANG • TALKSHOW UJUNG BAWAH GK</span>
           </div>
-          <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-widest bg-[#FAF8F2] px-3 py-1 border-2 border-[#141414] shadow-[2px_2px_0px_#141414]">
+          <div className="flex items-center gap-2 text-xs font-extrabold uppercase tracking-wider bg-[#FAF8F2] px-3 py-1 border-2 border-[#141414] shadow-[2px_2px_0px_#141414]">
             <span className="w-2.5 h-2.5 rounded-full bg-[#0B5E2E] animate-pulse"></span>
             <span>KAMIS, 21 JANUARI 2027</span>
           </div>
@@ -206,14 +206,14 @@ export default function PetaKampusPage() {
       {/* ================= PAGE MASTHEAD BANNER ================= */}
       <main className="max-w-7xl mx-auto px-4 sm:px-6 py-8 flex flex-col gap-8">
         <div className="w-full bg-[#EAE5D9] border-comic-4 p-6 sm:p-8 shadow-comic-lg relative">
-          <div className="absolute -top-3 left-6 bg-[#F5B700] text-[#141414] px-3 py-0.5 border-2 border-[#141414] font-display text-xs uppercase shadow-[2px_2px_0px_#141414] flex items-center gap-1.5">
+          <div className="absolute -top-3 left-6 bg-[#F5B700] text-[#141414] px-3 py-1 border-2 border-[#141414] font-body text-xs uppercase font-extrabold shadow-[2px_2px_0px_#141414] flex items-center gap-1.5 tracking-wider">
             <Compass className="w-3.5 h-3.5" />
             <span>DENAH TATA RUANG ACARA ESCAPE 2027</span>
           </div>
 
           <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-6 pt-2">
             <div className="max-w-3xl">
-              <span className="inline-block bg-[#0B5E2E] text-[#FAF8F2] px-3 py-1 font-display text-xs sm:text-sm uppercase border-2 border-[#141414] mb-2 font-bold shadow-comic-sm">
+              <span className="inline-block bg-[#0B5E2E] text-[#FAF8F2] px-3 py-1 font-body text-xs sm:text-sm uppercase border-2 border-[#141414] mb-2 font-bold shadow-comic-sm tracking-wide">
                 GEDUNG UTAMA GK (VERTIKAL KANAN) • STAND TALKSHOW DI PALING BAWAH UJUNG GK • MEJA CHECK-IN SAMPING PINTU 2
               </span>
               <h1 className="font-display text-3xl sm:text-5xl uppercase text-[#141414] tracking-tight leading-none">
@@ -228,13 +228,13 @@ export default function PetaKampusPage() {
             <div className="flex flex-wrap items-center gap-3">
               <button
                 onClick={handlePrint}
-                className="comic-btn bg-[#FAF8F2] text-[#141414] border-[3px] border-[#141414] px-4 py-2.5 font-display text-xs sm:text-sm uppercase shadow-[3px_3px_0px_#141414] hover:bg-[#F5B700] flex items-center gap-2 cursor-pointer"
+                className="comic-btn bg-[#FAF8F2] text-[#141414] border-[3px] border-[#141414] px-4 py-2.5 font-body text-xs sm:text-sm uppercase font-bold shadow-[3px_3px_0px_#141414] hover:bg-[#F5B700] flex items-center gap-2 cursor-pointer tracking-wider"
               >
                 <Printer className="w-4 h-4" />
                 <span>Cetak / Simpan PDF</span>
               </button>
 
-              <div className="bg-[#FAF8F2] text-[#0B5E2E] border-[3px] border-[#141414] px-4 py-2.5 font-display text-xs sm:text-sm uppercase shadow-[3px_3px_0px_#141414] flex items-center gap-2">
+              <div className="bg-[#FAF8F2] text-[#0B5E2E] border-[3px] border-[#141414] px-4 py-2.5 font-body text-xs sm:text-sm uppercase font-bold shadow-[3px_3px_0px_#141414] flex items-center gap-2 tracking-wide">
                 <span className="w-2.5 h-2.5 rounded-full bg-[#0B5E2E] animate-ping"></span>
                 <span>Area Aktif: <strong>{currentZone.name.split("—")[0]}</strong></span>
               </div>
@@ -250,10 +250,10 @@ export default function PetaKampusPage() {
               {/* Tactical Map Header Bar */}
               <div className="flex flex-wrap items-center justify-between pb-3 mb-4 border-b-4 border-[#141414] gap-3">
                 <div className="flex items-center gap-2">
-                  <span className="bg-[#0B5E2E] text-[#FAF8F2] font-display text-xs uppercase px-2.5 py-1 border-2 border-[#141414]">
+                  <span className="bg-[#0B5E2E] text-[#FAF8F2] font-body text-xs uppercase px-3 py-1 border-2 border-[#141414] font-bold tracking-wider">
                     DENAH TAKTIS LOKASI ACARA
                   </span>
-                  <span className="font-display text-xs sm:text-sm text-[#141414] uppercase">
+                  <span className="font-body text-xs sm:text-sm text-[#141414] uppercase font-bold tracking-wide">
                     KLIK AREA UNTUK INSPEKSI RINCIAN
                   </span>
                 </div>
@@ -278,7 +278,7 @@ export default function PetaKampusPage() {
               <div className="relative w-full aspect-[4/3] bg-[#FAF8F2] border-[3px] border-[#141414] overflow-hidden select-none shadow-inner">
                 {/* Compass Rose */}
                 <div className="absolute top-3 left-3 z-20 bg-[#FAF8F2] border-2 border-[#141414] p-2 shadow-[2px_2px_0px_#141414] text-center">
-                  <div className="font-display text-xs sm:text-sm text-[#0B5E2E] font-bold">U (UTARA)</div>
+                  <div className="font-body text-xs sm:text-sm text-[#0B5E2E] font-extrabold tracking-wide">U (UTARA)</div>
                   <div className="w-6 h-6 mx-auto flex items-center justify-center">
                     <Navigation className="w-5 h-5 text-[#0B5E2E]" />
                   </div>
@@ -286,7 +286,7 @@ export default function PetaKampusPage() {
                 </div>
 
                 {/* Sound Effect Badges */}
-                <div className="absolute top-4 right-4 z-20 bg-[#F5B700] border-2 border-[#141414] px-3 py-1.5 shadow-[2px_2px_0px_#141414] font-display text-xs sm:text-sm text-[#141414] pointer-events-none transform rotate-1 font-bold">
+                <div className="absolute top-4 right-4 z-20 bg-[#F5B700] border-2 border-[#141414] px-3 py-1.5 shadow-[2px_2px_0px_#141414] font-body text-xs sm:text-sm text-[#141414] pointer-events-none transform rotate-1 font-extrabold uppercase tracking-wide">
                   ★ ARENA UTAMA: GK VERTIKAL ★
                 </div>
 
@@ -383,7 +383,7 @@ export default function PetaKampusPage() {
                     <line x1="45" y1="292" x2="575" y2="292" stroke="#141414" strokeWidth="2.5" strokeDasharray="14 10" strokeOpacity="0.45" />
 
                     <rect x="50" y="223" width="460" height="28" rx="2" fill="#141414" />
-                    <text x="62" y="242" fill="#FFFFFF" fontFamily="Anton, sans-serif" fontSize="13.5" letterSpacing="1">
+                    <text x="62" y="242" fill="#FFFFFF" fontFamily="Plus Jakarta Sans, sans-serif" fontWeight="800" fontSize="12.5" letterSpacing="0.5">
                       JALAN STAN BOOTH • MEMANJANG KE KIRI DARI DEPAN GK
                     </text>
 
@@ -396,12 +396,12 @@ export default function PetaKampusPage() {
                       <rect x="402" y="258" width="80" height="38" rx="2" />
                       <rect x="490" y="258" width="85" height="38" rx="2" />
                     </g>
-                    <text x="56" y="282" fill="#0B5E2E" fontFamily="Anton, sans-serif" fontSize="11.5">PKN STAN</text>
-                    <text x="142" y="282" fill="#0B5E2E" fontFamily="Anton, sans-serif" fontSize="11.5">POLSTAT STIS</text>
-                    <text x="238" y="282" fill="#0B5E2E" fontFamily="Anton, sans-serif" fontSize="11.5">POLTEKIP</text>
-                    <text x="330" y="282" fill="#0B5E2E" fontFamily="Anton, sans-serif" fontSize="11.5">UBAYA</text>
-                    <text x="408" y="282" fill="#0B5E2E" fontFamily="Anton, sans-serif" fontSize="11.5">UK PETRA</text>
-                    <text x="496" y="282" fill="#0B5E2E" fontFamily="Anton, sans-serif" fontSize="11.5">ROBOTIKA</text>
+                    <text x="56" y="282" fill="#0B5E2E" fontFamily="Plus Jakarta Sans, sans-serif" fontWeight="800" fontSize="11">PKN STAN</text>
+                    <text x="142" y="282" fill="#0B5E2E" fontFamily="Plus Jakarta Sans, sans-serif" fontWeight="800" fontSize="11">POLSTAT STIS</text>
+                    <text x="238" y="282" fill="#0B5E2E" fontFamily="Plus Jakarta Sans, sans-serif" fontWeight="800" fontSize="11">POLTEKIP</text>
+                    <text x="330" y="282" fill="#0B5E2E" fontFamily="Plus Jakarta Sans, sans-serif" fontWeight="800" fontSize="11">UBAYA</text>
+                    <text x="408" y="282" fill="#0B5E2E" fontFamily="Plus Jakarta Sans, sans-serif" fontWeight="800" fontSize="11">UK PETRA</text>
+                    <text x="496" y="282" fill="#0B5E2E" fontFamily="Plus Jakarta Sans, sans-serif" fontWeight="800" fontSize="11">ROBOTIKA</text>
 
                     {/* South Row Booths */}
                     <g fill="#FAF8F2" stroke="#141414" strokeWidth="2">
@@ -411,15 +411,15 @@ export default function PetaKampusPage() {
                       <rect x="368" y="303" width="102" height="38" rx="2" />
                       <rect x="478" y="303" width="98" height="38" rx="2" />
                     </g>
-                    <text x="57" y="327" fill="#D97706" fontFamily="Anton, sans-serif" fontSize="11.5">BRAIN ACADEMY</text>
-                    <text x="162" y="327" fill="#D97706" fontFamily="Anton, sans-serif" fontSize="11.5">GANESHA OP.</text>
-                    <text x="270" y="327" fill="#D97706" fontFamily="Anton, sans-serif" fontSize="11.5">RUANGGURU</text>
-                    <text x="375" y="327" fill="#D97706" fontFamily="Anton, sans-serif" fontSize="11.5">BEASISWA S1</text>
-                    <text x="488" y="327" fill="#D97706" fontFamily="Anton, sans-serif" fontSize="11.5">EDUTECH 16</text>
+                    <text x="57" y="327" fill="#D97706" fontFamily="Plus Jakarta Sans, sans-serif" fontWeight="800" fontSize="11">BRAIN ACADEMY</text>
+                    <text x="162" y="327" fill="#D97706" fontFamily="Plus Jakarta Sans, sans-serif" fontWeight="800" fontSize="11">GANESHA OP.</text>
+                    <text x="270" y="327" fill="#D97706" fontFamily="Plus Jakarta Sans, sans-serif" fontWeight="800" fontSize="11">RUANGGURU</text>
+                    <text x="375" y="327" fill="#D97706" fontFamily="Plus Jakarta Sans, sans-serif" fontWeight="800" fontSize="11">BEASISWA S1</text>
+                    <text x="488" y="327" fill="#D97706" fontFamily="Plus Jakarta Sans, sans-serif" fontWeight="800" fontSize="11">EDUTECH 16</text>
 
                     <path d="M 565 348 L 55 348" stroke="#141414" strokeWidth="3" strokeDasharray="8 6" markerEnd="url(#arr-ink)" opacity="0.7" />
                     <rect x="150" y="347" width="260" height="20" rx="2" fill="#F5B700" stroke="#141414" strokeWidth="1.5" />
-                    <text x="160" y="361" fill="#141414" fontFamily="Anton, sans-serif" fontSize="11.5">
+                    <text x="160" y="361" fill="#141414" fontFamily="Plus Jakarta Sans, sans-serif" fontWeight="800" fontSize="11">
                       ← ALUR JELAJAH STAN KE ARAH BARAT
                     </text>
                   </g>
@@ -443,12 +443,12 @@ export default function PetaKampusPage() {
                       className="transition-all duration-150"
                     />
                     <rect x="435" y="383" width="165" height="28" fill="#141414" />
-                    <text x="443" y="402" fill="#FFFFFF" fontFamily="Anton, sans-serif" fontSize="12.5">
+                    <text x="443" y="402" fill="#FFFFFF" fontFamily="Plus Jakarta Sans, sans-serif" fontWeight="800" fontSize="12">
                       📍 MEJA CHECK-IN REGISTRASI
                     </text>
 
                     <rect x="443" y="417" width="149" height="24" fill="#0B5E2E" stroke="#141414" strokeWidth="1" rx="2" />
-                    <text x="449" y="433" fill="#FFFFFF" fontFamily="Anton, sans-serif" fontSize="11">
+                    <text x="449" y="433" fill="#FFFFFF" fontFamily="Plus Jakarta Sans, sans-serif" fontWeight="800" fontSize="10.5">
                       SAMPING PINTU 2 GK (DEKAT BOOTH)
                     </text>
 
@@ -498,7 +498,7 @@ export default function PetaKampusPage() {
                       AULA UTAMA (KOSONG)
                     </text>
                     <rect x="645" y="162" width="185" height="28" fill="#F5B700" stroke="#141414" strokeWidth="1" rx="2" />
-                    <text x="650" y="181" fill="#141414" fontFamily="Anton, sans-serif" fontSize="11.5">
+                    <text x="650" y="181" fill="#141414" fontFamily="Plus Jakarta Sans, sans-serif" fontWeight="800" fontSize="11">
                       KAPASITAS: SEKITAR 500 ORANG MENTOK
                     </text>
                     <text x="645" y="210" fill="#404940" fontFamily="Plus Jakarta Sans, sans-serif" fontSize="11" fontWeight="700">
@@ -513,13 +513,13 @@ export default function PetaKampusPage() {
 
                     {/* Middle Audience Viewing Area */}
                     <rect x="635" y="280" width="205" height="115" fill="#FFFFFF" stroke="#0B5E2E" strokeWidth="1.5" strokeDasharray="4 4" rx="2" opacity="0.95" />
-                    <text x="647" y="308" fill="#0B5E2E" fontFamily="Anton, sans-serif" fontSize="13.5" letterSpacing="0.5">
+                    <text x="647" y="308" fill="#0B5E2E" fontFamily="Plus Jakarta Sans, sans-serif" fontWeight="800" fontSize="12" letterSpacing="0.5">
                       ZONA LESEHAN PENONTON (~500 ORANG)
                     </text>
                     <text x="647" y="328" fill="#404940" fontFamily="Plus Jakarta Sans, sans-serif" fontSize="11" fontWeight="600">
                       Sirkulasi Lapang &amp; Bebas Halangan
                     </text>
-                    <text x="647" y="352" fill="#BA1A1A" fontFamily="Anton, sans-serif" fontSize="12" letterSpacing="0.5">
+                    <text x="647" y="352" fill="#BA1A1A" fontFamily="Plus Jakarta Sans, sans-serif" fontWeight="800" fontSize="11.5" letterSpacing="0.5">
                       ↓↓ MENGHADAP PANGGUNG DI BAWAH ↓↓
                     </text>
                     <path d="M 740 360 L 740 385" stroke="#BA1A1A" strokeWidth="3" markerEnd="url(#arr-green)" />
@@ -528,13 +528,13 @@ export default function PetaKampusPage() {
                     <g id="stand-talkshow-ujung-bawah-gk">
                       <rect x="625" y="405" width="225" height="155" rx="3" fill="#F5B700" stroke="#141414" strokeWidth="3.5" />
                       <rect x="625" y="405" width="225" height="32" fill="#141414" />
-                      <text x="633" y="427" fill="#FFFFFF" fontFamily="Anton, sans-serif" fontSize="13.5" letterSpacing="0.5">
+                      <text x="633" y="427" fill="#FFFFFF" fontFamily="Plus Jakarta Sans, sans-serif" fontWeight="800" fontSize="12.5" letterSpacing="0.5">
                         🎤 STAND PANGGUNG TALK SHOW
                       </text>
 
                       {/* Screen / Backdrop on Stage */}
                       <rect x="635" y="445" width="205" height="44" fill="#0B5E2E" stroke="#141414" strokeWidth="1.5" rx="2" />
-                      <text x="643" y="465" fill="#FFFFFF" fontFamily="Anton, sans-serif" fontSize="13">
+                      <text x="643" y="465" fill="#FFFFFF" fontFamily="Plus Jakarta Sans, sans-serif" fontWeight="800" fontSize="12">
                         GELAR WICARA &amp; SHARING ALUMNI
                       </text>
                       <text x="643" y="481" fill="#F5B700" fontFamily="Plus Jakarta Sans, sans-serif" fontSize="10.5" fontWeight="700">
@@ -543,7 +543,7 @@ export default function PetaKampusPage() {
 
                       {/* Stage info box */}
                       <rect x="635" y="495" width="205" height="55" fill="#FAF8F2" stroke="#141414" strokeWidth="1.5" rx="2" />
-                      <text x="643" y="513" fill="#BA1A1A" fontFamily="Anton, sans-serif" fontSize="12">
+                      <text x="643" y="513" fill="#BA1A1A" fontFamily="Plus Jakarta Sans, sans-serif" fontWeight="800" fontSize="11">
                         📍 POSISI: PALING BAWAH UJUNG DARI GEDUNG GK
                       </text>
                       <text x="643" y="530" fill="#141414" fontFamily="Plus Jakarta Sans, sans-serif" fontSize="10.5" fontWeight="700">
@@ -557,7 +557,7 @@ export default function PetaKampusPage() {
                     {/* ================= PINTU 1: UJUNG VERTIKAL ATAS ================= */}
                     <g id="pintu-1-ujung-atas">
                       <rect x="670" y="50" width="135" height="30" fill="#F5B700" stroke="#141414" strokeWidth="3" rx="2" />
-                      <text x="678" y="70" fill="#141414" fontFamily="Anton, sans-serif" fontSize="12">
+                      <text x="678" y="70" fill="#141414" fontFamily="Plus Jakarta Sans, sans-serif" fontWeight="800" fontSize="11.5">
                         🚪 PINTU 1 (UJUNG ATAS)
                       </text>
                     </g>
@@ -565,7 +565,7 @@ export default function PetaKampusPage() {
                     {/* ================= PINTU 2: SAMPING TENGAH SEBELAH JALAN ================= */}
                     <g id="pintu-2-samping-tengah">
                       <rect x="596" y="260" width="32" height="110" fill="#F5B700" stroke="#141414" strokeWidth="3" rx="2" />
-                      <text x="616" y="352" fill="#141414" fontFamily="Anton, sans-serif" fontSize="11" transform="rotate(-90 616 352)">
+                      <text x="616" y="352" fill="#141414" fontFamily="Plus Jakarta Sans, sans-serif" fontWeight="800" fontSize="10.5" transform="rotate(-90 616 352)">
                         🚪 PINTU 2 (SAMPING TENGAH)
                       </text>
                       <path d="M 575 315 L 605 315" stroke="#0B5E2E" strokeWidth="4" markerEnd="url(#arr-green)" />
@@ -575,7 +575,7 @@ export default function PetaKampusPage() {
                   {/* ================= HALAMAN / SELASAR SELATAN GK ================= */}
                   <g id="selasar-selatan-gk">
                     <rect x="615" y="585" width="245" height="42" rx="3" fill="#EAE5D9" stroke="#141414" strokeWidth="2.5" />
-                    <text x="625" y="605" fill="#141414" fontFamily="Anton, sans-serif" fontSize="12" letterSpacing="1">
+                    <text x="625" y="605" fill="#141414" fontFamily="Plus Jakarta Sans, sans-serif" fontWeight="800" fontSize="11.5" letterSpacing="0.5">
                       HALAMAN / DROP-OFF SELATAN GK
                     </text>
                     <text x="625" y="620" fill="#404940" fontFamily="Plus Jakarta Sans, sans-serif" fontSize="10" fontWeight="600">
@@ -600,7 +600,7 @@ export default function PetaKampusPage() {
                           : "bg-[#FAF8F2] text-[#141414] hover:bg-[#F5B700] shadow-[2px_2px_0px_#141414]"
                       }`}
                     >
-                      <span className="block font-display text-xs sm:text-sm uppercase tracking-wide truncate">
+                      <span className="block font-body font-bold text-xs sm:text-sm uppercase tracking-wide truncate">
                         {z.name.split("—")[0].trim()}
                       </span>
                       <span className="font-body text-[10px] sm:text-[11px] block opacity-90 truncate">
@@ -619,7 +619,7 @@ export default function PetaKampusPage() {
                   <Footprints className="w-6 h-6 text-[#141414]" />
                 </div>
                 <div className="flex-1">
-                  <div className="inline-block bg-[#0B5E2E] text-[#FAF8F2] px-2 py-0.5 border border-[#141414] font-display text-xs uppercase mb-1">
+                  <div className="inline-block bg-[#0B5E2E] text-[#FAF8F2] px-2 py-0.5 border border-[#141414] font-body font-bold text-xs uppercase tracking-wide mb-1">
                     KOMANDO SIRKULASI ACARA
                   </div>
                   <h2 className="font-display text-xl uppercase text-[#141414]">
@@ -654,26 +654,26 @@ export default function PetaKampusPage() {
             <div className="bg-[#FAF8F2] border-comic-4 shadow-comic-lg overflow-hidden">
               <div className="bg-[#0B5E2E] text-[#FAF8F2] p-4 border-b-4 border-[#141414] flex justify-between items-center">
                 <div>
-                  <span className="font-display text-xs bg-[#F5B700] text-[#141414] px-2 py-0.5 border border-[#141414] uppercase tracking-wider inline-block mb-1 font-bold">
+                  <span className="font-body text-xs bg-[#F5B700] text-[#141414] px-2 py-0.5 border border-[#141414] uppercase tracking-wider inline-block mb-1 font-extrabold">
                     INSPEKSI BERKAS TATA RUANG
                   </span>
                   <h3 className="font-display text-xl sm:text-2xl uppercase tracking-tight text-[#FAF8F2]">
                     {currentZone.name.split("—")[0]}
                   </h3>
                 </div>
-                <span className="bg-[#F5B700] text-[#141414] px-2.5 py-1 font-display text-xs uppercase border-2 border-[#141414] font-bold">
+                <span className="bg-[#F5B700] text-[#141414] px-2.5 py-1 font-body text-xs uppercase border-2 border-[#141414] font-extrabold tracking-wide">
                   {currentZone.badge}
                 </span>
               </div>
 
               <div className="p-5 flex flex-col gap-4">
                 <div className="bg-[#EAE5D9] p-3.5 border-2 border-[#141414]">
-                  <div className="flex items-center justify-between text-xs sm:text-sm font-display text-[#141414] mb-1.5">
+                  <div className="flex items-center justify-between text-xs sm:text-sm font-body font-bold text-[#141414] mb-1.5">
                     <span className="flex items-center gap-1.5">
                       <Users className="w-4 h-4 text-[#0B5E2E]" />
-                      <span>KAPASITAS:</span>
+                      <span className="uppercase tracking-wider">KAPASITAS:</span>
                     </span>
-                    <span className="text-[#0B5E2E] font-bold">{currentZone.capacity}</span>
+                    <span className="text-[#0B5E2E] font-extrabold">{currentZone.capacity}</span>
                   </div>
                   <div className="flex items-center justify-between text-xs sm:text-sm font-body text-[#404940]">
                     <span className="flex items-center gap-1.5">
@@ -690,7 +690,7 @@ export default function PetaKampusPage() {
 
                 {/* Highlights */}
                 <div>
-                  <div className="font-display text-xs sm:text-sm text-[#141414] uppercase mb-2 font-bold">
+                  <div className="font-body text-xs sm:text-sm text-[#141414] uppercase mb-2 font-extrabold tracking-wide">
                     SOROTAN UTAMA AREA INI:
                   </div>
                   <ul className="space-y-2 font-body text-xs sm:text-sm text-[#404940] font-medium">
@@ -705,7 +705,7 @@ export default function PetaKampusPage() {
 
                 {/* Booths in this zone */}
                 <div className="pt-3 border-t-2 border-[#141414]/20">
-                  <div className="font-display text-xs sm:text-sm text-[#141414] uppercase mb-2 flex justify-between items-center font-bold">
+                  <div className="font-body text-xs sm:text-sm text-[#141414] uppercase mb-2 flex justify-between items-center font-extrabold tracking-wide">
                     <span>DAFTAR BOOTH / RUANG DI AREA INI:</span>
                     <Link
                       href="/direktori-stan"
@@ -729,7 +729,7 @@ export default function PetaKampusPage() {
 
                 <Link
                   href="/direktori-stan"
-                  className="comic-btn w-full text-center bg-[#F5B700] text-[#141414] font-display text-xs sm:text-sm uppercase py-3 border-[3px] border-[#141414] shadow-[3px_3px_0px_#141414] hover:bg-[#FFE066] mt-2 block font-bold"
+                  className="comic-btn w-full text-center bg-[#F5B700] text-[#141414] font-body font-extrabold text-xs sm:text-sm uppercase tracking-wide py-3 border-[3px] border-[#141414] shadow-[3px_3px_0px_#141414] hover:bg-[#FFE066] mt-2 block"
                 >
                   Buka Halaman Database Kampus &rarr;
                 </Link>
@@ -742,10 +742,10 @@ export default function PetaKampusPage() {
                 <AlertTriangle className="w-6 h-6" />
               </div>
               <div className="flex-1">
-                <div className="font-display text-xs uppercase text-[#BA1A1A] leading-tight">
+                <div className="font-body font-extrabold text-xs uppercase tracking-wide text-[#BA1A1A] leading-tight">
                   HOTLINE PENGADUAN &amp; MEDIS
                 </div>
-                <div className="font-display text-base text-[#141414]">0812-3416-2027</div>
+                <div className="font-body font-black text-base text-[#141414] tracking-wider">0812-3416-2027</div>
                 <div className="font-body text-[11px] text-[#404940]">Sie Keamanan OSIS &amp; PMR 16 Surabaya</div>
               </div>
               <a
@@ -762,7 +762,7 @@ export default function PetaKampusPage() {
         {/* ================= CAMPUS SUPPORT FACILITIES GRID ================= */}
         <section className="mt-4">
           <div className="flex items-center gap-3 mb-6">
-            <span className="bg-[#0B5E2E] text-[#FAF8F2] px-3.5 py-1 font-display text-base uppercase border-[3px] border-[#141414] shadow-[3px_3px_0px_#141414]">
+            <span className="bg-[#0B5E2E] text-[#FAF8F2] px-3.5 py-1 font-body font-extrabold text-sm sm:text-base uppercase tracking-wide border-[3px] border-[#141414] shadow-[3px_3px_0px_#141414]">
               FASILITAS PENDUKUNG DI SEKITAR AREA EXPO
             </span>
             <div className="flex-1 h-1 bg-[#141414]"></div>
@@ -781,7 +781,7 @@ export default function PetaKampusPage() {
                       <div className="w-10 h-10 bg-[#EAE5D9] text-[#141414] border-2 border-[#141414] shadow-[2px_2px_0px_#141414] flex items-center justify-center">
                         <Icon className="w-5 h-5 text-[#0B5E2E]" />
                       </div>
-                      <span className={`px-2 py-0.5 text-[10px] font-display uppercase border border-[#141414] ${f.badgeBg}`}>
+                      <span className={`px-2 py-0.5 text-[10px] font-body font-extrabold uppercase tracking-wide border border-[#141414] ${f.badgeBg}`}>
                         {f.tag}
                       </span>
                     </div>
@@ -790,7 +790,7 @@ export default function PetaKampusPage() {
                       {f.desc}
                     </p>
                   </div>
-                  <div className="mt-4 pt-2 border-t-2 border-[#141414] font-display text-[11px] uppercase text-[#0B5E2E] font-bold flex items-center gap-1">
+                  <div className="mt-4 pt-2 border-t-2 border-[#141414] font-body text-[11px] uppercase text-[#0B5E2E] font-extrabold tracking-wide flex items-center gap-1">
                     <MapPin className="w-3 h-3 text-[#BA1A1A]" />
                     <span>{f.loc}</span>
                   </div>

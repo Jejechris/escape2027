@@ -29,11 +29,11 @@ export default function Home() {
               <div className="flex flex-wrap items-center gap-3">
                 <motion.span
                   whileHover={{ scale: 1.05, rotate: 1 }}
-                  className="bg-[#F5B700] text-[#141414] font-display text-xs sm:text-sm px-3 py-1 border-2 border-[#141414] shadow-comic-sm transform -rotate-1 cursor-default inline-block"
+                  className="bg-[#F5B700] text-[#141414] font-body font-extrabold text-xs sm:text-sm tracking-wide px-3 py-1 border-2 border-[#141414] shadow-comic-sm transform -rotate-1 cursor-default inline-block"
                 >
                   EDISI XVI // 21 JANUARI 2027
                 </motion.span>
-                <span className="bg-[#EAE5D9] text-[#404940] font-display text-xs uppercase px-2.5 py-1 border-2 border-[#141414] shadow-comic-sm">
+                <span className="bg-[#EAE5D9] text-[#404940] font-body font-bold text-xs uppercase tracking-wide px-2.5 py-1 border-2 border-[#141414] shadow-comic-sm">
                   RESMI PANITIA OSIS & BK EXPO
                 </span>
               </div>
@@ -59,7 +59,7 @@ export default function Home() {
                 transition={{ duration: 0.2 }}
                 className="bg-white p-4 sm:p-5 border-comic shadow-comic relative border-l-8 border-l-[#0B5E2E]"
               >
-                <div className="absolute -top-3 left-4 bg-[#0B5E2E] text-white font-display text-xs px-2 py-0.5 border border-[#141414] uppercase tracking-wider shadow-comic-sm">
+                <div className="absolute -top-3 left-4 bg-[#0B5E2E] text-white font-body font-bold text-xs uppercase tracking-wider px-2 py-0.5 border border-[#141414] shadow-comic-sm">
                   CAPTION NARASI
                 </div>
                 <p className="font-body text-base sm:text-lg text-[#141414] font-bold pt-1">
@@ -75,7 +75,7 @@ export default function Home() {
                 <motion.div whileHover={{ y: -3, scale: 1.02 }} whileTap={{ y: 2, scale: 0.98 }}>
                   <Link
                     href="/rundown"
-                    className="bg-[#0B5E2E] text-white font-display text-sm sm:text-base uppercase tracking-wider px-6 py-3 border-comic shadow-comic hover:bg-[#1E8449] transition-colors flex items-center gap-2"
+                    className="bg-[#0B5E2E] text-white font-body font-bold text-sm sm:text-base uppercase tracking-wider px-6 py-3 border-comic shadow-comic hover:bg-[#1E8449] transition-colors flex items-center gap-2"
                   >
                     <span>📅 Buka Jadwal Acara</span>
                   </Link>
@@ -84,7 +84,7 @@ export default function Home() {
                 <motion.div whileHover={{ y: -3, scale: 1.02 }} whileTap={{ y: 2, scale: 0.98 }}>
                   <Link
                     href="/direktori-stan"
-                    className="bg-white text-[#141414] font-display text-sm sm:text-base uppercase tracking-wider px-6 py-3 border-comic shadow-comic hover:bg-[#F5B700] transition-colors flex items-center gap-2"
+                    className="bg-white text-[#141414] font-body font-bold text-sm sm:text-base uppercase tracking-wider px-6 py-3 border-comic shadow-comic hover:bg-[#F5B700] transition-colors flex items-center gap-2"
                   >
                     <span>🏛 Buka Database Kampus</span>
                   </Link>
@@ -100,7 +100,7 @@ export default function Home() {
                   <span className="font-display text-3xl sm:text-4xl text-[#0B5E2E] leading-none">
                     45+
                   </span>
-                  <span className="font-display text-[10px] sm:text-xs uppercase tracking-wider text-[#141414] mt-1">
+                  <span className="font-body font-extrabold text-[10px] sm:text-xs uppercase tracking-wide text-[#141414] mt-1">
                     Kampus & Kedinasan
                   </span>
                 </motion.div>
@@ -112,7 +112,7 @@ export default function Home() {
                   <span className="font-display text-3xl sm:text-4xl text-[#F5B700] leading-none drop-shadow-[1px_1px_0px_#141414]">
                     2
                   </span>
-                  <span className="font-display text-[10px] sm:text-xs uppercase tracking-wider text-[#141414] mt-1">
+                  <span className="font-body font-extrabold text-[10px] sm:text-xs uppercase tracking-wide text-[#141414] mt-1">
                     Zona Utama Expo
                   </span>
                 </motion.div>
@@ -124,7 +124,7 @@ export default function Home() {
                   <span className="font-display text-3xl sm:text-4xl text-[#0B5E2E] leading-none">
                     1.500+
                   </span>
-                  <span className="font-display text-[10px] sm:text-xs uppercase tracking-wider text-[#141414] mt-1">
+                  <span className="font-body font-extrabold text-[10px] sm:text-xs uppercase tracking-wide text-[#141414] mt-1">
                     Sixteeners & Wali
                   </span>
                 </motion.div>
@@ -141,7 +141,7 @@ export default function Home() {
                 className="relative w-full max-w-sm sm:max-w-md bg-[#EAE5D9] border-comic-4 shadow-comic-lg p-5 sm:p-6 rotate-1"
               >
                 {/* Issue Stamp Ribbon */}
-                <div className="absolute -top-4 -right-3 bg-[#BA1A1A] text-white font-display text-xs uppercase px-3 py-1 border-2 border-[#141414] shadow-comic-sm transform rotate-3">
+                <div className="absolute -top-4 -right-3 bg-[#BA1A1A] text-white font-body font-extrabold text-xs uppercase tracking-wide px-3 py-1 border-2 border-[#141414] shadow-comic-sm transform rotate-3">
                   KOLABORASI RESMI!
                 </div>
 
@@ -151,7 +151,7 @@ export default function Home() {
 
                   {/* Header strip inside card */}
                   <div className="w-full bg-[#0B5E2E] text-white py-1 px-3 border-2 border-[#141414] shadow-comic-sm mb-4 relative z-10">
-                    <span className="font-display text-xs sm:text-sm uppercase tracking-wider">
+                    <span className="font-body font-extrabold text-xs sm:text-sm uppercase tracking-wide">
                       TEKAD EMERALD SIXTEEN // 2027
                     </span>
                   </div>
@@ -176,7 +176,7 @@ export default function Home() {
 
                   {/* Comic Action Caption */}
                   <div className="mt-3 bg-[#F5B700] text-[#141414] border-2 border-[#141414] py-2 px-4 shadow-comic-sm w-full relative z-10">
-                    <p className="font-display text-sm sm:text-base uppercase tracking-wide">
+                    <p className="font-body font-extrabold text-sm sm:text-base uppercase tracking-wide">
                       &quot;WILLPOWER TO CONQUER THE FUTURE&quot;
                     </p>
                     <p className="font-body text-xs text-[#141414] font-bold">
@@ -185,7 +185,7 @@ export default function Home() {
                   </div>
 
                   {/* Mini Footer stamp inside panel */}
-                  <div className="mt-4 flex justify-between w-full text-[10px] font-display uppercase font-bold text-[#404940] relative z-10">
+                  <div className="mt-4 flex justify-between w-full text-[10px] font-body font-bold uppercase tracking-wide text-[#404940] relative z-10">
                     <span>SEKTOR PRAKIRAAN KARIER</span>
                     <span>VOL. 16 SURABAYA</span>
                   </div>
@@ -197,7 +197,7 @@ export default function Home() {
                     <span>📍</span>
                     <span>Jl. Prapen Indah I, Surabaya</span>
                   </div>
-                  <span className="font-display text-[10px] bg-[#141414] text-white px-2 py-0.5 border border-[#141414]">
+                  <span className="font-body font-bold text-[10px] bg-[#141414] text-white px-2 py-0.5 border border-[#141414] uppercase tracking-wide">
                     TERBUKA UMUM
                   </span>
                 </div>
@@ -225,7 +225,7 @@ export default function Home() {
               ⚡
             </motion.div>
             <div className="space-y-2 text-center md:text-left">
-              <div className="inline-block bg-[#FAF8F2] text-[#0B5E2E] font-display text-xs uppercase px-2.5 py-0.5 border border-[#141414] shadow-comic-sm">
+              <div className="inline-block bg-[#FAF8F2] text-[#0B5E2E] font-body font-bold text-xs uppercase tracking-wide px-2.5 py-0.5 border border-[#141414] shadow-comic-sm">
                 IKRAR TEKAD SIXTEENERS
               </div>
               <blockquote className="font-display text-xl sm:text-2xl tracking-wide leading-snug">
@@ -242,14 +242,14 @@ export default function Home() {
         <section className="flex flex-col gap-6">
           <div className="flex flex-col sm:flex-row sm:items-center justify-between border-b-4 border-[#141414] pb-3 gap-2">
             <div>
-              <span className="bg-[#F5B700] text-[#141414] font-display text-xs px-2 py-0.5 border border-[#141414] uppercase font-bold shadow-comic-sm">
+              <span className="bg-[#F5B700] text-[#141414] font-body font-extrabold text-xs px-2 py-0.5 border border-[#141414] uppercase tracking-wide shadow-comic-sm">
                 PANEL UTAMA
               </span>
               <h2 className="font-display text-3xl sm:text-4xl uppercase text-[#0B5E2E] tracking-wide mt-1">
                 PROGRAM UNGGULAN EXPO
               </h2>
             </div>
-            <span className="font-display text-xs sm:text-sm text-[#404940] uppercase">
+            <span className="font-body font-bold text-xs sm:text-sm text-[#404940] uppercase tracking-wide">
               STRIP 01 // TIGA RUANG EKSPLORASI
             </span>
           </div>
@@ -269,17 +269,17 @@ export default function Home() {
                   <h3 className="font-display text-lg uppercase tracking-wider">
                     Eksplorasi Sektor Kampus
                   </h3>
-                  <span className="font-display text-[10px] bg-[#F5B700] text-[#141414] px-1.5 py-0.5 border border-[#141414] font-bold">
+                  <span className="font-body font-extrabold text-[10px] bg-[#F5B700] text-[#141414] px-1.5 py-0.5 border border-[#141414] uppercase tracking-wide">
                     PANEL A
                   </span>
                 </div>
                 <div className="p-5 space-y-4">
                   <div className="bg-[#EAE5D9] border-2 border-[#141414] p-2.5 benday-dots">
-                    <p className="font-display text-sm text-[#141414] uppercase bg-white p-2 border border-[#141414] text-center">
+                    <p className="font-body font-extrabold text-xs sm:text-sm text-[#141414] uppercase bg-white p-2 border border-[#141414] text-center tracking-wide">
                       PTN, PTS & KEDINASAN
                     </p>
                   </div>
-                  <p className="font-body text-xs sm:text-sm text-[#141414] leading-relaxed">
+                  <p className="font-body text-xs sm:text-sm text-[#141414] leading-relaxed font-medium">
                     Kunjungi langsung stan resmi PTN terkemuka (ITB, UI, UGM, ITS, UNAIR, UB) serta akademi militer & politeknik kedinasan. Konsultasikan syarat nilai rapor dan daya tampung SNBP/SNBT.
                   </p>
                   <ul className="space-y-2 border-t-2 border-[#404940] pt-3 font-body text-xs font-semibold">
@@ -297,7 +297,7 @@ export default function Home() {
               <div className="p-5 pt-0">
                 <Link
                   href="/direktori-stan"
-                  className="w-full block text-center bg-white text-[#141414] font-display text-sm uppercase py-2.5 border-comic shadow-comic-sm hover:bg-[#F5B700] active:translate-x-[1px] active:translate-y-[1px] transition-all"
+                  className="w-full block text-center bg-white text-[#141414] font-body font-bold text-sm uppercase tracking-wide py-2.5 border-comic shadow-comic-sm hover:bg-[#F5B700] active:translate-x-[1px] active:translate-y-[1px] transition-all"
                 >
                   Jelajahi Stan Kampus →
                 </Link>
@@ -319,17 +319,17 @@ export default function Home() {
                   <h3 className="font-display text-lg uppercase tracking-wider text-white">
                     Gelar Wicara & Mentorship
                   </h3>
-                  <span className="font-display text-[10px] bg-[#0B5E2E] text-white px-1.5 py-0.5 border border-white font-bold">
+                  <span className="font-body font-extrabold text-[10px] bg-[#0B5E2E] text-white px-1.5 py-0.5 border border-white uppercase tracking-wide">
                     PANEL B
                   </span>
                 </div>
                 <div className="p-5 space-y-4 relative z-10">
                   <div className="bg-white border-2 border-[#141414] p-2.5 shadow-comic-sm">
-                    <p className="font-display text-sm text-[#0B5E2E] uppercase text-center">
+                    <p className="font-body font-extrabold text-xs sm:text-sm text-[#0B5E2E] uppercase text-center tracking-wide">
                       SHARING SESSION KELAS DUNIA
                     </p>
                   </div>
-                  <p className="font-body text-xs sm:text-sm text-[#141414] leading-relaxed">
+                  <p className="font-body text-xs sm:text-sm text-[#141414] leading-relaxed font-medium">
                     Dengarkan langsung strategi lolos PTN dari alumni Sixteeners yang kini sukses meniti karier di bidang kedokteran, teknik industri, korporasi multinasional, hingga diplomat.
                   </p>
                   <ul className="space-y-2 border-t-2 border-[#404940] pt-3 font-body text-xs font-semibold">
@@ -347,7 +347,7 @@ export default function Home() {
               <div className="p-5 pt-0 relative z-10">
                 <Link
                   href="/alumni"
-                  className="w-full block text-center bg-[#0B5E2E] text-white font-display text-sm uppercase py-2.5 border-comic shadow-comic-sm hover:bg-[#1E8449] active:translate-x-[1px] active:translate-y-[1px] transition-all"
+                  className="w-full block text-center bg-[#0B5E2E] text-white font-body font-bold text-sm uppercase tracking-wide py-2.5 border-comic shadow-comic-sm hover:bg-[#1E8449] active:translate-x-[1px] active:translate-y-[1px] transition-all"
                 >
                   Daftar Mentorship Alumni →
                 </Link>
@@ -368,17 +368,17 @@ export default function Home() {
                   <h3 className="font-display text-lg uppercase tracking-wider">
                     Klinik Beasiswa & BK
                   </h3>
-                  <span className="font-display text-[10px] bg-[#141414] text-white px-1.5 py-0.5 font-bold">
+                  <span className="font-body font-extrabold text-[10px] bg-[#141414] text-white px-1.5 py-0.5 uppercase tracking-wide">
                     PANEL C
                   </span>
                 </div>
                 <div className="p-5 space-y-4">
                   <div className="bg-[#EAE5D9] border-2 border-[#141414] p-2.5">
-                    <p className="font-display text-sm text-[#141414] uppercase text-center">
+                    <p className="font-body font-extrabold text-xs sm:text-sm text-[#141414] uppercase text-center tracking-wide">
                       RUANG BIMBINGAN KARIER BK
                     </p>
                   </div>
-                  <p className="font-body text-xs sm:text-sm text-[#141414] leading-relaxed">
+                  <p className="font-body text-xs sm:text-sm text-[#141414] leading-relaxed font-medium">
                     Konsultasi privat bersama Guru BK SMAN 16 Surabaya dan pakar psikologi pendidikan. Kupas tuntas beasiswa KIP-Kuliah, beasiswa swasta, dan pemetaan minat bakat siswa.
                   </p>
                   <ul className="space-y-2 border-t-2 border-[#404940] pt-3 font-body text-xs font-semibold">
@@ -396,7 +396,7 @@ export default function Home() {
               <div className="p-5 pt-0">
                 <Link
                   href="/tanya-jawab"
-                  className="w-full block text-center bg-white text-[#141414] font-display text-sm uppercase py-2.5 border-comic shadow-comic-sm hover:bg-[#F5B700] active:translate-x-[1px] active:translate-y-[1px] transition-all"
+                  className="w-full block text-center bg-white text-[#141414] font-body font-bold text-sm uppercase tracking-wide py-2.5 border-comic shadow-comic-sm hover:bg-[#F5B700] active:translate-x-[1px] active:translate-y-[1px] transition-all"
                 >
                   Jadwalkan Konsultasi →
                 </Link>
@@ -421,7 +421,7 @@ export default function Home() {
                   ⏱ JADWAL UTAMA HARI EXPO
                 </h3>
               </div>
-              <span className="font-display text-xs bg-[#0B5E2E] text-white px-2.5 py-1 border border-[#141414] shadow-comic-sm">
+              <span className="font-body font-bold text-xs bg-[#0B5E2E] text-white px-2.5 py-1 border border-[#141414] shadow-comic-sm uppercase tracking-wide">
                 21 JANUARI 2027
               </span>
             </div>
@@ -432,11 +432,11 @@ export default function Home() {
                 whileHover={{ x: 4 }}
                 className="flex items-start gap-3 sm:gap-4 p-3 bg-white border-2 border-[#141414] shadow-comic-sm"
               >
-                <div className="bg-[#F5B700] text-[#141414] font-display text-xs sm:text-sm px-2 py-1 border border-[#141414] min-w-[90px] text-center">
+                <div className="bg-[#F5B700] text-[#141414] font-body font-extrabold text-xs sm:text-sm px-2 py-1 border border-[#141414] min-w-[90px] text-center tracking-wide">
                   07.30 - 08.15
                 </div>
                 <div>
-                  <p className="font-display text-sm sm:text-base text-[#0B5E2E] uppercase">
+                  <p className="font-body font-extrabold text-sm sm:text-base text-[#0B5E2E] uppercase tracking-wide">
                     Upacara Pembukaan & Parade Kampus
                   </p>
                   <p className="text-[#404940] text-xs font-medium">
@@ -450,11 +450,11 @@ export default function Home() {
                 whileHover={{ x: 4 }}
                 className="flex items-start gap-3 sm:gap-4 p-3 bg-white border-2 border-[#141414] shadow-comic-sm"
               >
-                <div className="bg-[#F5B700] text-[#141414] font-display text-xs sm:text-sm px-2 py-1 border border-[#141414] min-w-[90px] text-center">
+                <div className="bg-[#F5B700] text-[#141414] font-body font-extrabold text-xs sm:text-sm px-2 py-1 border border-[#141414] min-w-[90px] text-center tracking-wide">
                   08.30 - 11.30
                 </div>
                 <div>
-                  <p className="font-display text-sm sm:text-base text-[#0B5E2E] uppercase">
+                  <p className="font-body font-extrabold text-sm sm:text-base text-[#0B5E2E] uppercase tracking-wide">
                     Sesi Stan Terbuka & Klinik Beasiswa
                   </p>
                   <p className="text-[#404940] text-xs font-medium">
@@ -468,11 +468,11 @@ export default function Home() {
                 whileHover={{ x: 4 }}
                 className="flex items-start gap-3 sm:gap-4 p-3 bg-white border-2 border-[#141414] shadow-comic-sm"
               >
-                <div className="bg-[#F5B700] text-[#141414] font-display text-xs sm:text-sm px-2 py-1 border border-[#141414] min-w-[90px] text-center">
+                <div className="bg-[#F5B700] text-[#141414] font-body font-extrabold text-xs sm:text-sm px-2 py-1 border border-[#141414] min-w-[90px] text-center tracking-wide">
                   12.45 - 14.30
                 </div>
                 <div>
-                  <p className="font-display text-sm sm:text-base text-[#0B5E2E] uppercase">
+                  <p className="font-body font-extrabold text-sm sm:text-base text-[#0B5E2E] uppercase tracking-wide">
                     Talkshow Akbar Alumni Sixteen
                   </p>
                   <p className="text-[#404940] text-xs font-medium">
@@ -485,7 +485,7 @@ export default function Home() {
             <div className="mt-2 text-right">
               <Link
                 href="/rundown"
-                className="font-display text-sm text-[#0B5E2E] underline hover:text-[#1E8449]"
+                className="font-body font-bold text-sm text-[#0B5E2E] underline hover:text-[#1E8449]"
               >
                 Lihat Rundown Lengkap 12 Sesi Acara →
               </Link>
@@ -501,7 +501,7 @@ export default function Home() {
             className="lg:col-span-5 bg-[#EAE5D9] border-comic-4 shadow-comic p-6 flex flex-col justify-between relative"
           >
             <div className="space-y-4">
-              <div className="inline-block bg-[#141414] text-white font-display text-xs uppercase px-2.5 py-1 border border-[#141414]">
+              <div className="inline-block bg-[#141414] text-white font-body font-bold text-xs uppercase tracking-wide px-2.5 py-1 border border-[#141414]">
                 KATA ALUMNI SIXTEEN
               </div>
 
@@ -518,11 +518,11 @@ export default function Home() {
               </motion.div>
 
               <div className="pt-2 flex items-center gap-3">
-                <div className="w-12 h-12 bg-[#0B5E2E] text-white border-2 border-[#141414] flex items-center justify-center font-display text-base shadow-comic-sm">
+                <div className="w-12 h-12 bg-[#0B5E2E] text-white border-2 border-[#141414] flex items-center justify-center font-body font-extrabold text-base shadow-comic-sm">
                   FAR
                 </div>
                 <div>
-                  <h4 className="font-display text-base uppercase text-[#141414] leading-tight">
+                  <h4 className="font-body font-bold text-base uppercase text-[#141414] leading-tight">
                     Faris Ramadhan, S.T.
                   </h4>
                   <p className="font-body text-xs text-[#404940] font-medium">
@@ -533,7 +533,7 @@ export default function Home() {
             </div>
 
             <div className="mt-6 p-3 bg-[#F5B700] border-2 border-[#141414] shadow-comic-sm text-center">
-              <p className="font-display text-xs sm:text-sm uppercase text-[#141414]">
+              <p className="font-body font-extrabold text-xs sm:text-sm uppercase tracking-wide text-[#141414]">
                 ★ TOTAL 35 ALUMNI SIXTEEN SIAP MENGAWALMU! ★
               </p>
             </div>

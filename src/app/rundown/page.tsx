@@ -156,7 +156,7 @@ export default function RundownPage() {
           <div className="absolute -right-8 -bottom-8 w-44 h-44 benday-emerald opacity-20 pointer-events-none border-2 border-[#141414]" />
 
           {/* Top comic tab label */}
-          <div className="inline-block bg-[#0B5E2E] text-white font-display text-xs uppercase px-4 py-1 border-2 border-[#141414] -rotate-1 mb-4 shadow-comic-sm">
+          <div className="inline-block bg-[#0B5E2E] text-white font-body font-bold text-xs uppercase tracking-wide px-4 py-1 border-2 border-[#141414] -rotate-1 mb-4 shadow-comic-sm">
             PROGRAM BUKU ACARA // LEMBAR 02
           </div>
 
@@ -179,7 +179,7 @@ export default function RundownPage() {
                 whileHover={{ y: -3, scale: 1.02 }}
                 whileTap={{ y: 2, scale: 0.98 }}
                 onClick={handleSaveCalendar}
-                className="bg-[#F5B700] text-[#141414] font-display text-xs sm:text-sm uppercase px-5 py-3 border-comic shadow-comic hover:bg-white active:translate-x-[2px] active:translate-y-[2px] transition-all flex items-center gap-2 cursor-pointer"
+                className="bg-[#F5B700] text-[#141414] font-body font-bold text-xs sm:text-sm uppercase tracking-wide px-5 py-3 border-comic shadow-comic hover:bg-white active:translate-x-[2px] active:translate-y-[2px] transition-all flex items-center gap-2 cursor-pointer"
               >
                 <span>📅 Simpan ke Google Calendar</span>
               </motion.button>
@@ -188,7 +188,7 @@ export default function RundownPage() {
                 whileHover={{ y: -3, scale: 1.02 }}
                 whileTap={{ y: 2, scale: 0.98 }}
                 onClick={() => window.print()}
-                className="bg-white text-[#141414] font-display text-xs sm:text-sm uppercase px-4 py-3 border-comic shadow-comic hover:bg-[#FAF8F2] active:translate-x-[2px] active:translate-y-[2px] transition-all flex items-center gap-1.5 cursor-pointer"
+                className="bg-white text-[#141414] font-body font-bold text-xs sm:text-sm uppercase tracking-wide px-4 py-3 border-comic shadow-comic hover:bg-[#FAF8F2] active:translate-x-[2px] active:translate-y-[2px] transition-all flex items-center gap-1.5 cursor-pointer"
               >
                 <span>🖨 Cetak / PDF Rundown</span>
               </motion.button>
@@ -203,7 +203,7 @@ export default function RundownPage() {
           <div className="flex flex-wrap items-center gap-2 sm:gap-3">
             <button
               onClick={() => setFilter("all")}
-              className={`font-display text-xs sm:text-sm uppercase px-5 py-2.5 border-comic transition-all cursor-pointer ${
+              className={`font-body font-bold text-xs sm:text-sm uppercase tracking-wide px-5 py-2.5 border-comic transition-all cursor-pointer ${
                 filter === "all"
                   ? "bg-[#0B5E2E] text-white shadow-comic translate-x-1"
                   : "bg-white text-[#141414] hover:bg-[#FAF8F2] shadow-comic-sm"
@@ -213,7 +213,7 @@ export default function RundownPage() {
             </button>
             <button
               onClick={() => setFilter("sektor-1")}
-              className={`font-display text-xs sm:text-sm uppercase px-5 py-2.5 border-comic transition-all cursor-pointer ${
+              className={`font-body font-bold text-xs sm:text-sm uppercase tracking-wide px-5 py-2.5 border-comic transition-all cursor-pointer ${
                 filter === "sektor-1"
                   ? "bg-[#0B5E2E] text-white shadow-comic translate-x-1"
                   : "bg-white text-[#141414] hover:bg-[#FAF8F2] shadow-comic-sm"
@@ -223,7 +223,7 @@ export default function RundownPage() {
             </button>
             <button
               onClick={() => setFilter("sektor-2")}
-              className={`font-display text-xs sm:text-sm uppercase px-5 py-2.5 border-comic transition-all cursor-pointer ${
+              className={`font-body font-bold text-xs sm:text-sm uppercase tracking-wide px-5 py-2.5 border-comic transition-all cursor-pointer ${
                 filter === "sektor-2"
                   ? "bg-[#0B5E2E] text-white shadow-comic translate-x-1"
                   : "bg-white text-[#141414] hover:bg-[#FAF8F2] shadow-comic-sm"
@@ -234,7 +234,7 @@ export default function RundownPage() {
           </div>
 
           {/* Status Filter Badge */}
-          <div className="inline-flex items-center gap-2 bg-white border-2 border-[#141414] px-3 py-1 font-display text-xs uppercase shadow-comic-sm">
+          <div className="inline-flex items-center gap-2 bg-white border-2 border-[#141414] px-3 py-1 font-body font-bold text-xs uppercase tracking-wide shadow-comic-sm">
             <span className="w-2.5 h-2.5 bg-[#0B5E2E] rounded-full animate-pulse border border-[#141414]" />
             <span>WAKTU LOKAL: WIB (SURABAYA)</span>
           </div>
@@ -251,14 +251,14 @@ export default function RundownPage() {
         {/* Header Strip */}
         <div className="bg-[#0B5E2E] text-white px-5 sm:px-8 py-3 border-b-4 border-[#141414] flex flex-wrap justify-between items-center gap-2">
           <div className="flex items-center gap-3">
-            <span className="bg-[#F5B700] text-[#141414] font-display text-xs px-2.5 py-0.5 border border-[#141414] uppercase shadow-comic-sm">
+            <span className="bg-[#F5B700] text-[#141414] font-body font-extrabold text-xs px-2.5 py-0.5 border border-[#141414] uppercase tracking-wide shadow-comic-sm">
               SOROTAN UTAMA
             </span>
-            <span className="font-display text-base sm:text-lg tracking-wider text-white">
+            <span className="font-body font-extrabold text-sm sm:text-base tracking-wide text-white">
               PANGGUNG GK (08.30 - 10.30 WIB)
             </span>
           </div>
-          <div className="font-display text-xs uppercase bg-[#141414] text-white px-3 py-1 border border-white">
+          <div className="font-body font-bold text-xs uppercase tracking-wider bg-[#141414] text-white px-3 py-1 border border-white">
             EPISODE #02 EXCLUSIVE
           </div>
         </div>
@@ -267,13 +267,13 @@ export default function RundownPage() {
           {/* Left Details (8 cols) */}
           <div className="lg:col-span-8 flex flex-col gap-4">
             <div className="flex flex-wrap items-center gap-2">
-              <span className="bg-[#FAF8F2] font-display text-xs uppercase px-2.5 py-1 border border-[#141414]">
+              <span className="bg-[#FAF8F2] font-body font-bold text-xs uppercase tracking-wide px-2.5 py-1 border border-[#141414]">
                 SESI PLENO AKADEMIK
               </span>
-              <span className="bg-[#A7F4B5] font-display text-xs uppercase px-2.5 py-1 border border-[#141414] text-[#0B5E2E]">
+              <span className="bg-[#A7F4B5] font-body font-bold text-xs uppercase tracking-wide px-2.5 py-1 border border-[#141414] text-[#0B5E2E]">
                 WAJIB KELAS XII
               </span>
-              <span className="bg-[#FAF8F2] font-display text-xs uppercase px-2.5 py-1 border border-[#141414]">
+              <span className="bg-[#FAF8F2] font-body font-bold text-xs uppercase tracking-wide px-2.5 py-1 border border-[#141414]">
                 TERBUKA KELAS X & XI
               </span>
             </div>
@@ -292,7 +292,7 @@ export default function RundownPage() {
 
             {/* University Stamp Chips */}
             <div className="pt-2">
-              <span className="font-display text-xs text-[#404940] block mb-2 uppercase tracking-wide">
+              <span className="font-body font-bold text-xs text-[#404940] block mb-2 uppercase tracking-wide">
                 PERWAKILAN ALUMNI SIXTEEN:
               </span>
               <div className="flex flex-wrap gap-2">
@@ -300,7 +300,7 @@ export default function RundownPage() {
                   <motion.span
                     key={univ}
                     whileHover={{ scale: 1.1, rotate: 2 }}
-                    className="bg-[#FAF8F2] font-display text-xs px-3 py-1 border border-[#141414] shadow-comic-sm cursor-default"
+                    className="bg-[#FAF8F2] font-body font-extrabold text-xs px-3 py-1 border border-[#141414] shadow-comic-sm cursor-default"
                   >
                     {univ}
                   </motion.span>
@@ -312,16 +312,16 @@ export default function RundownPage() {
           {/* Right Action & Capacity Box (4 cols) */}
           <div className="lg:col-span-4 flex flex-col gap-4 bg-[#FAF8F2] p-5 sm:p-6 border-comic shadow-comic">
             <div className="flex items-center justify-between pb-3 border-b-2 border-[#141414]">
-              <span className="font-display text-xs uppercase text-[#404940]">KAPASITAS AUDITORIUM:</span>
-              <div className="bg-[#0B5E2E] text-white font-display text-sm px-3 py-1 border border-[#141414] shadow-comic-sm">
+              <span className="font-body font-bold text-xs uppercase tracking-wide text-[#404940]">KAPASITAS AUDITORIUM:</span>
+              <div className="bg-[#0B5E2E] text-white font-body font-extrabold text-sm px-3 py-1 border border-[#141414] shadow-comic-sm">
                 500 Kursi
               </div>
             </div>
 
             <div className="space-y-2 py-1">
-              <div className="flex justify-between font-display text-xs uppercase">
+              <div className="flex justify-between font-body font-bold text-xs uppercase tracking-wide">
                 <span>STATUS KURSI:</span>
-                <span className="font-bold text-[#0B5E2E]">
+                <span className="font-extrabold text-[#0B5E2E]">
                   {bookedSeats} / {totalSeats} TERPESAN
                 </span>
               </div>
@@ -346,7 +346,7 @@ export default function RundownPage() {
                 whileHover={{ y: -2, scale: 1.02 }}
                 whileTap={{ y: 2, scale: 0.98 }}
                 onClick={handleBookSeat}
-                className="w-full bg-[#0B5E2E] text-white font-display text-sm sm:text-base uppercase py-3 border-comic shadow-comic hover:bg-[#1E8449] active:translate-x-[2px] active:translate-y-[2px] transition-all text-center cursor-pointer"
+                className="w-full bg-[#0B5E2E] text-white font-body font-bold text-sm sm:text-base uppercase tracking-wide py-3 border-comic shadow-comic hover:bg-[#1E8449] active:translate-x-[2px] active:translate-y-[2px] transition-all text-center cursor-pointer"
               >
                 🎟 Booking Kursi Sesi
               </motion.button>
@@ -357,7 +357,7 @@ export default function RundownPage() {
                     initial={{ opacity: 0, y: -10 }}
                     animate={{ opacity: 1, y: 0 }}
                     exit={{ opacity: 0, y: -10 }}
-                    className="p-2.5 bg-[#A7F4B5] border-2 border-[#141414] text-center font-display text-xs uppercase text-[#0B5E2E] shadow-comic-sm"
+                    className="p-2.5 bg-[#A7F4B5] border-2 border-[#141414] text-center font-body font-bold text-xs uppercase tracking-wide text-[#0B5E2E] shadow-comic-sm"
                   >
                     ✔ Kursi #{bookedSeats} Berhasil Dipesan! Tunjukkan Kartu Pelajar saat Masuk.
                   </motion.div>
@@ -382,14 +382,14 @@ export default function RundownPage() {
               {/* Column Header Strip */}
               <div className="bg-[#0B5E2E] text-white p-4 border-b-4 border-[#141414] flex justify-between items-center">
                 <div>
-                  <span className="font-display text-[10px] uppercase tracking-wider block text-[#A7F4B5]">
+                  <span className="font-body font-extrabold text-[10px] uppercase tracking-wider block text-[#A7F4B5]">
                     SEKTOR 01 • INDOOR AUDITORIUM
                   </span>
                   <h3 className="font-display text-lg uppercase tracking-wide text-white">
                     PANGGUNG UTAMA GK (GELANGGANG REMAJA)
                   </h3>
                 </div>
-                <span className="bg-[#F5B700] text-[#141414] font-display text-xs px-2.5 py-0.5 border border-[#141414] uppercase shadow-comic-sm">
+                <span className="bg-[#F5B700] text-[#141414] font-body font-bold text-xs px-2.5 py-0.5 border border-[#141414] uppercase shadow-comic-sm">
                   5 SESI
                 </span>
               </div>
@@ -411,11 +411,11 @@ export default function RundownPage() {
                     }`}
                   >
                     <div className="flex items-center justify-between gap-2 border-b-2 border-[#141414] pb-2 mb-3">
-                      <div className="bg-[#F5B700] text-[#141414] font-display text-xs px-2.5 py-0.5 border border-[#141414] uppercase shadow-comic-sm">
+                      <div className="bg-[#F5B700] text-[#141414] font-body font-bold text-xs px-2.5 py-0.5 border border-[#141414] uppercase shadow-comic-sm">
                         {item.time}
                       </div>
                       <span
-                        className={`font-display text-[10px] px-2 py-0.5 border border-[#141414] uppercase ${
+                        className={`font-body font-extrabold text-[10px] px-2 py-0.5 border border-[#141414] uppercase tracking-wide ${
                           item.badgeColor || "bg-[#FAF8F2] text-[#141414]"
                         }`}
                       >
@@ -423,16 +423,16 @@ export default function RundownPage() {
                       </span>
                     </div>
 
-                    <h4 className="font-display text-base uppercase text-[#141414] mb-2 leading-snug">
+                    <h4 className="font-body font-extrabold text-base uppercase text-[#141414] mb-2 leading-snug">
                       {item.title}
                     </h4>
-                    <p className="font-body text-xs text-[#404940] leading-relaxed">
+                    <p className="font-body text-xs text-[#404940] leading-relaxed font-medium">
                       {item.description}
                     </p>
 
-                    <div className="mt-3 flex items-center justify-between text-[11px] font-display text-[#141414] pt-2 border-t border-gray-200 uppercase">
+                    <div className="mt-3 flex items-center justify-between text-[11px] font-body font-bold text-[#141414] pt-2 border-t border-gray-200 uppercase tracking-wide">
                       <span className="text-[#404940]">{item.location}</span>
-                      <span className="font-bold text-[#0B5E2E]">{item.status}</span>
+                      <span className="font-extrabold text-[#0B5E2E]">{item.status}</span>
                     </div>
                   </motion.div>
                 ))}
@@ -451,14 +451,14 @@ export default function RundownPage() {
               {/* Column Header Strip */}
               <div className="bg-[#141414] text-white p-4 border-b-4 border-[#141414] flex justify-between items-center">
                 <div>
-                  <span className="font-display text-[10px] uppercase tracking-wider block text-[#F5B700]">
+                  <span className="font-body font-extrabold text-[10px] uppercase tracking-wider block text-[#F5B700]">
                     SEKTOR 02 • OUTDOOR & SELASAR
                   </span>
                   <h3 className="font-display text-lg uppercase tracking-wide text-white">
                     SEKTOR STAN: DEPAN GK & PLAZA PERPUS
                   </h3>
                 </div>
-                <span className="bg-[#0B5E2E] text-white font-display text-xs px-2.5 py-0.5 border border-white uppercase shadow-comic-sm">
+                <span className="bg-[#0B5E2E] text-white font-body font-bold text-xs px-2.5 py-0.5 border border-white uppercase shadow-comic-sm">
                   3 ZONA
                 </span>
               </div>
@@ -480,11 +480,11 @@ export default function RundownPage() {
                     }`}
                   >
                     <div className="flex items-center justify-between gap-2 border-b-2 border-[#141414] pb-2 mb-3">
-                      <div className="bg-[#F5B700] text-[#141414] font-display text-xs px-2.5 py-0.5 border border-[#141414] uppercase shadow-comic-sm">
+                      <div className="bg-[#F5B700] text-[#141414] font-body font-bold text-xs px-2.5 py-0.5 border border-[#141414] uppercase shadow-comic-sm">
                         {item.time}
                       </div>
                       <span
-                        className={`font-display text-[10px] px-2 py-0.5 border border-[#141414] uppercase ${
+                        className={`font-body font-extrabold text-[10px] px-2 py-0.5 border border-[#141414] uppercase tracking-wide ${
                           item.badgeColor || "bg-[#FAF8F2] text-[#141414]"
                         }`}
                       >
@@ -492,16 +492,16 @@ export default function RundownPage() {
                       </span>
                     </div>
 
-                    <h4 className="font-display text-base uppercase text-[#141414] mb-2 leading-snug">
+                    <h4 className="font-body font-extrabold text-base uppercase text-[#141414] mb-2 leading-snug">
                       {item.title}
                     </h4>
-                    <p className="font-body text-xs text-[#404940] leading-relaxed">
+                    <p className="font-body text-xs text-[#404940] leading-relaxed font-medium">
                       {item.description}
                     </p>
 
-                    <div className="mt-3 flex items-center justify-between text-[11px] font-display text-[#141414] pt-2 border-t border-gray-200 uppercase">
+                    <div className="mt-3 flex items-center justify-between text-[11px] font-body font-bold text-[#141414] pt-2 border-t border-gray-200 uppercase tracking-wide">
                       <span className="text-[#404940]">{item.location}</span>
-                      <span className="font-bold text-[#0B5E2E]">{item.status}</span>
+                      <span className="font-extrabold text-[#0B5E2E]">{item.status}</span>
                     </div>
                   </motion.div>
                 ))}
@@ -514,7 +514,7 @@ export default function RundownPage() {
                   <div className="flex items-start gap-3">
                     <span className="text-2xl">☕</span>
                     <div>
-                      <h5 className="font-display text-sm uppercase text-[#141414] mb-1">
+                      <h5 className="font-body font-extrabold text-sm uppercase text-[#141414] mb-1">
                         AREA KULINER & RESTING LOUNGE
                       </h5>
                       <p className="font-body text-xs text-[#404940]">
@@ -544,7 +544,7 @@ export default function RundownPage() {
               🔔
             </div>
             <div>
-              <div className="inline-block bg-[#0B5E2E] text-white font-display text-xs uppercase px-2 py-0.5 border border-[#141414] mb-1 shadow-comic-sm">
+              <div className="inline-block bg-[#0B5E2E] text-white font-body font-bold text-xs uppercase tracking-wide px-2 py-0.5 border border-[#141414] mb-1 shadow-comic-sm">
                 JANGAN SAMPAI TERTINGGAL
               </div>
               <h3 className="font-display text-xl sm:text-2xl uppercase text-[#141414] tracking-wide">

@@ -66,7 +66,7 @@ export default function OpeningIntro() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.3 }}
             onClick={handleSkip}
-            className="absolute top-6 right-6 z-20 bg-[#F5B700] text-[#141414] font-display text-xs uppercase px-3.5 py-2 border-2 border-[#141414] shadow-comic-sm hover:bg-white active:translate-x-[2px] active:translate-y-[2px] transition-all cursor-pointer"
+            className="absolute top-6 right-6 z-20 bg-[#F5B700] text-[#141414] font-body font-bold text-xs uppercase tracking-wide px-3.5 py-2 border-2 border-[#141414] shadow-comic-sm hover:bg-white active:translate-x-[2px] active:translate-y-[2px] transition-all cursor-pointer"
           >
             Lewati Intro ✕
           </motion.button>
@@ -83,7 +83,7 @@ export default function OpeningIntro() {
               initial={{ scale: 0 }}
               animate={{ scale: [0, 1.2, 1] }}
               transition={{ delay: 0.2, duration: 0.35 }}
-              className="bg-[#F5B700] text-[#141414] font-display text-xs uppercase px-3.5 py-1 border-2 border-[#141414] shadow-comic-sm mb-5 rotate-[-2deg]"
+              className="bg-[#F5B700] text-[#141414] font-body font-extrabold text-xs uppercase tracking-wide px-3.5 py-1 border-2 border-[#141414] shadow-comic-sm mb-5 rotate-[-2deg]"
             >
               ★ SMAN 16 SURABAYA • ISSUE XVI ★
             </motion.div>
@@ -124,7 +124,7 @@ export default function OpeningIntro() {
                 ESCAPE 2027
               </h1>
               <div className="mt-1">
-                <span className="font-display text-xs uppercase tracking-widest text-[#0B5E2E] bg-[#A7F4B5] px-2.5 py-0.5 border border-[#141414] inline-block shadow-comic-sm">
+                <span className="font-body font-extrabold text-xs uppercase tracking-wide text-[#0B5E2E] bg-[#A7F4B5] px-2.5 py-0.5 border border-[#141414] inline-block shadow-comic-sm">
                   WILLPOWER CORPS EDITION
                 </span>
               </div>

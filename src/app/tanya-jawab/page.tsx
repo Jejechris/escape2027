@@ -105,7 +105,7 @@ export default function TanyaJawabPage() {
     <div className="w-full bg-[#FAF8F2] min-h-screen pb-16 selection:bg-[#F5B700] selection:text-[#141414]">
       {/* ================= TOP COMIC ISSUE RIBBON ================= */}
       <section className="bg-[#F5B700] border-b-4 border-[#141414] py-2 px-4 shadow-[0px_3px_0px_#141414] relative overflow-hidden">
-        <div className="max-w-7xl mx-auto flex items-center justify-between font-display text-sm tracking-wide text-[#141414]">
+        <div className="max-w-7xl mx-auto flex items-center justify-between font-body font-bold text-xs sm:text-sm tracking-wide text-[#141414]">
           <div className="flex items-center gap-3">
             <span className="bg-[#141414] text-[#FAF8F2] px-2 py-0.5 text-xs font-bold uppercase tracking-wider">
               EDISI KHUSUS
@@ -125,14 +125,14 @@ export default function TanyaJawabPage() {
       {/* ================= PAGE MASTHEAD BANNER ================= */}
       <main className="max-w-7xl mx-auto px-4 sm:px-6 py-8 flex flex-col gap-8">
         <div className="w-full bg-[#EAE5D9] border-comic-4 p-6 sm:p-8 shadow-comic-lg relative overflow-hidden">
-          <div className="absolute -top-3 left-6 bg-[#0B5E2E] text-[#FAF8F2] px-3 py-0.5 border-2 border-[#141414] font-display text-xs uppercase shadow-[2px_2px_0px_#141414] flex items-center gap-1.5">
+          <div className="absolute -top-3 left-6 bg-[#0B5E2E] text-[#FAF8F2] px-3 py-0.5 border-2 border-[#141414] font-body font-bold text-xs uppercase tracking-wide shadow-[2px_2px_0px_#141414] flex items-center gap-1.5">
             <HelpCircle className="w-3.5 h-3.5 text-[#F5B700]" />
             <span>DIREKTORI TANYA JAWAB &amp; DUKUNGAN RESMI</span>
           </div>
 
           <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-6 pt-2">
             <div className="max-w-3xl">
-              <span className="inline-block bg-[#F5B700] text-[#141414] px-2.5 py-0.5 font-display text-xs uppercase border border-[#141414] mb-2 font-bold">
+              <span className="inline-block bg-[#F5B700] text-[#141414] px-2.5 py-0.5 font-body font-extrabold text-xs uppercase tracking-wide border border-[#141414] mb-2">
                 FAQ RESMI • KOTAK SURAT PANITIA • KONTAK SEKRETARIAT OSIS
               </span>
               <h1 className="font-display text-3xl sm:text-5xl uppercase text-[#141414] tracking-tight leading-none">
@@ -164,13 +164,13 @@ export default function TanyaJawabPage() {
                   KOTAK SURAT PANITIA ESCAPE
                 </h2>
               </div>
-              <span className="bg-[#F5B700] text-[#141414] font-display text-xs px-2 py-0.5 border border-[#141414] font-bold">
+              <span className="bg-[#F5B700] text-[#141414] font-body font-extrabold text-xs px-2 py-0.5 border border-[#141414]">
                 P-01
               </span>
             </div>
 
             <div className="p-6 space-y-5">
-              <p className="font-body text-xs sm:text-sm text-[#404940] leading-relaxed">
+              <p className="font-body text-xs sm:text-sm text-[#404940] leading-relaxed font-medium">
                 Butuh informasi khusus rombongan sekolah, pertanyaan sponsorship, atau mengalami kendala teknis? Tulis transmisi pesanmu langsung ke tim desk panitia.
               </p>
 
@@ -184,14 +184,14 @@ export default function TanyaJawabPage() {
                   <h3 className="font-display text-xl uppercase text-[#141414]">
                     Pesan Berhasil Terkirim!
                   </h3>
-                  <p className="font-body text-xs text-[#141414]">
+                  <p className="font-body text-xs text-[#141414] font-semibold">
                     Terima kasih telah menghubungi panitia ESCAPE 2027. Tim sekretariat akan membalas via WhatsApp/Email dalam 1x24 jam kerja.
                   </p>
                 </motion.div>
               ) : (
                 <form onSubmit={handleSubmit} className="space-y-4">
                   <div>
-                    <label className="block font-display text-xs uppercase text-[#141414] mb-1">
+                    <label className="block font-body font-bold text-xs sm:text-sm uppercase tracking-wide text-[#141414] mb-1">
                       Nama Lengkap Siswa / Orang Tua *
                     </label>
                     <input
@@ -200,12 +200,12 @@ export default function TanyaJawabPage() {
                       value={formData.nama}
                       onChange={(e) => setFormData({ ...formData, nama: e.target.value })}
                       placeholder="Contoh: Arya Bimantara / Ibu Sulistiyowati"
-                      className="w-full p-2.5 bg-white border-2 border-[#141414] font-body text-xs focus:outline-none focus:border-[#0B5E2E] shadow-[2px_2px_0px_#141414]"
+                      className="w-full p-2.5 bg-white border-2 border-[#141414] font-body text-xs font-semibold focus:outline-none focus:border-[#0B5E2E] shadow-[2px_2px_0px_#141414]"
                     />
                   </div>
 
                   <div>
-                    <label className="block font-display text-xs uppercase text-[#141414] mb-1">
+                    <label className="block font-body font-bold text-xs sm:text-sm uppercase tracking-wide text-[#141414] mb-1">
                       Asal Kelas / Sekolah *
                     </label>
                     <input
@@ -213,13 +213,13 @@ export default function TanyaJawabPage() {
                       required
                       value={formData.sekolah}
                       onChange={(e) => setFormData({ ...formData, sekolah: e.target.value })}
-                      placeholder="Contoh: XII MIPA 4 SMAN 16 Surabaya / Tamu Luar"
-                      className="w-full p-2.5 bg-white border-2 border-[#141414] font-body text-xs focus:outline-none focus:border-[#0B5E2E] shadow-[2px_2px_0px_#141414]"
+                      placeholder="Contoh: XII-4 SMAN 16 Surabaya / Tamu Luar"
+                      className="w-full p-2.5 bg-white border-2 border-[#141414] font-body text-xs font-semibold focus:outline-none focus:border-[#0B5E2E] shadow-[2px_2px_0px_#141414]"
                     />
                   </div>
 
                   <div>
-                    <label className="block font-display text-xs uppercase text-[#141414] mb-1">
+                    <label className="block font-body font-bold text-xs sm:text-sm uppercase tracking-wide text-[#141414] mb-1">
                       Nomor WhatsApp / Email Aktif *
                     </label>
                     <input
@@ -228,12 +228,12 @@ export default function TanyaJawabPage() {
                       value={formData.kontak}
                       onChange={(e) => setFormData({ ...formData, kontak: e.target.value })}
                       placeholder="Contoh: 0812-3456-7890 atau email@domain.com"
-                      className="w-full p-2.5 bg-white border-2 border-[#141414] font-body text-xs focus:outline-none focus:border-[#0B5E2E] shadow-[2px_2px_0px_#141414]"
+                      className="w-full p-2.5 bg-white border-2 border-[#141414] font-body text-xs font-semibold focus:outline-none focus:border-[#0B5E2E] shadow-[2px_2px_0px_#141414]"
                     />
                   </div>
 
                   <div>
-                    <label htmlFor="kategori-pertanyaan" className="block font-display text-xs uppercase text-[#141414] mb-1">
+                    <label htmlFor="kategori-pertanyaan" className="block font-body font-bold text-xs sm:text-sm uppercase tracking-wide text-[#141414] mb-1">
                       Kategori Pertanyaan *
                     </label>
                     <select
@@ -251,7 +251,7 @@ export default function TanyaJawabPage() {
                   </div>
 
                   <div>
-                    <label className="block font-display text-xs uppercase text-[#141414] mb-1">
+                    <label className="block font-body font-bold text-xs sm:text-sm uppercase tracking-wide text-[#141414] mb-1">
                       Isi Pertanyaan Detail *
                     </label>
                     <textarea
@@ -260,13 +260,13 @@ export default function TanyaJawabPage() {
                       value={formData.pertanyaan}
                       onChange={(e) => setFormData({ ...formData, pertanyaan: e.target.value })}
                       placeholder="Tuliskan pertanyaanmu secara lengkap dan jelas di sini..."
-                      className="w-full p-2.5 bg-white border-2 border-[#141414] font-body text-xs focus:outline-none focus:border-[#0B5E2E] shadow-[2px_2px_0px_#141414]"
+                      className="w-full p-2.5 bg-white border-2 border-[#141414] font-body text-xs font-semibold focus:outline-none focus:border-[#0B5E2E] shadow-[2px_2px_0px_#141414]"
                     />
                   </div>
 
                   <button
                     type="submit"
-                    className="comic-btn w-full bg-[#0B5E2E] text-[#FAF8F2] font-display text-xs sm:text-sm uppercase py-3 border-3 border-[#141414] shadow-[4px_4px_0px_#141414] hover:bg-[#1F6C3A] flex items-center justify-center gap-2 cursor-pointer"
+                    className="comic-btn w-full bg-[#0B5E2E] text-[#FAF8F2] font-body font-bold text-xs sm:text-sm uppercase tracking-wider py-3.5 border-3 border-[#141414] shadow-[4px_4px_0px_#141414] hover:bg-[#1F6C3A] flex items-center justify-center gap-2 cursor-pointer"
                   >
                     <Send className="w-4 h-4 text-[#F5B700]" />
                     <span>Kirim Pesan ke Panitia</span>
@@ -275,7 +275,7 @@ export default function TanyaJawabPage() {
               )}
             </div>
 
-            <div className="border-t-2 border-[#141414] bg-[#EAE5D9] p-3 text-center font-display text-[10px] uppercase tracking-widest text-[#404940] font-bold">
+            <div className="border-t-2 border-[#141414] bg-[#EAE5D9] p-3 text-center font-body text-[10px] uppercase tracking-widest text-[#404940] font-extrabold">
               OFFICIAL DISPATCH SYSTEM // ESCAPE ISSUE XVI
             </div>
           </section>
@@ -289,7 +289,7 @@ export default function TanyaJawabPage() {
                   TANYA JAWAB (FAQ) TERVERIFIKASI
                 </h2>
               </div>
-              <span className="bg-[#0B5E2E] text-[#FAF8F2] font-display text-xs uppercase px-2.5 py-0.5 border border-[#141414]">
+              <span className="bg-[#0B5E2E] text-[#FAF8F2] font-body font-bold text-xs uppercase tracking-wide px-2.5 py-0.5 border border-[#141414]">
                 6 TOPIK UTAMA
               </span>
             </div>
@@ -308,14 +308,14 @@ export default function TanyaJawabPage() {
                       className="w-full text-left p-4 sm:p-5 flex justify-between items-start gap-4 hover:bg-[#EAE5D9]/40 transition-colors cursor-pointer"
                     >
                       <div className="flex items-start gap-3">
-                        <span className="bg-[#0B5E2E] text-[#FAF8F2] font-display text-xs w-7 h-7 flex items-center justify-center border-2 border-[#141414] shrink-0 shadow-[2px_2px_0px_#141414]">
+                        <span className="bg-[#0B5E2E] text-[#FAF8F2] font-body font-extrabold text-xs w-7 h-7 flex items-center justify-center border-2 border-[#141414] shrink-0 shadow-[2px_2px_0px_#141414]">
                           0{idx + 1}
                         </span>
                         <div>
-                          <span className="block font-display text-xs text-[#0B5E2E] uppercase">
+                          <span className="block font-body font-bold text-xs text-[#0B5E2E] uppercase tracking-wide">
                             {faq.category}
                           </span>
-                          <span className="font-display text-sm sm:text-base text-[#141414] uppercase pt-0.5 block leading-tight">
+                          <span className="font-body font-extrabold text-sm sm:text-base text-[#141414] uppercase pt-0.5 block leading-snug">
                             {faq.question}
                           </span>
                         </div>
@@ -341,7 +341,7 @@ export default function TanyaJawabPage() {
                             <div className="flex items-start gap-3">
                               <MessageSquare className="w-5 h-5 text-[#0B5E2E] shrink-0 mt-0.5" />
                               <div className="space-y-1">
-                                <span className="font-display text-xs uppercase text-[#0B5E2E] font-bold block">
+                                <span className="font-body font-extrabold text-xs uppercase tracking-wide text-[#0B5E2E] block">
                                   JAWABAN RESMI PANITIA:
                                 </span>
                                 <p className="font-body text-xs sm:text-sm text-[#141414] font-medium leading-relaxed">
@@ -364,10 +364,10 @@ export default function TanyaJawabPage() {
                 <Sparkles className="w-5 h-5" />
               </div>
               <div>
-                <h3 className="font-display text-sm uppercase text-[#0B5E2E]">
+                <h3 className="font-body font-extrabold text-sm uppercase tracking-wide text-[#0B5E2E]">
                   TIPS KUNJUNGAN EXPO
                 </h3>
-                <p className="font-body text-xs text-[#404940] mt-1 leading-relaxed">
+                <p className="font-body text-xs text-[#404940] mt-1 leading-relaxed font-medium">
                   Siapkan salinan sertifikat prestasi lomba atau rekap nilai rapor semester 1-5 Anda untuk berkonsultasi rasionalisasi prodi langsung di booth universitas impian!
                 </p>
               </div>
@@ -384,7 +384,7 @@ export default function TanyaJawabPage() {
                 KONTAK RESMI PANITIA &amp; KAMPUS SMAN 16 SURABAYA
               </h2>
             </div>
-            <span className="hidden sm:inline-block font-display text-xs uppercase tracking-widest text-[#F5B700]">
+            <span className="hidden sm:inline-block font-body font-bold text-xs uppercase tracking-widest text-[#F5B700]">
               DIREKTORI SEKRETARIAT
             </span>
           </div>
@@ -393,7 +393,7 @@ export default function TanyaJawabPage() {
             {/* Address Card */}
             <div className="bg-[#FAF8F2] border-comic-4 p-5 shadow-comic flex flex-col justify-between">
               <div>
-                <div className="flex items-center gap-2 text-[#0B5E2E] font-display text-sm uppercase mb-2">
+                <div className="flex items-center gap-2 text-[#0B5E2E] font-body font-bold text-xs sm:text-sm uppercase tracking-wide mb-2">
                   <MapPin className="w-4 h-4 text-[#BA1A1A]" />
                   <span>LOKASI SEKRETARIAT</span>
                 </div>
@@ -401,7 +401,7 @@ export default function TanyaJawabPage() {
                   Ruang Sekretariat OSIS/MPK SMAN 16 Surabaya, Jl. Prapen Indah I, Prapen, Kec. Tenggilis Mejoyo, Kota Surabaya
                 </p>
               </div>
-              <div className="mt-4 pt-3 border-t-2 border-[#141414] font-display text-[11px] uppercase text-[#404940]">
+              <div className="mt-4 pt-3 border-t-2 border-[#141414] font-body font-bold text-[11px] uppercase tracking-wide text-[#404940]">
                 Gedung Utama SMAN 16 Lantai 1
               </div>
             </div>
@@ -409,7 +409,7 @@ export default function TanyaJawabPage() {
             {/* WhatsApp Card */}
             <div className="bg-[#FAF8F2] border-comic-4 p-5 shadow-comic flex flex-col justify-between">
               <div>
-                <div className="flex items-center gap-2 text-[#0B5E2E] font-display text-sm uppercase mb-2">
+                <div className="flex items-center gap-2 text-[#0B5E2E] font-body font-bold text-xs sm:text-sm uppercase tracking-wide mb-2">
                   <PhoneCall className="w-4 h-4 text-[#0B5E2E]" />
                   <span>WHATSAPP SIE ACARA</span>
                 </div>
@@ -417,15 +417,15 @@ export default function TanyaJawabPage() {
                   href="https://wa.me/6281234567890"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="font-display text-xl text-[#0B5E2E] hover:underline block leading-tight"
+                  className="font-body font-black text-xl text-[#0B5E2E] hover:underline block leading-tight tracking-wider"
                 >
                   +62 812-3456-7890
                 </a>
-                <p className="font-body text-xs text-[#404940] mt-1.5 leading-relaxed">
+                <p className="font-body text-xs text-[#404940] mt-1.5 leading-relaxed font-medium">
                   Layanan pesan cepat untuk informasi darurat, konfirmasi rombongan sekolah, &amp; validasi presensi.
                 </p>
               </div>
-              <div className="mt-4 pt-3 border-t-2 border-[#141414] font-display text-[11px] uppercase text-[#404940]">
+              <div className="mt-4 pt-3 border-t-2 border-[#141414] font-body font-bold text-[11px] uppercase tracking-wide text-[#404940]">
                 Senin - Sabtu (08.00 - 16.00 WIB)
               </div>
             </div>
@@ -433,7 +433,7 @@ export default function TanyaJawabPage() {
             {/* Instagram Card */}
             <div className="bg-[#FAF8F2] border-comic-4 p-5 shadow-comic flex flex-col justify-between">
               <div>
-                <div className="flex items-center gap-2 text-[#0B5E2E] font-display text-sm uppercase mb-2">
+                <div className="flex items-center gap-2 text-[#0B5E2E] font-body font-bold text-xs sm:text-sm uppercase tracking-wide mb-2">
                   <Share2 className="w-4 h-4 text-[#D97706]" />
                   <span>INSTAGRAM RESMI</span>
                 </div>
@@ -441,15 +441,15 @@ export default function TanyaJawabPage() {
                   href="https://instagram.com/escapesman16"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="font-display text-xl text-[#0B5E2E] hover:underline block leading-tight"
+                  className="font-body font-black text-xl text-[#0B5E2E] hover:underline block leading-tight tracking-wider"
                 >
                   @escapesman16
                 </a>
-                <p className="font-body text-xs text-[#404940] mt-1.5 leading-relaxed">
+                <p className="font-body text-xs text-[#404940] mt-1.5 leading-relaxed font-medium">
                   Ikuti highlight kakak alumni, live story hari-H, dan pengumuman kuis doorprize expo!
                 </p>
               </div>
-              <div className="mt-4 pt-3 border-t-2 border-[#141414] font-display text-[11px] uppercase text-[#404940]">
+              <div className="mt-4 pt-3 border-t-2 border-[#141414] font-body font-bold text-[11px] uppercase tracking-wide text-[#404940]">
                 #ESCAPE2027 #SMAN16Surabaya
               </div>
             </div>
