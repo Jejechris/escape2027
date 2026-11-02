@@ -277,8 +277,7 @@ export default function AlumniPage() {
         alumni.campus.toLowerCase().includes(q) ||
         alumni.major.toLowerCase().includes(q) ||
         alumni.classGroup.toLowerCase().includes(q) ||
-        alumni.track.toLowerCase().includes(q) ||
-        alumni.focus.toLowerCase().includes(q);
+        (alumni.quote && alumni.quote.toLowerCase().includes(q));
 
       return matchClass && matchSearch;
     });
@@ -411,57 +410,62 @@ export default function AlumniPage() {
                 className="bg-[#FAF8F2] border-comic-4 shadow-comic flex flex-col justify-between hover:-translate-y-1 transition-transform overflow-hidden"
               >
                 <div>
-                  {/* Header ribbon with CLASS badge & track */}
-                  <div className="bg-[#EAE5D9] border-b-2 border-[#141414] p-3 flex justify-between items-center">
-                    <span className="bg-[#141414] text-[#FAF8F2] text-xs font-display uppercase px-2.5 py-0.5 border border-[#141414]">
-                      {alumni.classGroup}
+                  {/* Header ribbon with CLASS badge & Campus */}
+                  <div className="bg-[#EAE5D9] border-b-2 border-[#141414] px-4 py-2.5 flex justify-between items-center">
+                    <span className="bg-[#141414] text-[#FAF8F2] text-xs sm:text-sm font-display uppercase px-3 py-1 border border-[#141414] font-bold shadow-comic-sm">
+                      KELAS {alumni.classGroup}
                     </span>
-                    <span className="bg-[#F5B700] text-[#141414] text-[10px] font-display uppercase px-2 py-0.5 border border-[#141414] font-bold">
-                      {alumni.track}
+                    <span className="bg-[#0B5E2E] text-white text-xs sm:text-sm font-display uppercase px-3 py-1 border border-[#141414] font-bold shadow-comic-sm">
+                      {alumni.shortCampus}
                     </span>
                   </div>
 
-                  <div className="p-5 flex flex-col gap-3">
-                    <div className="flex items-start gap-3">
+                  <div className="p-5 sm:p-6 flex flex-col gap-4">
+                    <div className="flex items-start gap-3.5">
                       <div
-                        className={`w-12 h-12 ${alumni.avatarBg} text-white border-2 border-[#141414] shadow-[2px_2px_0px_#141414] flex items-center justify-center font-display text-sm font-bold flex-shrink-0`}
+                        className={`w-14 h-14 ${alumni.avatarBg} text-white border-2 border-[#141414] shadow-[3px_3px_0px_#141414] flex items-center justify-center font-display text-base font-bold flex-shrink-0`}
                       >
                         {alumni.avatarText}
                       </div>
-                      <div>
-                        <h3 className="font-display text-lg uppercase text-[#141414] leading-tight">
+                      <div className="flex-1 min-w-0">
+                        <h3 className="font-display text-xl sm:text-2xl uppercase text-[#141414] leading-tight">
                           {alumni.name}
                         </h3>
-                      <p className="font-body text-xs text-[#0B5E2E] font-bold mt-0.5">
-                        {alumni.major}
-                      </p>
-                      <p className="font-body text-[11px] text-[#404940]">
-                        {alumni.campus} • {alumni.batchName}
-                      </p>
+                        <p className="font-body text-sm sm:text-base text-[#0B5E2E] font-bold mt-1 leading-snug">
+                          {alumni.major}
+                        </p>
+                        <p className="font-body text-xs sm:text-sm text-[#404940] font-semibold mt-0.5">
+                          {alumni.campus} • {alumni.batchName}
+                        </p>
+                      </div>
                     </div>
+
+                    {/* Prominent Noted & Tips/Trick dari Alumni */}
+                    {alumni.quote && (
+                      <div className="bg-[#FEF08A] border-2 border-[#141414] p-4 shadow-comic-sm relative mt-1">
+                        <div className="flex items-center gap-1.5 mb-1.5">
+                          <span className="text-base">💡</span>
+                          <span className="font-display text-xs sm:text-sm uppercase tracking-wide text-[#141414] font-bold">
+                            NOTED TIPS &amp; TRIK DARI KAKAK {alumni.classGroup}:
+                          </span>
+                        </div>
+                        <p className="font-body text-xs sm:text-sm text-[#141414] font-semibold leading-relaxed italic">
+                          &ldquo;{alumni.quote}&rdquo;
+                        </p>
+                      </div>
+                    )}
                   </div>
-
-                  <p className="font-body text-xs text-[#404940] bg-[#EAE5D9]/50 p-2.5 border border-[#141414]/30 leading-relaxed">
-                    <strong>Fokus &amp; Rekam Jejak:</strong> {alumni.focus}
-                  </p>
-
-                  {alumni.quote && (
-                    <p className="font-body text-xs italic text-[#141414] bg-white p-2 border border-[#141414]">
-                      &ldquo;{alumni.quote}&rdquo;
-                    </p>
-                  )}
                 </div>
-              </div>
 
-              <div className="p-5 pt-0">
-                <button
-                  onClick={() => setSelectedAlumniModal(alumni)}
-                  className="comic-btn w-full bg-[#FAF8F2] text-[#141414] font-display text-xs uppercase py-2.5 border-2 border-[#141414] shadow-[2px_2px_0px_#141414] hover:bg-[#F5B700] flex items-center justify-center gap-1.5 cursor-pointer"
-                >
-                  <MessageSquare className="w-3.5 h-3.5 text-[#0B5E2E]" />
-                  <span>Tanya Tips &amp; Pengalaman ({alumni.classGroup})</span>
-                </button>
-              </div>
+                <div className="p-5 sm:p-6 pt-0">
+                  <button
+                    onClick={() => setSelectedAlumniModal(alumni)}
+                    className="comic-btn w-full bg-[#FAF8F2] text-[#141414] font-display text-xs sm:text-sm uppercase py-3 border-2 border-[#141414] shadow-[3px_3px_0px_#141414] hover:bg-[#F5B700] flex items-center justify-center gap-2 cursor-pointer font-bold"
+                  >
+                    <MessageSquare className="w-4 h-4 text-[#0B5E2E]" />
+                    <span>Tanya Tips &amp; Pengalaman ({alumni.classGroup})</span>
+                  </button>
+                </div>
             </div>
           ))}
           </div>
@@ -512,22 +516,37 @@ export default function AlumniPage() {
               </button>
 
               <div className="space-y-4">
-                <div className="flex items-center gap-3">
-                  <div className={`w-12 h-12 ${selectedAlumniModal.avatarBg} text-white border-2 border-[#141414] shadow-[2px_2px_0px_#141414] flex items-center justify-center font-display text-sm font-bold flex-shrink-0`}>
+                <div className="flex items-start gap-3.5">
+                  <div className={`w-14 h-14 ${selectedAlumniModal.avatarBg} text-white border-2 border-[#141414] shadow-[3px_3px_0px_#141414] flex items-center justify-center font-display text-base font-bold flex-shrink-0`}>
                     {selectedAlumniModal.avatarText}
                   </div>
                   <div>
-                    <span className="bg-[#0B5E2E] text-[#FAF8F2] font-display text-[10px] uppercase px-2 py-0.5 border border-[#141414]">
-                      {selectedAlumniModal.classGroup} • ALUMNI SIXTEEN
+                    <span className="bg-[#0B5E2E] text-[#FAF8F2] font-display text-xs uppercase px-2.5 py-0.5 border border-[#141414] font-bold">
+                      KELAS {selectedAlumniModal.classGroup} • ALUMNI SIXTEEN
                     </span>
-                    <h3 className="font-display text-xl uppercase text-[#141414] leading-tight mt-1">
+                    <h3 className="font-display text-2xl uppercase text-[#141414] leading-tight mt-1">
                       {selectedAlumniModal.name}
                     </h3>
-                    <p className="font-body text-xs text-[#404940] font-semibold">
+                    <p className="font-body text-sm text-[#0B5E2E] font-bold">
                       {selectedAlumniModal.major} • {selectedAlumniModal.campus}
                     </p>
                   </div>
                 </div>
+
+                {/* Noted tips & trick inside modal */}
+                {selectedAlumniModal.quote && (
+                  <div className="bg-[#FEF08A] border-2 border-[#141414] p-3.5 shadow-comic-sm">
+                    <div className="flex items-center gap-1.5 mb-1">
+                      <span className="text-sm">💡</span>
+                      <span className="font-display text-xs uppercase text-[#141414] font-bold">
+                        NOTED DARI KAKAK {selectedAlumniModal.classGroup}:
+                      </span>
+                    </div>
+                    <p className="font-body text-xs sm:text-sm text-[#141414] font-semibold italic">
+                      &ldquo;{selectedAlumniModal.quote}&rdquo;
+                    </p>
+                  </div>
+                )}
 
                 {consultationSuccess ? (
                   <motion.div
@@ -539,20 +558,20 @@ export default function AlumniPage() {
                     <h3 className="font-display text-lg uppercase text-[#141414]">
                       Permintaan Konsultasi Terkirim!
                     </h3>
-                    <p className="font-body text-xs text-[#141414]">
+                    <p className="font-body text-xs sm:text-sm text-[#141414] font-medium">
                       Pesanmu telah dicatat panitia ESCAPE 2027. Kakak alumni akan membalas atau menemuimu di booth kampus saat hari expo!
                     </p>
                   </motion.div>
                 ) : (
-                  <form onSubmit={handleSendConsultation} className="space-y-3 pt-2">
+                  <form onSubmit={handleSendConsultation} className="space-y-3 pt-1">
                     <div>
-                      <label className="block font-display text-xs uppercase text-[#141414] mb-1">
+                      <label className="block font-display text-xs sm:text-sm uppercase text-[#141414] mb-1 font-bold">
                         Pilih Topik Konsultasi:
                       </label>
                       <select
                         value={consultTopic}
                         onChange={(e) => setConsultTopic(e.target.value)}
-                        className="w-full p-2.5 bg-white border-2 border-[#141414] font-body text-xs font-semibold focus:outline-none focus:border-[#0B5E2E]"
+                        className="w-full p-2.5 bg-white border-2 border-[#141414] font-body text-xs sm:text-sm font-semibold focus:outline-none focus:border-[#0B5E2E]"
                       >
                         <option value="Review Portofolio & Nilai Rapor">Review Portofolio & Nilai Rapor SNBP</option>
                         <option value="Strategi Lolos SNBT / UTBK">Strategi Lolos SNBT / Subtes UTBK</option>
@@ -562,35 +581,35 @@ export default function AlumniPage() {
                     </div>
 
                     <div>
-                      <label className="block font-display text-xs uppercase text-[#141414] mb-1">
+                      <label className="block font-display text-xs sm:text-sm uppercase text-[#141414] mb-1 font-bold">
                         Nama &amp; Kelasmu:
                       </label>
                       <input
                         type="text"
                         required
                         placeholder="Contoh: Rian (XI MIPA 2)"
-                        className="w-full p-2.5 bg-white border-2 border-[#141414] font-body text-xs focus:outline-none focus:border-[#0B5E2E]"
+                        className="w-full p-2.5 bg-white border-2 border-[#141414] font-body text-xs sm:text-sm focus:outline-none focus:border-[#0B5E2E] font-medium"
                       />
                     </div>
 
                     <div>
-                      <label className="block font-display text-xs uppercase text-[#141414] mb-1">
+                      <label className="block font-display text-xs sm:text-sm uppercase text-[#141414] mb-1 font-bold">
                         Pertanyaanmu:
                       </label>
                       <textarea
                         required
                         rows={3}
                         placeholder="Tanyakan hal yang ingin kamu ketahui seputar cara belajar, materi tes, atau jurusan..."
-                        className="w-full p-2.5 bg-white border-2 border-[#141414] font-body text-xs focus:outline-none focus:border-[#0B5E2E]"
+                        className="w-full p-2.5 bg-white border-2 border-[#141414] font-body text-xs sm:text-sm focus:outline-none focus:border-[#0B5E2E] font-medium"
                       />
                     </div>
 
                     <div className="pt-2 flex gap-3">
                       <button
                         type="submit"
-                        className="comic-btn flex-1 bg-[#0B5E2E] text-[#FAF8F2] font-display text-xs uppercase py-2.5 border-2 border-[#141414] shadow-[3px_3px_0px_#141414] hover:bg-[#1F6C3A] flex items-center justify-center gap-1.5 cursor-pointer"
+                        className="comic-btn flex-1 bg-[#0B5E2E] text-[#FAF8F2] font-display text-xs sm:text-sm uppercase py-3 border-2 border-[#141414] shadow-[3px_3px_0px_#141414] hover:bg-[#1F6C3A] flex items-center justify-center gap-1.5 cursor-pointer font-bold"
                       >
-                        <Send className="w-3.5 h-3.5" />
+                        <Send className="w-4 h-4" />
                         <span>Kirim Pertanyaan</span>
                       </button>
                       <button

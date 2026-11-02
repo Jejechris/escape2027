@@ -38,24 +38,24 @@ interface ZoneData {
 const ZONES: Record<"GK" | "BOOTH_JALAN" | "CHECKIN" | "FASILITAS", ZoneData> = {
   GK: {
     id: "GK",
-    name: "GEDUNG KESENIAN (GK) — AULA UTAMA",
-    subname: "Gedung Vertikal Paling Kanan • Ruang Kosong / Lesehan",
+    name: "GEDUNG KESENIAN (GK) — AULA & STAND TALKSHOW",
+    subname: "Gedung Vertikal Paling Kanan • Stand Talkshow di Paling Bawah Ujung GK",
     location: "Gedung Kesenian SMAN 16 (Gedung Paling Kanan Vertikal)",
-    capacity: "Sekitar 500 Orang Mentok (Aula Bersih & Lapang)",
-    badge: "AULA KOSONG & LESEHAN",
+    capacity: "Sekitar 500 Orang Mentok (Aula Lapang Lesehan Full AC)",
+    badge: "AULA & PANGGUNG TALKSHOW",
     color: "#0B5E2E",
     accentBg: "bg-[#0B5E2E]",
     description:
-      "Gedung megah berorientasi vertikal di sisi kanan kompleks SMAN 16 Surabaya. Ruang dalam GK dibuat bersih dan kosong tanpa sekat stan pameran, difungsikan khusus sebagai aula sirkulasi terbuka dan area lesehan sejuk berpendingin udara (Full AC) dengan daya tampung maksimal sekitar 500 orang mentok.",
+      "Gedung megah berorientasi vertikal di sisi kanan kompleks SMAN 16 Surabaya. Stand panggung talkshow berada di paling bawah ujung dari gedung GK untuk gelar wicara narasumber kampus dan alumni. Area tengah hingga utara GK difungsikan sebagai aula lapang berkarpet lesehan sejuk (Full AC) menampung sekitar 500 orang mentok tanpa sekat stan pameran.",
     highlights: [
-      "Kapasitas Maksimal: Sekitar 500 orang mentok",
-      "Area Dalam Bersih & Lapang: Tanpa stan pameran di dalam aula",
-      "Sirkulasi Nyaman: Pendingin udara (Full AC) & karpet lesehan terbuka",
-      "Pintu 1 (Ujung Vertikal Atas) & Pintu 2 (Samping Tengah Sebelah Jalan)",
+      "Stand Panggung Talkshow: Berada di paling bawah ujung dari gedung GK",
+      "Kapasitas Penonton: Sekitar 500 orang mentok (Aula lapang & lesehan Full AC)",
+      "Area Dalam Bersih & Lapang: Bebas stan pameran demi kenyamanan penonton",
+      "Dua Akses Utama: Pintu 1 (Ujung Vertikal Atas) & Pintu 2 (Samping Tengah Dekat Jalan Booth)",
     ],
     booths: [
-      "Aula Terbuka Full AC (Area Bersih)",
-      "Zonasi Lesehan Istirahat Pengunjung",
+      "Stand Panggung Talkshow (Ujung Bawah GK)",
+      "Aula Terbuka Full AC (Lesehan ~500 Orang)",
       "Pintu 1 (Akses Ujung Atas)",
       "Pintu 2 (Akses Samping Tengah)",
     ],
@@ -188,13 +188,13 @@ export default function PetaKampusPage() {
       <section className="bg-[#F5B700] border-b-4 border-[#141414] py-2 px-4 shadow-[0px_3px_0px_#141414] relative overflow-hidden">
         <div className="max-w-7xl mx-auto flex items-center justify-between font-display text-sm tracking-wide text-[#141414]">
           <div className="flex items-center gap-3">
-            <span className="bg-[#141414] text-[#FAF8F2] px-2 py-0.5 text-xs font-bold uppercase tracking-wider">
+            <span className="bg-[#141414] text-[#FAF8F2] px-2.5 py-1 text-xs sm:text-sm font-bold uppercase tracking-wider">
               DENAH RESMI ACARA
             </span>
-            <span className="hidden sm:inline">
-              ESCAPE 2027 • GEDUNG KESENIAN (GK KOSONG ~500 ORANG) • STAND TALKSHOW DEPAN GK • MEJA CHECK-IN SAMPING PINTU
+            <span className="hidden sm:inline font-bold">
+              ESCAPE 2027 • GEDUNG KESENIAN (GK KOSONG ~500 ORANG) • STAND TALKSHOW DI UJUNG BAWAH GK • MEJA CHECK-IN SAMPING PINTU 2
             </span>
-            <span className="sm:hidden">GK KOSONG ~500 ORANG • JALAN STAN KE KIRI</span>
+            <span className="sm:hidden font-bold">GK KOSONG ~500 ORANG • TALKSHOW UJUNG BAWAH GK</span>
           </div>
           <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-widest bg-[#FAF8F2] px-3 py-1 border-2 border-[#141414] shadow-[2px_2px_0px_#141414]">
             <span className="w-2.5 h-2.5 rounded-full bg-[#0B5E2E] animate-pulse"></span>
@@ -213,14 +213,14 @@ export default function PetaKampusPage() {
 
           <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-6 pt-2">
             <div className="max-w-3xl">
-              <span className="inline-block bg-[#0B5E2E] text-[#FAF8F2] px-2.5 py-0.5 font-display text-xs uppercase border border-[#141414] mb-2">
-                GEDUNG UTAMA GK (VERTIKAL KANAN) • STAND TALKSHOW DEPAN GK • MEJA CHECK-IN SAMPING PINTU DEKAT BOOTH
+              <span className="inline-block bg-[#0B5E2E] text-[#FAF8F2] px-3 py-1 font-display text-xs sm:text-sm uppercase border-2 border-[#141414] mb-2 font-bold shadow-comic-sm">
+                GEDUNG UTAMA GK (VERTIKAL KANAN) • STAND TALKSHOW DI PALING BAWAH UJUNG GK • MEJA CHECK-IN SAMPING PINTU 2
               </span>
               <h1 className="font-display text-3xl sm:text-5xl uppercase text-[#141414] tracking-tight leading-none">
                 DENAH LOKASI ACARA EXPO ESCAPE 2027
               </h1>
-              <p className="font-body text-sm sm:text-base text-[#404940] mt-3 font-medium leading-relaxed">
-                Panduan tata letak acara: <strong>Gedung Kesenian (GK)</strong> di sisi vertikal paling kanan sebagai aula utama ber-AC yang bersih dan kosong (kapasitas sekitar 500 orang mentok), <strong>stand talkshow</strong> persis di depan GK, <strong>meja check-in</strong> di samping pintu masuk samping dekat booth, dan <strong>jalan stan abu-abu</strong> yang memanjang ke kiri.
+              <p className="font-body text-sm sm:text-base text-[#404940] mt-3 font-semibold leading-relaxed">
+                Panduan tata letak acara: <strong>Gedung Kesenian (GK)</strong> di sisi vertikal paling kanan sebagai aula utama ber-AC yang lapang dan kosong (kapasitas sekitar 500 orang mentok), <strong>stand panggung talkshow</strong> berada di paling bawah ujung dari gedung GK, <strong>meja check-in</strong> di samping pintu masuk samping (Pintu 2 GK) dekat booth, dan <strong>jalan stan abu-abu</strong> yang memanjang ke kiri.
               </p>
             </div>
 
@@ -259,17 +259,17 @@ export default function PetaKampusPage() {
                 </div>
 
                 <div className="flex items-center gap-2 text-xs flex-wrap">
-                  <span className="flex items-center gap-1 font-body text-[11px] font-bold uppercase bg-[#EAE5D9] px-2 py-0.5 border border-[#141414]">
-                    <span className="w-2.5 h-2.5 bg-[#0B5E2E] border border-[#141414] inline-block"></span> GK Kosong (~500 Orang)
+                  <span className="flex items-center gap-1.5 font-body text-xs sm:text-sm font-bold uppercase bg-[#EAE5D9] px-3 py-1 border-2 border-[#141414] shadow-comic-sm">
+                    <span className="w-3.5 h-3.5 bg-[#0B5E2E] border border-[#141414] inline-block"></span> GK Kosong (~500 Orang)
                   </span>
-                  <span className="flex items-center gap-1 font-body text-[11px] font-bold uppercase bg-[#EAE5D9] px-2 py-0.5 border border-[#141414]">
-                    <span className="w-2.5 h-2.5 bg-[#F5B700] border border-[#141414] inline-block"></span> Stand Talkshow Depan GK
+                  <span className="flex items-center gap-1.5 font-body text-xs sm:text-sm font-bold uppercase bg-[#EAE5D9] px-3 py-1 border-2 border-[#141414] shadow-comic-sm">
+                    <span className="w-3.5 h-3.5 bg-[#F5B700] border border-[#141414] inline-block"></span> Stand Talkshow Ujung Bawah GK
                   </span>
-                  <span className="flex items-center gap-1 font-body text-[11px] font-bold uppercase bg-[#EAE5D9] px-2 py-0.5 border border-[#141414]">
-                    <span className="w-2.5 h-2.5 bg-[#A8A29E] border border-[#141414] inline-block"></span> Jalan Booth Abu-Abu
+                  <span className="flex items-center gap-1.5 font-body text-xs sm:text-sm font-bold uppercase bg-[#EAE5D9] px-3 py-1 border-2 border-[#141414] shadow-comic-sm">
+                    <span className="w-3.5 h-3.5 bg-[#A8A29E] border border-[#141414] inline-block"></span> Jalan Booth Abu-Abu
                   </span>
-                  <span className="flex items-center gap-1 font-body text-[11px] font-bold uppercase bg-[#EAE5D9] px-2 py-0.5 border border-[#141414]">
-                    <span className="w-2.5 h-2.5 bg-[#FEF08A] border border-[#141414] inline-block"></span> Check-in Samping Pintu
+                  <span className="flex items-center gap-1.5 font-body text-xs sm:text-sm font-bold uppercase bg-[#EAE5D9] px-3 py-1 border-2 border-[#141414] shadow-comic-sm">
+                    <span className="w-3.5 h-3.5 bg-[#FEF08A] border border-[#141414] inline-block"></span> Check-in Samping Pintu 2
                   </span>
                 </div>
               </div>
@@ -277,16 +277,16 @@ export default function PetaKampusPage() {
               {/* THE PURE COMIC ARCHITECTURAL CAMPUS MAP SVG */}
               <div className="relative w-full aspect-[4/3] bg-[#FAF8F2] border-[3px] border-[#141414] overflow-hidden select-none shadow-inner">
                 {/* Compass Rose */}
-                <div className="absolute top-3 left-3 z-20 bg-[#FAF8F2] border-2 border-[#141414] p-1.5 sm:p-2 shadow-[2px_2px_0px_#141414] text-center">
-                  <div className="font-display text-[10px] sm:text-xs text-[#0B5E2E] font-bold">U (UTARA)</div>
-                  <div className="w-5 h-5 mx-auto flex items-center justify-center">
-                    <Navigation className="w-4 h-4 text-[#0B5E2E]" />
+                <div className="absolute top-3 left-3 z-20 bg-[#FAF8F2] border-2 border-[#141414] p-2 shadow-[2px_2px_0px_#141414] text-center">
+                  <div className="font-display text-xs sm:text-sm text-[#0B5E2E] font-bold">U (UTARA)</div>
+                  <div className="w-6 h-6 mx-auto flex items-center justify-center">
+                    <Navigation className="w-5 h-5 text-[#0B5E2E]" />
                   </div>
-                  <div className="font-body text-[8px] uppercase tracking-tighter text-[#404940] font-bold">ORIENTASI ACARA</div>
+                  <div className="font-body text-[9px] uppercase tracking-wider text-[#404940] font-bold">ORIENTASI ACARA</div>
                 </div>
 
                 {/* Sound Effect Badges */}
-                <div className="absolute top-4 right-4 z-20 bg-[#F5B700] border-2 border-[#141414] px-2.5 py-1 shadow-[2px_2px_0px_#141414] font-display text-[11px] text-[#141414] pointer-events-none transform rotate-1">
+                <div className="absolute top-4 right-4 z-20 bg-[#F5B700] border-2 border-[#141414] px-3 py-1.5 shadow-[2px_2px_0px_#141414] font-display text-xs sm:text-sm text-[#141414] pointer-events-none transform rotate-1 font-bold">
                   ★ ARENA UTAMA: GK VERTIKAL ★
                 </div>
 
@@ -314,48 +314,51 @@ export default function PetaKampusPage() {
 
                   <rect width="900" height="650" fill="url(#comic-grid-pure)" />
 
-                  {/* Nature / Courtyard Backdrop (Bersih Tanpa Ornamen Yang Kurang Jelas) */}
+                  {/* Nature / Courtyard Backdrop */}
                   <rect x="20" y="20" width="860" height="610" fill="#FAF8F2" />
 
                   {/* ================= NORTH HORIZONTAL BUILDING (GEDUNG KELAS UTARA) ================= */}
                   <g id="gedung-utara">
-                    <rect x="75" y="80" width="470" height="130" fill="#141414" rx="2" />
-                    <rect x="70" y="75" width="470" height="130" fill="#EAE5D9" stroke="#141414" strokeWidth="3.5" rx="2" />
-                    <polygon points="70,75 540,75 490,140 120,140" fill="#DCDAD4" stroke="#141414" strokeWidth="1.5" />
-                    <text x="140" y="115" fill="#141414" fontFamily="Anton, sans-serif" fontSize="15" letterSpacing="1">
+                    <rect x="55" y="75" width="510" height="125" fill="#141414" rx="2" />
+                    <rect x="50" y="70" width="510" height="125" fill="#EAE5D9" stroke="#141414" strokeWidth="3.5" rx="2" />
+                    <polygon points="50,70 560,70 515,135 95,135" fill="#DCDAD4" stroke="#141414" strokeWidth="1.5" />
+                    <text x="110" y="108" fill="#141414" fontFamily="Anton, sans-serif" fontSize="16" letterSpacing="1">
                       GEDUNG KELAS UTARA (RUANG TRANSIT &amp; OSIS)
                     </text>
-                    <text x="140" y="132" fill="#404940" fontFamily="Plus Jakarta Sans, sans-serif" fontSize="10" fontWeight="700">
+                    <text x="110" y="128" fill="#404940" fontFamily="Plus Jakarta Sans, sans-serif" fontSize="12" fontWeight="700">
                       Zona Akademik &amp; Ruang Panitia SMAN 16 Surabaya
                     </text>
                   </g>
 
                   {/* ================= SOUTHWEST BUILDING (MUSHOLLA BAITUL 'ILMI) ================= */}
                   <g id="gedung-selatan-kiri" onClick={() => setSelectedZone("FASILITAS")} className="cursor-pointer">
-                    <rect x="75" y="445" width="210" height="130" fill="#141414" rx="2" />
-                    <rect x="70" y="440" width="210" height="130" fill="#EAE5D9" stroke="#141414" strokeWidth="3" rx="2" />
-                    <polygon points="70,440 280,440 250,505 100,505" fill="#DCDAD4" stroke="#141414" strokeWidth="1" />
-                    <rect x="80" y="450" width="90" height="22" fill="#0B5E2E" stroke="#141414" strokeWidth="1" />
-                    <text x="88" y="465" fill="#FFFFFF" fontFamily="Anton, sans-serif" fontSize="11">
+                    <rect x="55" y="445" width="235" height="135" fill="#141414" rx="2" />
+                    <rect x="50" y="440" width="235" height="135" fill="#EAE5D9" stroke="#141414" strokeWidth="3" rx="2" />
+                    <polygon points="50,440 285,440 255,505 80,505" fill="#DCDAD4" stroke="#141414" strokeWidth="1" />
+                    <rect x="65" y="450" width="115" height="26" fill="#0B5E2E" stroke="#141414" strokeWidth="1" />
+                    <text x="73" y="468" fill="#FFFFFF" fontFamily="Anton, sans-serif" fontSize="13">
                       BAITUL &apos;ILMI
                     </text>
-                    <text x="80" y="495" fill="#141414" fontFamily="Anton, sans-serif" fontSize="14">
+                    <text x="65" y="498" fill="#141414" fontFamily="Anton, sans-serif" fontSize="16">
                       MUSHOLLA UTAMA
                     </text>
-                    <text x="80" y="525" fill="#404940" fontFamily="Plus Jakarta Sans, sans-serif" fontSize="9.5" fontWeight="700">
+                    <text x="65" y="528" fill="#404940" fontFamily="Plus Jakarta Sans, sans-serif" fontSize="12" fontWeight="700">
                       Kapasitas 120 Jamaah • Area Wudhu Luas
                     </text>
                   </g>
 
                   {/* ================= SOUTH MIDDLE BUILDING ================= */}
                   <g id="gedung-selatan-tengah">
-                    <rect x="315" y="455" width="165" height="115" fill="#141414" rx="2" />
-                    <rect x="310" y="450" width="165" height="115" fill="#EAE5D9" stroke="#141414" strokeWidth="3" rx="2" />
-                    <text x="325" y="500" fill="#141414" fontFamily="Anton, sans-serif" fontSize="13">
-                      RUANG KELAS &amp; OSIS
+                    <rect x="305" y="455" width="120" height="120" fill="#141414" rx="2" />
+                    <rect x="300" y="450" width="120" height="120" fill="#EAE5D9" stroke="#141414" strokeWidth="3" rx="2" />
+                    <text x="312" y="495" fill="#141414" fontFamily="Anton, sans-serif" fontSize="14">
+                      RUANG KELAS
                     </text>
-                    <text x="325" y="520" fill="#404940" fontFamily="Plus Jakarta Sans, sans-serif" fontSize="9" fontWeight="600">
-                      Pos Logistik &amp; Media Center
+                    <text x="312" y="515" fill="#141414" fontFamily="Anton, sans-serif" fontSize="12">
+                      &amp; POS LOGISTIK
+                    </text>
+                    <text x="312" y="538" fill="#404940" fontFamily="Plus Jakarta Sans, sans-serif" fontSize="10.5" fontWeight="700">
+                      Media Center SMAN 16
                     </text>
                   </g>
 
@@ -367,96 +370,114 @@ export default function PetaKampusPage() {
                   >
                     {/* Grey Road Surface */}
                     <rect
-                      x="55"
-                      y="225"
-                      width="540"
-                      height="125"
+                      x="40"
+                      y="215"
+                      width="545"
+                      height="155"
                       rx="4"
                       fill={selectedZone === "BOOTH_JALAN" ? "#D6D3D1" : "#A8A29E"}
                       stroke="#141414"
                       strokeWidth={selectedZone === "BOOTH_JALAN" ? "4.5" : "3.5"}
                       className="transition-all duration-150"
                     />
-                    <line x1="60" y1="287" x2="585" y2="287" stroke="#141414" strokeWidth="2" strokeDasharray="14 10" strokeOpacity="0.4" />
+                    <line x1="45" y1="292" x2="575" y2="292" stroke="#141414" strokeWidth="2.5" strokeDasharray="14 10" strokeOpacity="0.45" />
 
-                    <rect x="70" y="235" width="370" height="24" rx="2" fill="#141414" />
-                    <text x="80" y="251" fill="#FFFFFF" fontFamily="Anton, sans-serif" fontSize="12" letterSpacing="1">
+                    <rect x="50" y="223" width="460" height="28" rx="2" fill="#141414" />
+                    <text x="62" y="242" fill="#FFFFFF" fontFamily="Anton, sans-serif" fontSize="13.5" letterSpacing="1">
                       JALAN STAN BOOTH • MEMANJANG KE KIRI DARI DEPAN GK
                     </text>
 
                     {/* North Row Booths */}
                     <g fill="#FAF8F2" stroke="#141414" strokeWidth="2">
-                      <rect x="70" y="265" width="75" height="36" rx="2" />
-                      <rect x="155" y="265" width="75" height="36" rx="2" />
-                      <rect x="240" y="265" width="75" height="36" rx="2" />
-                      <rect x="325" y="265" width="75" height="36" rx="2" />
-                      <rect x="410" y="265" width="75" height="36" rx="2" />
-                      <rect x="495" y="265" width="75" height="36" rx="2" />
+                      <rect x="50" y="258" width="80" height="38" rx="2" />
+                      <rect x="138" y="258" width="85" height="38" rx="2" />
+                      <rect x="231" y="258" width="80" height="38" rx="2" />
+                      <rect x="319" y="258" width="75" height="38" rx="2" />
+                      <rect x="402" y="258" width="80" height="38" rx="2" />
+                      <rect x="490" y="258" width="85" height="38" rx="2" />
                     </g>
-                    <text x="76" y="287" fill="#0B5E2E" fontFamily="Anton, sans-serif" fontSize="10">PKN STAN</text>
-                    <text x="160" y="287" fill="#0B5E2E" fontFamily="Anton, sans-serif" fontSize="10">POLSTAT STIS</text>
-                    <text x="247" y="287" fill="#0B5E2E" fontFamily="Anton, sans-serif" fontSize="10">POLTEKIP</text>
-                    <text x="338" y="287" fill="#0B5E2E" fontFamily="Anton, sans-serif" fontSize="10">UBAYA</text>
-                    <text x="418" y="287" fill="#0B5E2E" fontFamily="Anton, sans-serif" fontSize="10">UK PETRA</text>
-                    <text x="502" y="287" fill="#0B5E2E" fontFamily="Anton, sans-serif" fontSize="10">ROBOTIKA</text>
+                    <text x="56" y="282" fill="#0B5E2E" fontFamily="Anton, sans-serif" fontSize="11.5">PKN STAN</text>
+                    <text x="142" y="282" fill="#0B5E2E" fontFamily="Anton, sans-serif" fontSize="11.5">POLSTAT STIS</text>
+                    <text x="238" y="282" fill="#0B5E2E" fontFamily="Anton, sans-serif" fontSize="11.5">POLTEKIP</text>
+                    <text x="330" y="282" fill="#0B5E2E" fontFamily="Anton, sans-serif" fontSize="11.5">UBAYA</text>
+                    <text x="408" y="282" fill="#0B5E2E" fontFamily="Anton, sans-serif" fontSize="11.5">UK PETRA</text>
+                    <text x="496" y="282" fill="#0B5E2E" fontFamily="Anton, sans-serif" fontSize="11.5">ROBOTIKA</text>
 
                     {/* South Row Booths */}
                     <g fill="#FAF8F2" stroke="#141414" strokeWidth="2">
-                      <rect x="70" y="306" width="95" height="36" rx="2" />
-                      <rect x="175" y="306" width="95" height="36" rx="2" />
-                      <rect x="280" y="306" width="95" height="36" rx="2" />
-                      <rect x="385" y="306" width="95" height="36" rx="2" />
-                      <rect x="490" y="306" width="85" height="36" rx="2" />
+                      <rect x="50" y="303" width="98" height="38" rx="2" />
+                      <rect x="156" y="303" width="98" height="38" rx="2" />
+                      <rect x="262" y="303" width="98" height="38" rx="2" />
+                      <rect x="368" y="303" width="102" height="38" rx="2" />
+                      <rect x="478" y="303" width="98" height="38" rx="2" />
                     </g>
-                    <text x="78" y="328" fill="#D97706" fontFamily="Anton, sans-serif" fontSize="10">BRAIN ACADEMY</text>
-                    <text x="183" y="328" fill="#D97706" fontFamily="Anton, sans-serif" fontSize="10">GANESHA OP.</text>
-                    <text x="290" y="328" fill="#D97706" fontFamily="Anton, sans-serif" fontSize="10">RUANGGURU</text>
-                    <text x="395" y="328" fill="#D97706" fontFamily="Anton, sans-serif" fontSize="10">BEASISWA S1</text>
-                    <text x="496" y="328" fill="#D97706" fontFamily="Anton, sans-serif" fontSize="10">EDUTECH</text>
+                    <text x="57" y="327" fill="#D97706" fontFamily="Anton, sans-serif" fontSize="11.5">BRAIN ACADEMY</text>
+                    <text x="162" y="327" fill="#D97706" fontFamily="Anton, sans-serif" fontSize="11.5">GANESHA OP.</text>
+                    <text x="270" y="327" fill="#D97706" fontFamily="Anton, sans-serif" fontSize="11.5">RUANGGURU</text>
+                    <text x="375" y="327" fill="#D97706" fontFamily="Anton, sans-serif" fontSize="11.5">BEASISWA S1</text>
+                    <text x="488" y="327" fill="#D97706" fontFamily="Anton, sans-serif" fontSize="11.5">EDUTECH 16</text>
 
-                    <path d="M 570 300 L 70 300" stroke="#141414" strokeWidth="3" strokeDasharray="8 6" markerEnd="url(#arr-ink)" opacity="0.6" />
-                    <rect x="200" y="212" width="180" height="20" rx="2" fill="#F5B700" stroke="#141414" strokeWidth="1.5" />
-                    <text x="210" y="226" fill="#141414" fontFamily="Anton, sans-serif" fontSize="10.5">
-                      ← ALUR JELAJAH STAN KE KIRI
+                    <path d="M 565 348 L 55 348" stroke="#141414" strokeWidth="3" strokeDasharray="8 6" markerEnd="url(#arr-ink)" opacity="0.7" />
+                    <rect x="150" y="347" width="260" height="20" rx="2" fill="#F5B700" stroke="#141414" strokeWidth="1.5" />
+                    <text x="160" y="361" fill="#141414" fontFamily="Anton, sans-serif" fontSize="11.5">
+                      ← ALUR JELAJAH STAN KE ARAH BARAT
                     </text>
                   </g>
 
-                  {/* ================= STAND PANGGUNG TALKSHOW (PERSIS DI DEPAN GK) ================= */}
-                  <g id="stand-talkshow-depan-gk" className="cursor-pointer group">
-                    <rect x="445" y="80" width="155" height="130" rx="3" fill="#141414" />
-                    <rect x="440" y="75" width="155" height="130" rx="3" fill="#FAF8F2" stroke="#141414" strokeWidth="3" />
-                    <rect x="440" y="75" width="155" height="28" fill="#F5B700" stroke="#141414" strokeWidth="2" />
-                    <text x="448" y="94" fill="#141414" fontFamily="Anton, sans-serif" fontSize="12" letterSpacing="0.5">
-                      🎤 STAND PANGGUNG TALKSHOW
+                  {/* ================= MEJA CHECK-IN: DI SAMPING PINTU 2 GK DEKAT JALUR BOOTH ================= */}
+                  <g
+                    id="meja-checkin-samping-pintu"
+                    onClick={() => setSelectedZone("CHECKIN")}
+                    className="cursor-pointer group"
+                  >
+                    <rect x="440" y="388" width="165" height="125" rx="3" fill="#141414" />
+                    <rect
+                      x="435"
+                      y="383"
+                      width="165"
+                      height="125"
+                      rx="3"
+                      fill={selectedZone === "CHECKIN" ? "#F5B700" : "#FEF08A"}
+                      stroke="#141414"
+                      strokeWidth={selectedZone === "CHECKIN" ? "4.5" : "3.5"}
+                      className="transition-all duration-150"
+                    />
+                    <rect x="435" y="383" width="165" height="28" fill="#141414" />
+                    <text x="443" y="402" fill="#FFFFFF" fontFamily="Anton, sans-serif" fontSize="12.5">
+                      📍 MEJA CHECK-IN REGISTRASI
                     </text>
-                    <rect x="450" y="110" width="135" height="46" fill="#0B5E2E" stroke="#141414" strokeWidth="1.5" rx="2" />
-                    <text x="458" y="130" fill="#FFFFFF" fontFamily="Anton, sans-serif" fontSize="12">
-                      GELAR WICARA UTAMA
+
+                    <rect x="443" y="417" width="149" height="24" fill="#0B5E2E" stroke="#141414" strokeWidth="1" rx="2" />
+                    <text x="449" y="433" fill="#FFFFFF" fontFamily="Anton, sans-serif" fontSize="11">
+                      SAMPING PINTU 2 GK (DEKAT BOOTH)
                     </text>
-                    <text x="458" y="146" fill="#F5B700" fontFamily="Plus Jakarta Sans, sans-serif" fontSize="9" fontWeight="700">
-                      Keynote Alumni &amp; Beasiswa Kampus
+
+                    <text x="443" y="458" fill="#141414" fontFamily="Plus Jakarta Sans, sans-serif" fontSize="11" fontWeight="800">
+                      Pangkal Jalur Masuk Booth
                     </text>
-                    <rect x="450" y="162" width="135" height="34" fill="#EAE5D9" stroke="#141414" strokeWidth="1" />
-                    <text x="455" y="176" fill="#141414" fontFamily="Plus Jakarta Sans, sans-serif" fontSize="8.5" fontWeight="800">
-                      📍 POSISI: PERSIS DI DEPAN GK
+                    <text x="443" y="475" fill="#404940" fontFamily="Plus Jakarta Sans, sans-serif" fontSize="10.5" fontWeight="700">
+                      Scan E-Ticket &amp; Gelang Masuk
                     </text>
-                    <text x="455" y="189" fill="#404940" fontFamily="Plus Jakarta Sans, sans-serif" fontSize="8" fontWeight="600">
-                      Sound System &amp; Mimbar Presentasi
+                    <text x="443" y="493" fill="#0B5E2E" fontFamily="Plus Jakarta Sans, sans-serif" fontSize="10" fontWeight="800">
+                      Alur Cepat ~500 Pengunjung
                     </text>
+
+                    {/* Direct connection arrow to Pintu 2 and Booth road */}
+                    <path d="M 590 440 L 610 365" stroke="#0B5E2E" strokeWidth="3.5" markerEnd="url(#arr-green)" />
                   </g>
 
-                  {/* ================= GEDUNG KESENIAN (GK) — GEDUNG PALING KANAN VERTIKAL (BENAR-BENAR KOSONG) ================= */}
+                  {/* ================= GEDUNG KESENIAN (GK) — GEDUNG PALING KANAN VERTIKAL ================= */}
                   <g
                     id="gedung-kesenian-gk"
                     onClick={() => setSelectedZone("GK")}
                     className="cursor-pointer group"
                   >
-                    <rect x="625" y="85" width="245" height="490" rx="4" fill="#141414" />
+                    <rect x="625" y="75" width="245" height="505" rx="4" fill="#141414" />
                     <rect
                       x="615"
-                      y="75"
+                      y="65"
                       width="245"
-                      height="490"
+                      height="505"
                       rx="4"
                       fill={selectedZone === "GK" ? "#0F7A3D" : "#0B5E2E"}
                       stroke="#141414"
@@ -464,117 +485,100 @@ export default function PetaKampusPage() {
                       className="transition-all duration-150"
                     />
 
-                    {/* Interior Hall Carpet Texture (AULA BERSIH TANPA STAN) */}
-                    <rect x="625" y="85" width="225" height="470" fill="#EBF7EE" stroke="#141414" strokeWidth="1.5" strokeDasharray="6 4" />
+                    {/* Interior Hall Carpet Texture (AULA BERSIH LAPANG TANPA STAN) */}
+                    <rect x="625" y="75" width="225" height="485" fill="#EBF7EE" stroke="#141414" strokeWidth="1.5" strokeDasharray="6 4" />
 
-                    {/* Open Area North Wing */}
-                    <rect x="640" y="100" width="195" height="120" fill="#FFFFFF" stroke="#0B5E2E" strokeWidth="1.5" strokeDasharray="4 4" rx="2" opacity="0.95" />
-                    <text x="652" y="150" fill="#0B5E2E" fontFamily="Anton, sans-serif" fontSize="13" letterSpacing="1">
-                      AULA KOSONG UTARA
-                    </text>
-                    <text x="652" y="170" fill="#404940" fontFamily="Plus Jakarta Sans, sans-serif" fontSize="9" fontWeight="600">
-                      Area Lesehan Berpendingin Udara (Full AC)
-                    </text>
-
-                    {/* Central Hall Banner — Ruang Kosong Kapasitas ~500 Orang */}
-                    <rect x="635" y="235" width="205" height="160" fill="#FAF8F2" stroke="#141414" strokeWidth="3" rx="2" />
-                    <rect x="640" y="240" width="195" height="26" fill="#0B5E2E" stroke="#141414" strokeWidth="1" />
-                    <text x="648" y="258" fill="#FFFFFF" fontFamily="Anton, sans-serif" fontSize="13" letterSpacing="1">
+                    {/* Central Hall Banner — Ruang Kosong Kapasitas ~500 Orang Mentok */}
+                    <rect x="635" y="95" width="205" height="175" fill="#FAF8F2" stroke="#141414" strokeWidth="3" rx="2" />
+                    <rect x="640" y="100" width="195" height="28" fill="#0B5E2E" stroke="#141414" strokeWidth="1" />
+                    <text x="648" y="120" fill="#FFFFFF" fontFamily="Anton, sans-serif" fontSize="14" letterSpacing="1">
                       GEDUNG KESENIAN (GK)
                     </text>
-                    <text x="645" y="288" fill="#141414" fontFamily="Anton, sans-serif" fontSize="15">
+                    <text x="645" y="152" fill="#141414" fontFamily="Anton, sans-serif" fontSize="16">
                       AULA UTAMA (KOSONG)
                     </text>
-                    <rect x="645" y="298" width="185" height="24" fill="#F5B700" stroke="#141414" strokeWidth="1" rx="2" />
-                    <text x="650" y="314" fill="#141414" fontFamily="Anton, sans-serif" fontSize="10.5">
+                    <rect x="645" y="162" width="185" height="28" fill="#F5B700" stroke="#141414" strokeWidth="1" rx="2" />
+                    <text x="650" y="181" fill="#141414" fontFamily="Anton, sans-serif" fontSize="11.5">
                       KAPASITAS: SEKITAR 500 ORANG MENTOK
                     </text>
-                    <text x="645" y="340" fill="#404940" fontFamily="Plus Jakarta Sans, sans-serif" fontSize="9" fontWeight="700">
-                      Ruang Terbuka Bebas Tanpa Sekat Stan
+                    <text x="645" y="210" fill="#404940" fontFamily="Plus Jakarta Sans, sans-serif" fontSize="11" fontWeight="700">
+                      Ruang Lapang Terbuka Bebas Stan
                     </text>
-                    <text x="645" y="356" fill="#404940" fontFamily="Plus Jakarta Sans, sans-serif" fontSize="8.5" fontWeight="600">
-                      Area Istirahat, Sirkulasi, &amp; Lesehan Santai
+                    <text x="645" y="228" fill="#404940" fontFamily="Plus Jakarta Sans, sans-serif" fontSize="10.5" fontWeight="600">
+                      Area Duduk Lesehan Penonton Full AC
                     </text>
-                    <text x="645" y="372" fill="#0B5E2E" fontFamily="Plus Jakarta Sans, sans-serif" fontSize="8" fontWeight="800">
+                    <text x="645" y="246" fill="#0B5E2E" fontFamily="Plus Jakarta Sans, sans-serif" fontSize="10" fontWeight="800">
                       ★ FULL AIR CONDITIONER (SEJUK) ★
                     </text>
 
-                    {/* Open Area South Wing */}
-                    <rect x="640" y="410" width="195" height="125" fill="#FFFFFF" stroke="#0B5E2E" strokeWidth="1.5" strokeDasharray="4 4" rx="2" opacity="0.95" />
-                    <text x="652" y="460" fill="#0B5E2E" fontFamily="Anton, sans-serif" fontSize="13" letterSpacing="1">
-                      AULA KOSONG SELATAN
+                    {/* Middle Audience Viewing Area */}
+                    <rect x="635" y="280" width="205" height="115" fill="#FFFFFF" stroke="#0B5E2E" strokeWidth="1.5" strokeDasharray="4 4" rx="2" opacity="0.95" />
+                    <text x="647" y="308" fill="#0B5E2E" fontFamily="Anton, sans-serif" fontSize="13.5" letterSpacing="0.5">
+                      ZONA LESEHAN PENONTON (~500 ORANG)
                     </text>
-                    <text x="652" y="480" fill="#404940" fontFamily="Plus Jakarta Sans, sans-serif" fontSize="9" fontWeight="600">
-                      Sirkulasi Pengunjung &amp; Koridor Bebas
+                    <text x="647" y="328" fill="#404940" fontFamily="Plus Jakarta Sans, sans-serif" fontSize="11" fontWeight="600">
+                      Sirkulasi Lapang &amp; Bebas Halangan
                     </text>
+                    <text x="647" y="352" fill="#BA1A1A" fontFamily="Anton, sans-serif" fontSize="12" letterSpacing="0.5">
+                      ↓↓ MENGHADAP PANGGUNG DI BAWAH ↓↓
+                    </text>
+                    <path d="M 740 360 L 740 385" stroke="#BA1A1A" strokeWidth="3" markerEnd="url(#arr-green)" />
+
+                    {/* ================= STAND PANGGUNG TALK SHOW: PALING BAWAH UJUNG DARI GEDUNG GK ================= */}
+                    <g id="stand-talkshow-ujung-bawah-gk">
+                      <rect x="625" y="405" width="225" height="155" rx="3" fill="#F5B700" stroke="#141414" strokeWidth="3.5" />
+                      <rect x="625" y="405" width="225" height="32" fill="#141414" />
+                      <text x="633" y="427" fill="#FFFFFF" fontFamily="Anton, sans-serif" fontSize="13.5" letterSpacing="0.5">
+                        🎤 STAND PANGGUNG TALK SHOW
+                      </text>
+
+                      {/* Screen / Backdrop on Stage */}
+                      <rect x="635" y="445" width="205" height="44" fill="#0B5E2E" stroke="#141414" strokeWidth="1.5" rx="2" />
+                      <text x="643" y="465" fill="#FFFFFF" fontFamily="Anton, sans-serif" fontSize="13">
+                        GELAR WICARA &amp; SHARING ALUMNI
+                      </text>
+                      <text x="643" y="481" fill="#F5B700" fontFamily="Plus Jakarta Sans, sans-serif" fontSize="10.5" fontWeight="700">
+                        Narasumber Perguruan Tinggi &amp; Beasiswa
+                      </text>
+
+                      {/* Stage info box */}
+                      <rect x="635" y="495" width="205" height="55" fill="#FAF8F2" stroke="#141414" strokeWidth="1.5" rx="2" />
+                      <text x="643" y="513" fill="#BA1A1A" fontFamily="Anton, sans-serif" fontSize="12">
+                        📍 POSISI: PALING BAWAH UJUNG DARI GEDUNG GK
+                      </text>
+                      <text x="643" y="530" fill="#141414" fontFamily="Plus Jakarta Sans, sans-serif" fontSize="10.5" fontWeight="700">
+                        Mimbar Presentasi • Sound System • LED
+                      </text>
+                      <text x="643" y="544" fill="#0B5E2E" fontFamily="Plus Jakarta Sans, sans-serif" fontSize="10" fontWeight="800">
+                        ★ ARENA TALKSHOW UTAMA ESCAPE 2027 ★
+                      </text>
+                    </g>
 
                     {/* ================= PINTU 1: UJUNG VERTIKAL ATAS ================= */}
                     <g id="pintu-1-ujung-atas">
-                      <rect x="675" y="62" width="125" height="26" fill="#F5B700" stroke="#141414" strokeWidth="3" rx="2" />
-                      <text x="683" y="79" fill="#141414" fontFamily="Anton, sans-serif" fontSize="11">
+                      <rect x="670" y="50" width="135" height="30" fill="#F5B700" stroke="#141414" strokeWidth="3" rx="2" />
+                      <text x="678" y="70" fill="#141414" fontFamily="Anton, sans-serif" fontSize="12">
                         🚪 PINTU 1 (UJUNG ATAS)
                       </text>
                     </g>
 
                     {/* ================= PINTU 2: SAMPING TENGAH SEBELAH JALAN ================= */}
                     <g id="pintu-2-samping-tengah">
-                      <rect x="600" y="275" width="28" height="100" fill="#F5B700" stroke="#141414" strokeWidth="3" rx="2" />
-                      <text x="618" y="360" fill="#141414" fontFamily="Anton, sans-serif" fontSize="10" transform="rotate(-90 618 360)">
+                      <rect x="596" y="260" width="32" height="110" fill="#F5B700" stroke="#141414" strokeWidth="3" rx="2" />
+                      <text x="616" y="352" fill="#141414" fontFamily="Anton, sans-serif" fontSize="11" transform="rotate(-90 616 352)">
                         🚪 PINTU 2 (SAMPING TENGAH)
                       </text>
-                      <path d="M 580 325 L 610 325" stroke="#0B5E2E" strokeWidth="4" markerEnd="url(#arr-green)" />
+                      <path d="M 575 315 L 605 315" stroke="#0B5E2E" strokeWidth="4" markerEnd="url(#arr-green)" />
                     </g>
-                  </g>
-
-                  {/* ================= MEJA CHECK-IN: DI SAMPING PINTU DEKAT BOOTH MASUK SAMPING ================= */}
-                  <g
-                    id="meja-checkin-samping-pintu"
-                    onClick={() => setSelectedZone("CHECKIN")}
-                    className="cursor-pointer group"
-                  >
-                    <rect x="460" y="375" width="145" height="100" rx="3" fill="#141414" />
-                    <rect
-                      x="455"
-                      y="370"
-                      width="145"
-                      height="100"
-                      rx="3"
-                      fill={selectedZone === "CHECKIN" ? "#F5B700" : "#FEF08A"}
-                      stroke="#141414"
-                      strokeWidth={selectedZone === "CHECKIN" ? "4.5" : "3.5"}
-                      className="transition-all duration-150"
-                    />
-                    <rect x="455" y="370" width="145" height="24" fill="#141414" />
-                    <text x="462" y="386" fill="#FFFFFF" fontFamily="Anton, sans-serif" fontSize="10.5">
-                      📍 MEJA CHECK-IN REGISTRASI
-                    </text>
-
-                    <rect x="462" y="399" width="131" height="20" fill="#0B5E2E" stroke="#141414" strokeWidth="1" rx="2" />
-                    <text x="467" y="413" fill="#FFFFFF" fontFamily="Anton, sans-serif" fontSize="9.5">
-                      SAMPING PINTU 2 GK
-                    </text>
-
-                    <text x="462" y="434" fill="#141414" fontFamily="Plus Jakarta Sans, sans-serif" fontSize="8.5" fontWeight="800">
-                      Dekat Jalur Masuk Stan Booth
-                    </text>
-                    <text x="462" y="448" fill="#474646" fontFamily="Plus Jakarta Sans, sans-serif" fontSize="8" fontWeight="700">
-                      Scan E-Ticket &amp; Ambil Gelang ID
-                    </text>
-                    <text x="462" y="461" fill="#0B5E2E" fontFamily="Plus Jakarta Sans, sans-serif" fontSize="7.5" fontWeight="800">
-                      Kapasitas Alur ~500 Orang Cepat
-                    </text>
-
-                    {/* Direct connection arrow to Pintu 2 and Booth road */}
-                    <path d="M 600 415 L 610 375" stroke="#0B5E2E" strokeWidth="3" markerEnd="url(#arr-green)" />
                   </g>
 
                   {/* ================= HALAMAN / SELASAR SELATAN GK ================= */}
                   <g id="selasar-selatan-gk">
-                    <rect x="615" y="580" width="245" height="48" rx="3" fill="#EAE5D9" stroke="#141414" strokeWidth="2.5" />
-                    <text x="630" y="602" fill="#141414" fontFamily="Anton, sans-serif" fontSize="11" letterSpacing="1">
+                    <rect x="615" y="585" width="245" height="42" rx="3" fill="#EAE5D9" stroke="#141414" strokeWidth="2.5" />
+                    <text x="625" y="605" fill="#141414" fontFamily="Anton, sans-serif" fontSize="12" letterSpacing="1">
                       HALAMAN / DROP-OFF SELATAN GK
                     </text>
-                    <text x="630" y="617" fill="#404940" fontFamily="Plus Jakarta Sans, sans-serif" fontSize="8.5" fontWeight="600">
+                    <text x="625" y="620" fill="#404940" fontFamily="Plus Jakarta Sans, sans-serif" fontSize="10" fontWeight="600">
                       Akses Jalur Evakuasi &amp; Penjemputan Pengunjung
                     </text>
                   </g>
@@ -621,21 +625,21 @@ export default function PetaKampusPage() {
                   <h2 className="font-display text-xl uppercase text-[#141414]">
                     Alur Tertib Jelajah ESCAPE 2027 SMAN 16
                   </h2>
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-3 mt-3 font-body text-xs text-[#404940]">
-                    <div className="flex items-start gap-2 bg-[#FAF8F2] p-2.5 border border-[#141414]">
-                      <CheckCircle2 className="w-4 h-4 text-[#0B5E2E] flex-shrink-0 mt-0.5" />
-                      <span><strong>1. Meja Check-in (Samping Pintu 2 Masuk Samping):</strong> Verifikasi e-ticket barcode persis di samping Pintu 2 GK dekat pangkal jalan booth untuk mengambil gelang ID.</span>
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-3 mt-3 font-body text-xs sm:text-sm text-[#404940]">
+                    <div className="flex items-start gap-2 bg-[#FAF8F2] p-3 border-2 border-[#141414] shadow-comic-sm">
+                      <CheckCircle2 className="w-5 h-5 text-[#0B5E2E] flex-shrink-0 mt-0.5" />
+                      <span><strong>1. Meja Check-in (Samping Pintu 2 Masuk Samping):</strong> Verifikasi barcode e-ticket persis di samping Pintu 2 GK dekat pangkal jalan booth untuk mengambil gelang ID.</span>
                     </div>
-                    <div className="flex items-start gap-2 bg-[#FAF8F2] p-2.5 border border-[#141414]">
-                      <CheckCircle2 className="w-4 h-4 text-[#0B5E2E] flex-shrink-0 mt-0.5" />
-                      <span><strong>2. Stand Panggung Talkshow (Depan GK):</strong> Saksikan sesi talkshow inspiratif dan presentasi kampus unggulan di panggung stand persis di depan GK.</span>
+                    <div className="flex items-start gap-2 bg-[#FAF8F2] p-3 border-2 border-[#141414] shadow-comic-sm">
+                      <CheckCircle2 className="w-5 h-5 text-[#0B5E2E] flex-shrink-0 mt-0.5" />
+                      <span><strong>2. Stand Panggung Talkshow (Paling Bawah Ujung GK):</strong> Saksikan sesi gelar wicara inspiratif dan presentasi kampus di panggung utama yang berada di paling bawah ujung gedung GK.</span>
                     </div>
-                    <div className="flex items-start gap-2 bg-[#FAF8F2] p-2.5 border border-[#141414]">
-                      <CheckCircle2 className="w-4 h-4 text-[#0B5E2E] flex-shrink-0 mt-0.5" />
-                      <span><strong>3. Aula Gedung Kesenian (GK Kosong ~500 Orang):</strong> Masuk via Pintu 1 atau Pintu 2. Area dalam bersih dan lapang tanpa stan pameran, nyaman ber-AC untuk istirahat lesehan santai (kapasitas sekitar 500 orang mentok).</span>
+                    <div className="flex items-start gap-2 bg-[#FAF8F2] p-3 border-2 border-[#141414] shadow-comic-sm">
+                      <CheckCircle2 className="w-5 h-5 text-[#0B5E2E] flex-shrink-0 mt-0.5" />
+                      <span><strong>3. Aula Gedung Kesenian (GK Kosong ~500 Orang):</strong> Masuk via Pintu 1 atau Pintu 2. Area aula lapang dan bersih tanpa stan pameran, nyaman ber-AC untuk istirahat lesehan santai (kapasitas sekitar 500 orang mentok).</span>
                     </div>
-                    <div className="flex items-start gap-2 bg-[#FAF8F2] p-2.5 border border-[#141414]">
-                      <CheckCircle2 className="w-4 h-4 text-[#0B5E2E] flex-shrink-0 mt-0.5" />
+                    <div className="flex items-start gap-2 bg-[#FAF8F2] p-3 border-2 border-[#141414] shadow-comic-sm">
+                      <CheckCircle2 className="w-5 h-5 text-[#0B5E2E] flex-shrink-0 mt-0.5" />
                       <span><strong>4. Jalan Stan Abu-Abu (Memanjang ke Kiri):</strong> Jelajahi seluruh deretan stan booth kedinasan, swasta, bimbel &amp; karya siswa yang memanjang ke arah barat.</span>
                     </div>
                   </div>
@@ -650,46 +654,46 @@ export default function PetaKampusPage() {
             <div className="bg-[#FAF8F2] border-comic-4 shadow-comic-lg overflow-hidden">
               <div className="bg-[#0B5E2E] text-[#FAF8F2] p-4 border-b-4 border-[#141414] flex justify-between items-center">
                 <div>
-                  <span className="font-display text-[10px] bg-[#F5B700] text-[#141414] px-1.5 py-0.5 border border-[#141414] uppercase tracking-wider inline-block mb-1">
+                  <span className="font-display text-xs bg-[#F5B700] text-[#141414] px-2 py-0.5 border border-[#141414] uppercase tracking-wider inline-block mb-1 font-bold">
                     INSPEKSI BERKAS TATA RUANG
                   </span>
                   <h3 className="font-display text-xl sm:text-2xl uppercase tracking-tight text-[#FAF8F2]">
                     {currentZone.name.split("—")[0]}
                   </h3>
                 </div>
-                <span className="bg-[#F5B700] text-[#141414] px-2 py-0.5 font-display text-xs uppercase border border-[#141414] font-bold">
+                <span className="bg-[#F5B700] text-[#141414] px-2.5 py-1 font-display text-xs uppercase border-2 border-[#141414] font-bold">
                   {currentZone.badge}
                 </span>
               </div>
 
               <div className="p-5 flex flex-col gap-4">
-                <div className="bg-[#EAE5D9] p-3 border-2 border-[#141414]">
-                  <div className="flex items-center justify-between text-xs font-display text-[#141414] mb-1">
+                <div className="bg-[#EAE5D9] p-3.5 border-2 border-[#141414]">
+                  <div className="flex items-center justify-between text-xs sm:text-sm font-display text-[#141414] mb-1.5">
                     <span className="flex items-center gap-1.5">
-                      <Users className="w-3.5 h-3.5 text-[#0B5E2E]" />
+                      <Users className="w-4 h-4 text-[#0B5E2E]" />
                       <span>KAPASITAS:</span>
                     </span>
                     <span className="text-[#0B5E2E] font-bold">{currentZone.capacity}</span>
                   </div>
-                  <div className="flex items-center justify-between text-xs font-body text-[#404940]">
+                  <div className="flex items-center justify-between text-xs sm:text-sm font-body text-[#404940]">
                     <span className="flex items-center gap-1.5">
-                      <MapPin className="w-3.5 h-3.5 text-[#BA1A1A]" />
+                      <MapPin className="w-4 h-4 text-[#BA1A1A]" />
                       <span>Lokasi:</span>
                     </span>
-                    <span className="font-semibold text-right text-[11px]">{currentZone.location}</span>
+                    <span className="font-semibold text-right text-xs sm:text-sm">{currentZone.location}</span>
                   </div>
                 </div>
 
-                <p className="font-body text-xs sm:text-sm text-[#404940] leading-relaxed">
+                <p className="font-body text-xs sm:text-sm text-[#404940] leading-relaxed font-medium">
                   {currentZone.description}
                 </p>
 
                 {/* Highlights */}
                 <div>
-                  <div className="font-display text-xs text-[#141414] uppercase mb-2">
+                  <div className="font-display text-xs sm:text-sm text-[#141414] uppercase mb-2 font-bold">
                     SOROTAN UTAMA AREA INI:
                   </div>
-                  <ul className="space-y-1.5 font-body text-xs text-[#404940]">
+                  <ul className="space-y-2 font-body text-xs sm:text-sm text-[#404940] font-medium">
                     {currentZone.highlights.map((h, i) => (
                       <li key={i} className="flex items-start gap-2">
                         <span className="text-[#0B5E2E] font-bold mt-0.5">✔</span>
@@ -700,22 +704,22 @@ export default function PetaKampusPage() {
                 </div>
 
                 {/* Booths in this zone */}
-                <div className="pt-3 border-t border-[#141414]/20">
-                  <div className="font-display text-xs text-[#141414] uppercase mb-2 flex justify-between items-center">
+                <div className="pt-3 border-t-2 border-[#141414]/20">
+                  <div className="font-display text-xs sm:text-sm text-[#141414] uppercase mb-2 flex justify-between items-center font-bold">
                     <span>DAFTAR BOOTH / RUANG DI AREA INI:</span>
                     <Link
                       href="/direktori-stan"
-                      className="text-[11px] text-[#0B5E2E] hover:underline font-bold flex items-center gap-1"
+                      className="text-xs text-[#0B5E2E] hover:underline font-bold flex items-center gap-1"
                     >
-                      <span>Eksplor Booth</span>
-                      <ArrowRight className="w-3 h-3" />
+                      <span>Database Kampus</span>
+                      <ArrowRight className="w-3.5 h-3.5" />
                     </Link>
                   </div>
-                  <div className="flex flex-wrap gap-1.5">
+                  <div className="flex flex-wrap gap-2">
                     {currentZone.booths.map((b, i) => (
                       <span
                         key={i}
-                        className="bg-[#EAE5D9] text-[#141414] px-2 py-0.5 text-[11px] font-bold border border-[#141414]"
+                        className="bg-[#EAE5D9] text-[#141414] px-2.5 py-1 text-xs font-bold border-2 border-[#141414] shadow-comic-sm"
                       >
                         {b}
                       </span>
@@ -725,9 +729,9 @@ export default function PetaKampusPage() {
 
                 <Link
                   href="/direktori-stan"
-                  className="comic-btn w-full text-center bg-[#F5B700] text-[#141414] font-display text-xs uppercase py-2.5 border-[3px] border-[#141414] shadow-[3px_3px_0px_#141414] hover:bg-[#FFE066] mt-2 block"
+                  className="comic-btn w-full text-center bg-[#F5B700] text-[#141414] font-display text-xs sm:text-sm uppercase py-3 border-[3px] border-[#141414] shadow-[3px_3px_0px_#141414] hover:bg-[#FFE066] mt-2 block font-bold"
                 >
-                  Buka Halaman Eksplor Booth &rarr;
+                  Buka Halaman Database Kampus &rarr;
                 </Link>
               </div>
             </div>

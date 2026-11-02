@@ -726,68 +726,68 @@ export default function DatabaseKampusPage() {
               >
                 <div>
                   {/* Card Header Strip */}
-                  <div className="bg-[#0B5E2E] text-white p-3 border-b-2 border-[#141414] flex justify-between items-center">
-                    <span className="font-display text-xs uppercase tracking-wide flex items-center gap-1.5">
-                      <Building className="w-3.5 h-3.5 text-[#F5B700]" />
+                  <div className="bg-[#0B5E2E] text-white p-3 sm:p-3.5 border-b-2 border-[#141414] flex justify-between items-center">
+                    <span className="font-display text-xs sm:text-sm uppercase tracking-wide flex items-center gap-1.5 font-bold">
+                      <Building className="w-4 h-4 text-[#F5B700]" />
                       <span>{campus.categoryLabel}</span>
                     </span>
-                    <span className="bg-[#F5B700] text-[#141414] font-display text-[10px] uppercase px-2 py-0.5 border border-[#141414] font-bold">
+                    <span className="bg-[#F5B700] text-[#141414] font-display text-xs uppercase px-2.5 py-0.5 border border-[#141414] font-bold">
                       {campus.badge}
                     </span>
                   </div>
 
-                  <div className="p-5 flex flex-col gap-4">
+                  <div className="p-5 sm:p-6 flex flex-col gap-4">
                     {/* Title & Location */}
                     <div>
-                      <div className="flex items-center gap-1 text-[11px] font-bold text-[#404940] uppercase">
-                        <MapPin className="w-3 h-3 text-[#BA1A1A]" />
+                      <div className="flex items-center gap-1 text-xs font-bold text-[#404940] uppercase">
+                        <MapPin className="w-3.5 h-3.5 text-[#BA1A1A]" />
                         <span>{campus.location}</span>
                       </div>
-                      <h3 className="font-display text-xl uppercase text-[#141414] leading-tight mt-1">
+                      <h3 className="font-display text-xl sm:text-2xl uppercase text-[#141414] leading-tight mt-1">
                         {campus.name}
                       </h3>
                       {campus.nationalRank && (
-                        <div className="inline-block mt-1.5 bg-[#EAE5D9] text-[#141414] text-[10px] font-display uppercase px-2 py-0.5 border border-[#141414]">
+                        <div className="inline-block mt-2 bg-[#EAE5D9] text-[#141414] text-xs font-display uppercase px-2.5 py-1 border border-[#141414] font-bold">
                           {campus.nationalRank}
                         </div>
                       )}
                     </div>
 
                     {/* Telemetry Metric Grid */}
-                    <div className="grid grid-cols-2 gap-2 bg-white p-3 border-2 border-[#141414] shadow-[2px_2px_0px_#141414]">
+                    <div className="grid grid-cols-2 gap-2 bg-white p-3.5 border-2 border-[#141414] shadow-[3px_3px_0px_#141414]">
                       <div className="border-r border-[#141414] pr-2">
-                        <span className="block font-display text-[10px] uppercase text-[#404940]">ALUMNI SIXTEEN:</span>
-                        <span className="font-display text-lg text-[#0B5E2E] leading-none">
+                        <span className="block font-display text-xs uppercase text-[#404940] font-bold">ALUMNI SIXTEEN:</span>
+                        <span className="font-display text-xl text-[#0B5E2E] leading-tight font-bold">
                           {campus.alumniSixteenCount} Mahasiswa
                         </span>
                       </div>
                       <div className="pl-2">
-                        <span className="block font-display text-[10px] uppercase text-[#404940]">TARGET UTBK:</span>
-                        <span className="font-display text-base text-[#141414] leading-none">
+                        <span className="block font-display text-xs uppercase text-[#404940] font-bold">TARGET UTBK:</span>
+                        <span className="font-display text-lg text-[#141414] leading-tight font-bold">
                           {campus.utbkTargetScore}
                         </span>
                       </div>
-                      <div className="col-span-2 pt-2 border-t border-[#141414] flex justify-between items-center text-[11px] font-semibold">
+                      <div className="col-span-2 pt-2.5 border-t border-[#141414] flex justify-between items-center text-xs sm:text-sm font-bold">
                         <span className="text-[#404940]">Nilai Rapor SNBP Aman:</span>
-                        <span className="font-display text-[#0B5E2E]">{campus.snbpRaporTarget}</span>
+                        <span className="font-display text-[#0B5E2E] text-base">{campus.snbpRaporTarget}</span>
                       </div>
                     </div>
 
                     {/* Brief Overview */}
-                    <p className="font-body text-xs text-[#404940] leading-relaxed line-clamp-2">
+                    <p className="font-body text-xs sm:text-sm text-[#404940] leading-relaxed font-medium line-clamp-2">
                       {campus.overview}
                     </p>
 
                     {/* Top Majors Quick List */}
                     <div className="space-y-1.5">
-                      <span className="font-display text-[10px] uppercase text-[#141414] block">
+                      <span className="font-display text-xs uppercase text-[#141414] block font-bold">
                         JURUSAN FAVORIT &amp; KEKETATAN:
                       </span>
                       <div className="flex flex-wrap gap-1.5">
                         {campus.topMajors.slice(0, 3).map((m, idx) => (
                           <span
                             key={idx}
-                            className="bg-[#EAE5D9] text-[#141414] text-[10px] font-body font-semibold px-2 py-0.5 border border-[#141414]"
+                            className="bg-[#EAE5D9] text-[#141414] text-xs font-body font-bold px-2.5 py-1 border border-[#141414]"
                           >
                             {m.name} ({m.keketatan})
                           </span>
@@ -797,10 +797,10 @@ export default function DatabaseKampusPage() {
 
                     {/* Admission Paths */}
                     <div className="space-y-1">
-                      <span className="font-display text-[10px] uppercase text-[#404940] block">
+                      <span className="font-display text-xs uppercase text-[#404940] block font-bold">
                         JALUR MASUK TERBUKA:
                       </span>
-                      <div className="flex flex-wrap gap-1 text-[10px] font-semibold text-[#0B5E2E]">
+                      <div className="flex flex-wrap gap-1.5 text-xs font-bold text-[#0B5E2E]">
                         {campus.admissionPaths.slice(0, 3).join(" • ")}
                       </div>
                     </div>
@@ -808,13 +808,13 @@ export default function DatabaseKampusPage() {
                 </div>
 
                 {/* Card Action Button */}
-                <div className="p-5 pt-0">
+                <div className="p-5 sm:p-6 pt-0">
                   <button
                     onClick={() => setSelectedCampusModal(campus)}
-                    className="w-full comic-btn bg-[#FAF8F2] text-[#141414] hover:bg-[#F5B700] font-display text-xs uppercase py-2.5 border-2 border-[#141414] shadow-[2px_2px_0px_#141414] flex items-center justify-center gap-1.5 cursor-pointer"
+                    className="w-full comic-btn bg-[#FAF8F2] text-[#141414] hover:bg-[#F5B700] font-display text-xs sm:text-sm uppercase py-3 border-2 border-[#141414] shadow-[3px_3px_0px_#141414] flex items-center justify-center gap-2 cursor-pointer font-bold"
                   >
                     <span>Buka Arsip Lengkap &amp; Kuota</span>
-                    <ChevronRight className="w-3.5 h-3.5" />
+                    <ChevronRight className="w-4 h-4" />
                   </button>
                 </div>
               </motion.article>
