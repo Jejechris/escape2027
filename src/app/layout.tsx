@@ -3,6 +3,7 @@ import { Anton, Oswald, Plus_Jakarta_Sans } from "next/font/google";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import ComicPageLoader from "@/components/ComicPageLoader";
+import LockdownGuard from "@/components/LockdownGuard";
 import "./globals.css";
 
 const comicHero = Anton({
@@ -38,16 +39,21 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  // Mode Website: 1 = Publish, 0 = Lockdown (Maintenance)
+  const isPublished = process.env.NEXT_PUBLIC_SITE_PUBLISHED === "1";
+
   return (
     <html
       lang="id"
       className={`${comicHero.variable} ${comicDisplay.variable} ${comicBody.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col bg-[#FAF8F2] text-[#141414] font-body selection:bg-[#F5B700] selection:text-[#141414]">
-        <ComicPageLoader />
-        <Navbar />
-        <div className="flex-1 flex flex-col">{children}</div>
-        <Footer />
+        <LockdownGuard isPublished={isPublished}>
+          <ComicPageLoader />
+          <Navbar />
+          <div className="flex-1 flex flex-col">{children}</div>
+          <Footer />
+        </LockdownGuard>
       </body>
     </html>
   );
