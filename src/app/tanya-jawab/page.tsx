@@ -124,8 +124,8 @@ export default function TanyaJawabPage() {
 
       {/* ================= PAGE MASTHEAD BANNER ================= */}
       <main className="max-w-7xl mx-auto px-4 sm:px-6 py-8 flex flex-col gap-8">
-        <div className="w-full bg-[#EAE5D9] border-comic-4 p-6 sm:p-8 shadow-comic-lg relative overflow-hidden">
-          <div className="absolute -top-3 left-6 bg-[#0B5E2E] text-[#FAF8F2] px-3 py-0.5 border-2 border-[#141414] font-body font-bold text-xs uppercase tracking-wide shadow-[2px_2px_0px_#141414] flex items-center gap-1.5">
+        <div className="w-full bg-[#EAE5D9] border-comic-4 p-6 sm:p-8 shadow-comic-lg relative mt-3">
+          <div className="absolute -top-3.5 left-6 bg-[#0B5E2E] text-[#FAF8F2] px-3.5 py-1 border-2 border-[#141414] font-display text-xs uppercase font-semibold tracking-wider shadow-[2px_2px_0px_#141414] flex items-center gap-1.5 z-20">
             <HelpCircle className="w-3.5 h-3.5 text-[#F5B700]" />
             <span>DIREKTORI TANYA JAWAB &amp; DUKUNGAN RESMI</span>
           </div>

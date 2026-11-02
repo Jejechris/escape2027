@@ -205,8 +205,8 @@ export default function PetaKampusPage() {
 
       {/* ================= PAGE MASTHEAD BANNER ================= */}
       <main className="max-w-7xl mx-auto px-4 sm:px-6 py-8 flex flex-col gap-8">
-        <div className="w-full bg-[#EAE5D9] border-comic-4 p-6 sm:p-8 shadow-comic-lg relative">
-          <div className="absolute -top-3 left-6 bg-[#F5B700] text-[#141414] px-3 py-1 border-2 border-[#141414] font-body text-xs uppercase font-extrabold shadow-[2px_2px_0px_#141414] flex items-center gap-1.5 tracking-wider">
+        <div className="w-full bg-[#EAE5D9] border-comic-4 p-6 sm:p-8 shadow-comic-lg relative mt-3">
+          <div className="absolute -top-3.5 left-6 bg-[#F5B700] text-[#141414] px-3.5 py-1 border-2 border-[#141414] font-display text-xs uppercase font-semibold shadow-[2px_2px_0px_#141414] flex items-center gap-1.5 tracking-wider z-20">
             <Compass className="w-3.5 h-3.5" />
             <span>DENAH TATA RUANG ACARA ESCAPE 2027</span>
           </div>

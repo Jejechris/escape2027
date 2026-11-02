@@ -10,19 +10,29 @@ export default function ComicPageLoader() {
   const [initialLoading, setInitialLoading] = useState(true);
   const [progress, setProgress] = useState(0);
   const [routeLoading, setRouteLoading] = useState(false);
+  const [routeProgress, setRouteProgress] = useState(0);
   const isFirstRender = useRef(true);
 
-  // Dynamic Comic Status text based on progress percentage
-  const getStatusText = (pct: number) => {
+  // Dynamic Comic Status text based on progress percentage for initial load
+  const getInitialStatusText = (pct: number) => {
     if (pct < 30) return "Mengumpulkan frekuensi lentera hijau...";
     if (pct < 65) return "Mengakses arsip 45+ perguruan tinggi...";
     if (pct < 90) return "Menghubungkan sinyal alumni SMAN 16...";
     return "Siap! Membuka gerbang pameran ESCAPE 2027...";
   };
 
+  // Dynamic Route Destination title based on pathname
+  const getRouteDestinationTitle = (path: string) => {
+    if (path.includes("direktori-stan")) return "Membuka Database & Kuota Kampus...";
+    if (path.includes("alumni")) return "Menghubungkan Direktori Alumni Sixteen...";
+    if (path.includes("peta-kampus")) return "Memuat Denah Gedung Kesenian (GK)...";
+    if (path.includes("rundown")) return "Menyiapkan Jadwal & Linimasa Acara...";
+    if (path.includes("tanya-jawab")) return "Membuka Pusat Bantuan & FAQ Resmi...";
+    return "Menyiapkan Beranda Utama ESCAPE 2027...";
+  };
+
   // Full Initial & Hard-Refresh Animation
   useEffect(() => {
-    // Check for audit bots or reduced motion
     if (typeof window !== "undefined") {
       const isAuditor =
         navigator.userAgent.includes("Chrome-Lighthouse") ||
@@ -39,7 +49,7 @@ export default function ComicPageLoader() {
     setProgress(0);
 
     const startTime = Date.now();
-    const duration = 2400; // 2.4 seconds total for cinematic intro
+    const duration = 2400; // 2.4 seconds for cinematic intro
 
     const interval = setInterval(() => {
       const elapsed = Date.now() - startTime;
@@ -50,27 +60,41 @@ export default function ComicPageLoader() {
         clearInterval(interval);
         setTimeout(() => {
           setInitialLoading(false);
-        }, 200);
+        }, 180);
       }
     }, 30);
 
     return () => clearInterval(interval);
   }, []);
 
-  // Sleek Route Transition on client-side navigation between pages
+  // Satisfying Blurry Comic Route Transition on client-side page switch
   useEffect(() => {
     if (isFirstRender.current) {
       isFirstRender.current = false;
       return;
     }
 
-    // Trigger fast 600ms comic transition when pathname changes
+    // Trigger rich 1100ms blurry comic transition when navigating
     setRouteLoading(true);
-    const timer = setTimeout(() => {
-      setRouteLoading(false);
-    }, 600);
+    setRouteProgress(0);
 
-    return () => clearTimeout(timer);
+    const startTime = Date.now();
+    const duration = 1100; // 1.1s duration for satisfying loading impression
+
+    const interval = setInterval(() => {
+      const elapsed = Date.now() - startTime;
+      const rawPct = Math.min(100, Math.floor((elapsed / duration) * 100));
+      setRouteProgress(rawPct);
+
+      if (elapsed >= duration) {
+        clearInterval(interval);
+        setTimeout(() => {
+          setRouteLoading(false);
+        }, 120);
+      }
+    }, 25);
+
+    return () => clearInterval(interval);
   }, [pathname]);
 
   const handleSkip = () => {
@@ -86,8 +110,8 @@ export default function ComicPageLoader() {
             key="cinematic-refresh-intro"
             initial={{ opacity: 1 }}
             exit={{ opacity: 0, scale: 1.05, filter: "blur(6px)" }}
-            transition={{ duration: 0.5, ease: "easeInOut" }}
-            className="fixed inset-0 z-[100] bg-[#FAF8F2] flex flex-col items-center justify-center p-4 selection:bg-[#F5B700] overflow-hidden"
+            transition={{ duration: 0.45, ease: "easeInOut" }}
+            className="fixed inset-0 z-[110] bg-[#FAF8F2] flex flex-col items-center justify-center p-4 selection:bg-[#F5B700] overflow-hidden"
           >
             {/* Halftone Comic Pattern Background */}
             <div className="absolute inset-0 benday-dots opacity-25 pointer-events-none" />
@@ -184,7 +208,7 @@ export default function ComicPageLoader() {
               <div className="w-full mt-5 space-y-2">
                 <div className="flex justify-between items-center text-xs font-display uppercase tracking-wider text-[#141414]">
                   <span className="truncate max-w-[240px] text-left font-medium text-[#0B5E2E]">
-                    {getStatusText(progress)}
+                    {getInitialStatusText(progress)}
                   </span>
                   <span className="font-bold text-sm text-[#0B5E2E] pl-2">
                     {progress}%
@@ -210,53 +234,97 @@ export default function ComicPageLoader() {
         )}
       </AnimatePresence>
 
-      {/* ================= 2. FAST COMIC ROUTE TRANSITION (PINDAH HALAMAN) ================= */}
+      {/* ================= 2. SATISFYING BLURRY COMIC ROUTE TRANSITION (PINDAH HALAMAN) ================= */}
       <AnimatePresence>
         {routeLoading && (
           <motion.div
-            key="route-page-transition"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            transition={{ duration: 0.2 }}
-            className="fixed inset-0 z-[90] pointer-events-none flex flex-col justify-between"
+            key="route-page-transition-blur"
+            initial={{ opacity: 0, backdropFilter: "blur(0px)" }}
+            animate={{ opacity: 1, backdropFilter: "blur(8px)" }}
+            exit={{ opacity: 0, backdropFilter: "blur(0px)" }}
+            transition={{ duration: 0.25, ease: "easeOut" }}
+            className="fixed inset-0 z-[105] bg-[#FAF8F2]/80 backdrop-blur-md flex flex-col justify-center items-center p-4 selection:bg-[#F5B700] overflow-hidden"
           >
-            {/* Top Comic Speed Bar */}
-            <motion.div
-              initial={{ width: "0%" }}
-              animate={{ width: "100%" }}
-              transition={{ duration: 0.55, ease: "easeInOut" }}
-              className="h-1.5 w-full bg-[#0B5E2E] shadow-[0px_2px_4px_rgba(11,94,46,0.4)]"
-            />
+            {/* Ambient Halftone Pattern in blur layer */}
+            <div className="absolute inset-0 benday-dots opacity-15 pointer-events-none" />
 
-            {/* Center Floating Comic Navigation Badge */}
-            <div className="flex-1 flex items-center justify-center p-4">
+            {/* Top Comic Speed Bar */}
+            <div className="absolute top-0 left-0 w-full h-2 bg-[#EAE5D9] border-b border-[#141414] overflow-hidden">
               <motion.div
-                initial={{ scale: 0.8, y: 15, opacity: 0 }}
-                animate={{ scale: 1, y: 0, opacity: 1 }}
-                exit={{ scale: 0.85, y: -10, opacity: 0 }}
-                transition={{ duration: 0.25 }}
-                className="bg-[#FAF8F2] border-comic-4 p-4 shadow-comic-lg flex items-center gap-3.5"
-              >
-                <div className="relative w-10 h-10 shrink-0 bg-[#141414] border-2 border-[#141414] rounded-full overflow-hidden animate-spin">
+                style={{ width: `${routeProgress}%` }}
+                className="h-full bg-[#0B5E2E] benday-gold transition-all duration-75"
+              />
+            </div>
+
+            {/* Central Fancy Loading Card */}
+            <motion.div
+              initial={{ scale: 0.85, y: 15, opacity: 0 }}
+              animate={{ scale: 1, y: 0, opacity: 1 }}
+              exit={{ scale: 0.9, y: -10, opacity: 0 }}
+              transition={{ duration: 0.3, type: "spring", stiffness: 260, damping: 22 }}
+              className="bg-white border-comic-4 p-6 sm:p-7 shadow-comic-lg max-w-sm w-full text-center flex flex-col items-center relative overflow-hidden"
+            >
+              {/* Halftone Accent Corner */}
+              <div className="absolute -top-6 -right-6 w-20 h-20 benday-emerald opacity-25 pointer-events-none" />
+
+              {/* Status Header Badge */}
+              <div className="inline-flex items-center gap-1.5 bg-[#0B5E2E] text-white font-display text-xs uppercase tracking-wider px-3 py-0.5 border border-[#141414] shadow-comic-sm mb-4 font-medium">
+                <span className="w-2 h-2 bg-[#F5B700] rounded-full animate-pulse" />
+                <span>MEMUAT HALAMAN BARU</span>
+              </div>
+
+              {/* Spinning Logo with Pulsing Emerald Halo */}
+              <div className="relative my-2 flex justify-center items-center">
+                <motion.div
+                  animate={{ scale: [1, 1.25, 1], opacity: [0.6, 0.2, 0.6] }}
+                  transition={{ duration: 1.2, repeat: Infinity, ease: "easeInOut" }}
+                  className="absolute w-24 h-24 bg-[#0B5E2E] rounded-full filter blur-xs"
+                />
+                <motion.div
+                  animate={{ scale: [1, 1.15, 1], opacity: [0.8, 0.3, 0.8] }}
+                  transition={{ duration: 0.9, repeat: Infinity, ease: "easeInOut" }}
+                  className="absolute w-20 h-20 bg-[#F5B700] rounded-full filter blur-xs"
+                />
+
+                <motion.div
+                  animate={{ rotate: 360 }}
+                  transition={{ duration: 2.5, repeat: Infinity, ease: "linear" }}
+                  className="relative w-16 h-16 bg-[#141414] border-3 border-[#141414] rounded-full overflow-hidden shadow-comic flex items-center justify-center z-10"
+                >
                   <Image
                     src="/logo-escape-2027.png"
                     alt="Logo ESCAPE 2027"
-                    width={40}
-                    height={40}
+                    width={64}
+                    height={64}
                     className="w-full h-full object-cover"
                   />
+                </motion.div>
+              </div>
+
+              {/* Dynamic Route Destination Title */}
+              <div className="mt-3 space-y-1">
+                <h3 className="font-display text-base sm:text-lg uppercase text-[#141414] leading-tight font-semibold">
+                  {getRouteDestinationTitle(pathname)}
+                </h3>
+                <p className="font-display text-xs uppercase tracking-wider text-[#0B5E2E] font-medium">
+                  ESCAPE 2027 • SMAN 16 SURABAYA
+                </p>
+              </div>
+
+              {/* Animated Route Progress Bar */}
+              <div className="w-full mt-4 space-y-1.5">
+                <div className="flex justify-between items-center text-[11px] font-display uppercase tracking-wider text-[#404940]">
+                  <span>SINKRONISASI DATA</span>
+                  <span className="font-bold text-[#0B5E2E]">{routeProgress}%</span>
                 </div>
-                <div>
-                  <span className="block font-display text-xs uppercase tracking-wider text-[#0B5E2E] font-medium">
-                    MEMUAT HALAMAN...
-                  </span>
-                  <span className="block font-display text-sm uppercase tracking-wider text-[#141414] font-semibold">
-                    ESCAPE 2027 • SMAN 16 SURABAYA
-                  </span>
+                <div className="w-full h-3 bg-[#EAE5D9] border-2 border-[#141414] overflow-hidden relative shadow-comic-sm">
+                  <motion.div
+                    style={{ width: `${routeProgress}%` }}
+                    className="h-full bg-[#0B5E2E] benday-gold transition-all duration-75"
+                  />
                 </div>
-              </motion.div>
-            </div>
+              </div>
+            </motion.div>
           </motion.div>
         )}
       </AnimatePresence>
