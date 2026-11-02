@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Anton, Oswald, Plus_Jakarta_Sans } from "next/font/google";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import ComicPageLoader from "@/components/ComicPageLoader";
 import "./globals.css";
 
 const comicHero = Anton({
@@ -43,6 +44,7 @@ export default function RootLayout({
       className={`${comicHero.variable} ${comicDisplay.variable} ${comicBody.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col bg-[#FAF8F2] text-[#141414] font-body selection:bg-[#F5B700] selection:text-[#141414]">
+        <ComicPageLoader />
         <Navbar />
         <div className="flex-1 flex flex-col">{children}</div>
         <Footer />

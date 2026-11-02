@@ -3,14 +3,10 @@
 import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
-import OpeningIntro from "@/components/OpeningIntro";
 
 export default function Home() {
   return (
     <>
-      {/* Opening Intro Animation (Framer Motion) */}
-      <OpeningIntro />
-
       <main className="flex-1 max-w-7xl mx-auto px-4 sm:px-6 py-6 sm:py-8 w-full flex flex-col gap-8 sm:gap-10">
         {/* HERO SECTION: OVERLAPPING COMIC COVER LAYOUT */}
         <motion.section
