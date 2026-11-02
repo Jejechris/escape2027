@@ -24,14 +24,14 @@ export default function Navbar() {
       <div className="w-full bg-[#F5B700] border-b-4 border-[#141414] py-1.5 px-4 overflow-hidden select-none">
         <div className="max-w-7xl mx-auto flex justify-between items-center text-[#141414]">
           <div className="flex items-center gap-2 sm:gap-3 flex-wrap">
-            <span className="bg-[#0B5E2E] text-white px-2 py-0.5 border border-[#141414] text-[10px] sm:text-xs font-body font-bold tracking-wider uppercase">
+            <span className="bg-[#0B5E2E] text-white px-2 py-0.5 border border-[#141414] text-[10px] sm:text-xs font-display tracking-wider uppercase">
               BULETIN RESMI
             </span>
-            <span className="text-[11px] sm:text-xs font-body font-bold uppercase tracking-wide truncate">
+            <span className="text-[11px] sm:text-xs font-display uppercase tracking-wide truncate">
               EXHIBITION SIXTEEN CAMPUS EXPO • SMAN 16 SURABAYA
             </span>
           </div>
-          <div className="hidden md:flex items-center gap-2 text-xs font-body font-bold uppercase tracking-wider">
+          <div className="hidden md:flex items-center gap-2 text-xs font-display uppercase tracking-wider">
             <span>KAMIS, 21 JANUARI 2027</span>
             <span className="w-1.5 h-1.5 bg-[#141414] rounded-full inline-block" />
             <span>07.30 — 15.00 WIB</span>
@@ -70,14 +70,14 @@ export default function Navbar() {
           </Link>
 
           {/* Desktop Nav Links */}
-          <nav className="hidden lg:flex items-center gap-5 xl:gap-7">
+          <nav className="hidden lg:flex items-center gap-4 xl:gap-6">
             {NAV_ITEMS.map((item) => {
               const isActive = pathname === item.href;
               return (
                 <Link
                   key={item.href}
                   href={item.href}
-                  className={`font-body font-extrabold uppercase tracking-wide text-xs sm:text-sm transition-all pb-0.5 ${
+                  className={`font-display uppercase tracking-wider text-sm transition-all pb-0.5 font-medium ${
                     isActive
                       ? "text-[#0B5E2E] border-b-4 border-[#0B5E2E]"
                       : "text-[#141414] hover:text-[#0B5E2E] hover:border-b-4 hover:border-[#0B5E2E]"
@@ -93,7 +93,7 @@ export default function Navbar() {
           <div className="flex items-center gap-3">
             <Link
               href="/#tiket"
-              className="hidden sm:inline-flex bg-[#0B5E2E] text-white font-body font-bold text-xs sm:text-sm uppercase tracking-wide px-4 py-2 border-2 border-[#141414] shadow-comic hover:bg-[#1E8449] active:translate-x-[2px] active:translate-y-[2px] active:shadow-none transition-all items-center gap-2"
+              className="hidden sm:inline-flex bg-[#0B5E2E] text-white font-display text-xs sm:text-sm uppercase tracking-wider px-3.5 py-2 border-2 border-[#141414] shadow-comic hover:bg-[#1E8449] active:translate-x-[2px] active:translate-y-[2px] active:shadow-none transition-all items-center gap-1.5 font-medium whitespace-nowrap"
             >
               <span>Daftar Tiket / Presensi</span>
             </Link>

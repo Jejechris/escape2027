@@ -266,7 +266,7 @@ export default function TanyaJawabPage() {
 
                   <button
                     type="submit"
-                    className="comic-btn w-full bg-[#0B5E2E] text-[#FAF8F2] font-body font-bold text-xs sm:text-sm uppercase tracking-wider py-3.5 border-3 border-[#141414] shadow-[4px_4px_0px_#141414] hover:bg-[#1F6C3A] flex items-center justify-center gap-2 cursor-pointer"
+                    className="comic-btn w-full bg-[#0B5E2E] text-[#FAF8F2] font-display font-medium text-xs sm:text-sm uppercase tracking-wider py-3 border-2 border-[#141414] shadow-[3px_3px_0px_#141414] hover:bg-[#1F6C3A] flex items-center justify-center gap-2 cursor-pointer"
                   >
                     <Send className="w-4 h-4 text-[#F5B700]" />
                     <span>Kirim Pesan ke Panitia</span>
@@ -315,7 +315,7 @@ export default function TanyaJawabPage() {
                           <span className="block font-body font-bold text-xs text-[#0B5E2E] uppercase tracking-wide">
                             {faq.category}
                           </span>
-                          <span className="font-body font-extrabold text-sm sm:text-base text-[#141414] uppercase pt-0.5 block leading-snug">
+                          <span className="font-display font-medium text-sm sm:text-base text-[#141414] uppercase pt-0.5 block leading-snug">
                             {faq.question}
                           </span>
                         </div>
@@ -417,7 +417,7 @@ export default function TanyaJawabPage() {
                   href="https://wa.me/6281234567890"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="font-body font-black text-xl text-[#0B5E2E] hover:underline block leading-tight tracking-wider"
+                  className="font-display font-medium text-lg sm:text-xl text-[#0B5E2E] hover:underline block leading-tight tracking-wider"
                 >
                   +62 812-3456-7890
                 </a>
@@ -441,7 +441,7 @@ export default function TanyaJawabPage() {
                   href="https://instagram.com/escapesman16"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="font-body font-black text-xl text-[#0B5E2E] hover:underline block leading-tight tracking-wider"
+                  className="font-display font-medium text-lg sm:text-xl text-[#0B5E2E] hover:underline block leading-tight tracking-wider"
                 >
                   @escapesman16
                 </a>

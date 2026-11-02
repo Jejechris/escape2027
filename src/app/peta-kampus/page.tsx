@@ -383,7 +383,7 @@ export default function PetaKampusPage() {
                     <line x1="45" y1="292" x2="575" y2="292" stroke="#141414" strokeWidth="2.5" strokeDasharray="14 10" strokeOpacity="0.45" />
 
                     <rect x="50" y="223" width="460" height="28" rx="2" fill="#141414" />
-                    <text x="62" y="242" fill="#FFFFFF" fontFamily="Plus Jakarta Sans, sans-serif" fontWeight="800" fontSize="12.5" letterSpacing="0.5">
+                    <text x="62" y="242" fill="#FFFFFF" fontFamily="var(--font-comic-display), Oswald, sans-serif" fontSize="13" letterSpacing="0.5">
                       JALAN STAN BOOTH • MEMANJANG KE KIRI DARI DEPAN GK
                     </text>
 
@@ -396,12 +396,12 @@ export default function PetaKampusPage() {
                       <rect x="402" y="258" width="80" height="38" rx="2" />
                       <rect x="490" y="258" width="85" height="38" rx="2" />
                     </g>
-                    <text x="56" y="282" fill="#0B5E2E" fontFamily="Plus Jakarta Sans, sans-serif" fontWeight="800" fontSize="11">PKN STAN</text>
-                    <text x="142" y="282" fill="#0B5E2E" fontFamily="Plus Jakarta Sans, sans-serif" fontWeight="800" fontSize="11">POLSTAT STIS</text>
-                    <text x="238" y="282" fill="#0B5E2E" fontFamily="Plus Jakarta Sans, sans-serif" fontWeight="800" fontSize="11">POLTEKIP</text>
-                    <text x="330" y="282" fill="#0B5E2E" fontFamily="Plus Jakarta Sans, sans-serif" fontWeight="800" fontSize="11">UBAYA</text>
-                    <text x="408" y="282" fill="#0B5E2E" fontFamily="Plus Jakarta Sans, sans-serif" fontWeight="800" fontSize="11">UK PETRA</text>
-                    <text x="496" y="282" fill="#0B5E2E" fontFamily="Plus Jakarta Sans, sans-serif" fontWeight="800" fontSize="11">ROBOTIKA</text>
+                    <text x="90" y="282" textAnchor="middle" fill="#0B5E2E" fontFamily="var(--font-comic-display), Oswald, sans-serif" fontSize="11">PKN STAN</text>
+                    <text x="180" y="282" textAnchor="middle" fill="#0B5E2E" fontFamily="var(--font-comic-display), Oswald, sans-serif" fontSize="11">POLSTAT STIS</text>
+                    <text x="271" y="282" textAnchor="middle" fill="#0B5E2E" fontFamily="var(--font-comic-display), Oswald, sans-serif" fontSize="11">POLTEKIP</text>
+                    <text x="356" y="282" textAnchor="middle" fill="#0B5E2E" fontFamily="var(--font-comic-display), Oswald, sans-serif" fontSize="11">UBAYA</text>
+                    <text x="442" y="282" textAnchor="middle" fill="#0B5E2E" fontFamily="var(--font-comic-display), Oswald, sans-serif" fontSize="11">UK PETRA</text>
+                    <text x="532" y="282" textAnchor="middle" fill="#0B5E2E" fontFamily="var(--font-comic-display), Oswald, sans-serif" fontSize="11">ROBOTIKA</text>
 
                     {/* South Row Booths */}
                     <g fill="#FAF8F2" stroke="#141414" strokeWidth="2">
@@ -411,15 +411,15 @@ export default function PetaKampusPage() {
                       <rect x="368" y="303" width="102" height="38" rx="2" />
                       <rect x="478" y="303" width="98" height="38" rx="2" />
                     </g>
-                    <text x="57" y="327" fill="#D97706" fontFamily="Plus Jakarta Sans, sans-serif" fontWeight="800" fontSize="11">BRAIN ACADEMY</text>
-                    <text x="162" y="327" fill="#D97706" fontFamily="Plus Jakarta Sans, sans-serif" fontWeight="800" fontSize="11">GANESHA OP.</text>
-                    <text x="270" y="327" fill="#D97706" fontFamily="Plus Jakarta Sans, sans-serif" fontWeight="800" fontSize="11">RUANGGURU</text>
-                    <text x="375" y="327" fill="#D97706" fontFamily="Plus Jakarta Sans, sans-serif" fontWeight="800" fontSize="11">BEASISWA S1</text>
-                    <text x="488" y="327" fill="#D97706" fontFamily="Plus Jakarta Sans, sans-serif" fontWeight="800" fontSize="11">EDUTECH 16</text>
+                    <text x="99" y="327" textAnchor="middle" fill="#D97706" fontFamily="var(--font-comic-display), Oswald, sans-serif" fontSize="11">BRAIN ACADEMY</text>
+                    <text x="205" y="327" textAnchor="middle" fill="#D97706" fontFamily="var(--font-comic-display), Oswald, sans-serif" fontSize="11">GANESHA OP.</text>
+                    <text x="311" y="327" textAnchor="middle" fill="#D97706" fontFamily="var(--font-comic-display), Oswald, sans-serif" fontSize="11">RUANGGURU</text>
+                    <text x="419" y="327" textAnchor="middle" fill="#D97706" fontFamily="var(--font-comic-display), Oswald, sans-serif" fontSize="11">BEASISWA S1</text>
+                    <text x="527" y="327" textAnchor="middle" fill="#D97706" fontFamily="var(--font-comic-display), Oswald, sans-serif" fontSize="11">EDUTECH 16</text>
 
                     <path d="M 565 348 L 55 348" stroke="#141414" strokeWidth="3" strokeDasharray="8 6" markerEnd="url(#arr-ink)" opacity="0.7" />
                     <rect x="150" y="347" width="260" height="20" rx="2" fill="#F5B700" stroke="#141414" strokeWidth="1.5" />
-                    <text x="160" y="361" fill="#141414" fontFamily="Plus Jakarta Sans, sans-serif" fontWeight="800" fontSize="11">
+                    <text x="280" y="361" textAnchor="middle" fill="#141414" fontFamily="var(--font-comic-display), Oswald, sans-serif" fontSize="11">
                       ← ALUR JELAJAH STAN KE ARAH BARAT
                     </text>
                   </g>
@@ -443,22 +443,22 @@ export default function PetaKampusPage() {
                       className="transition-all duration-150"
                     />
                     <rect x="435" y="383" width="165" height="28" fill="#141414" />
-                    <text x="443" y="402" fill="#FFFFFF" fontFamily="Plus Jakarta Sans, sans-serif" fontWeight="800" fontSize="12">
+                    <text x="517" y="402" textAnchor="middle" fill="#FFFFFF" fontFamily="var(--font-comic-display), Oswald, sans-serif" fontSize="12">
                       📍 MEJA CHECK-IN REGISTRASI
                     </text>
 
                     <rect x="443" y="417" width="149" height="24" fill="#0B5E2E" stroke="#141414" strokeWidth="1" rx="2" />
-                    <text x="449" y="433" fill="#FFFFFF" fontFamily="Plus Jakarta Sans, sans-serif" fontWeight="800" fontSize="10.5">
+                    <text x="517" y="433" textAnchor="middle" fill="#FFFFFF" fontFamily="var(--font-comic-display), Oswald, sans-serif" fontSize="10">
                       SAMPING PINTU 2 GK (DEKAT BOOTH)
                     </text>
 
-                    <text x="443" y="458" fill="#141414" fontFamily="Plus Jakarta Sans, sans-serif" fontSize="11" fontWeight="800">
+                    <text x="517" y="458" textAnchor="middle" fill="#141414" fontFamily="var(--font-comic-display), Oswald, sans-serif" fontSize="11">
                       Pangkal Jalur Masuk Booth
                     </text>
-                    <text x="443" y="475" fill="#404940" fontFamily="Plus Jakarta Sans, sans-serif" fontSize="10.5" fontWeight="700">
+                    <text x="517" y="475" textAnchor="middle" fill="#404940" fontFamily="var(--font-comic-body), 'Plus Jakarta Sans', sans-serif" fontSize="10" fontWeight="600">
                       Scan E-Ticket &amp; Gelang Masuk
                     </text>
-                    <text x="443" y="493" fill="#0B5E2E" fontFamily="Plus Jakarta Sans, sans-serif" fontSize="10" fontWeight="800">
+                    <text x="517" y="493" textAnchor="middle" fill="#0B5E2E" fontFamily="var(--font-comic-display), Oswald, sans-serif" fontSize="10">
                       Alur Cepat ~500 Pengunjung
                     </text>
 
@@ -491,35 +491,35 @@ export default function PetaKampusPage() {
                     {/* Central Hall Banner — Ruang Kosong Kapasitas ~500 Orang Mentok */}
                     <rect x="635" y="95" width="205" height="175" fill="#FAF8F2" stroke="#141414" strokeWidth="3" rx="2" />
                     <rect x="640" y="100" width="195" height="28" fill="#0B5E2E" stroke="#141414" strokeWidth="1" />
-                    <text x="648" y="120" fill="#FFFFFF" fontFamily="Anton, sans-serif" fontSize="14" letterSpacing="1">
+                    <text x="737" y="120" textAnchor="middle" fill="#FFFFFF" fontFamily="var(--font-comic-display), Oswald, sans-serif" fontSize="14" letterSpacing="1">
                       GEDUNG KESENIAN (GK)
                     </text>
-                    <text x="645" y="152" fill="#141414" fontFamily="Anton, sans-serif" fontSize="16">
+                    <text x="737" y="152" textAnchor="middle" fill="#141414" fontFamily="var(--font-comic-display), Oswald, sans-serif" fontSize="16">
                       AULA UTAMA (KOSONG)
                     </text>
                     <rect x="645" y="162" width="185" height="28" fill="#F5B700" stroke="#141414" strokeWidth="1" rx="2" />
-                    <text x="650" y="181" fill="#141414" fontFamily="Plus Jakarta Sans, sans-serif" fontWeight="800" fontSize="11">
+                    <text x="737" y="181" textAnchor="middle" fill="#141414" fontFamily="var(--font-comic-display), Oswald, sans-serif" fontSize="10.5">
                       KAPASITAS: SEKITAR 500 ORANG MENTOK
                     </text>
-                    <text x="645" y="210" fill="#404940" fontFamily="Plus Jakarta Sans, sans-serif" fontSize="11" fontWeight="700">
+                    <text x="737" y="210" textAnchor="middle" fill="#404940" fontFamily="var(--font-comic-body), 'Plus Jakarta Sans', sans-serif" fontSize="10.5" fontWeight="600">
                       Ruang Lapang Terbuka Bebas Stan
                     </text>
-                    <text x="645" y="228" fill="#404940" fontFamily="Plus Jakarta Sans, sans-serif" fontSize="10.5" fontWeight="600">
+                    <text x="737" y="228" textAnchor="middle" fill="#404940" fontFamily="var(--font-comic-body), 'Plus Jakarta Sans', sans-serif" fontSize="10" fontWeight="600">
                       Area Duduk Lesehan Penonton Full AC
                     </text>
-                    <text x="645" y="246" fill="#0B5E2E" fontFamily="Plus Jakarta Sans, sans-serif" fontSize="10" fontWeight="800">
+                    <text x="737" y="246" textAnchor="middle" fill="#0B5E2E" fontFamily="var(--font-comic-display), Oswald, sans-serif" fontSize="10">
                       ★ FULL AIR CONDITIONER (SEJUK) ★
                     </text>
 
                     {/* Middle Audience Viewing Area */}
                     <rect x="635" y="280" width="205" height="115" fill="#FFFFFF" stroke="#0B5E2E" strokeWidth="1.5" strokeDasharray="4 4" rx="2" opacity="0.95" />
-                    <text x="647" y="308" fill="#0B5E2E" fontFamily="Plus Jakarta Sans, sans-serif" fontWeight="800" fontSize="12" letterSpacing="0.5">
+                    <text x="737" y="308" textAnchor="middle" fill="#0B5E2E" fontFamily="var(--font-comic-display), Oswald, sans-serif" fontSize="12" letterSpacing="0.5">
                       ZONA LESEHAN PENONTON (~500 ORANG)
                     </text>
-                    <text x="647" y="328" fill="#404940" fontFamily="Plus Jakarta Sans, sans-serif" fontSize="11" fontWeight="600">
+                    <text x="737" y="328" textAnchor="middle" fill="#404940" fontFamily="var(--font-comic-body), 'Plus Jakarta Sans', sans-serif" fontSize="10.5" fontWeight="600">
                       Sirkulasi Lapang &amp; Bebas Halangan
                     </text>
-                    <text x="647" y="352" fill="#BA1A1A" fontFamily="Plus Jakarta Sans, sans-serif" fontWeight="800" fontSize="11.5" letterSpacing="0.5">
+                    <text x="737" y="352" textAnchor="middle" fill="#BA1A1A" fontFamily="var(--font-comic-display), Oswald, sans-serif" fontSize="11" letterSpacing="0.5">
                       ↓↓ MENGHADAP PANGGUNG DI BAWAH ↓↓
                     </text>
                     <path d="M 740 360 L 740 385" stroke="#BA1A1A" strokeWidth="3" markerEnd="url(#arr-green)" />
@@ -528,28 +528,28 @@ export default function PetaKampusPage() {
                     <g id="stand-talkshow-ujung-bawah-gk">
                       <rect x="625" y="405" width="225" height="155" rx="3" fill="#F5B700" stroke="#141414" strokeWidth="3.5" />
                       <rect x="625" y="405" width="225" height="32" fill="#141414" />
-                      <text x="633" y="427" fill="#FFFFFF" fontFamily="Plus Jakarta Sans, sans-serif" fontWeight="800" fontSize="12.5" letterSpacing="0.5">
+                      <text x="737" y="426" textAnchor="middle" fill="#FFFFFF" fontFamily="var(--font-comic-display), Oswald, sans-serif" fontSize="13" letterSpacing="0.5">
                         🎤 STAND PANGGUNG TALK SHOW
                       </text>
 
                       {/* Screen / Backdrop on Stage */}
                       <rect x="635" y="445" width="205" height="44" fill="#0B5E2E" stroke="#141414" strokeWidth="1.5" rx="2" />
-                      <text x="643" y="465" fill="#FFFFFF" fontFamily="Plus Jakarta Sans, sans-serif" fontWeight="800" fontSize="12">
+                      <text x="737" y="465" textAnchor="middle" fill="#FFFFFF" fontFamily="var(--font-comic-display), Oswald, sans-serif" fontSize="12">
                         GELAR WICARA &amp; SHARING ALUMNI
                       </text>
-                      <text x="643" y="481" fill="#F5B700" fontFamily="Plus Jakarta Sans, sans-serif" fontSize="10.5" fontWeight="700">
+                      <text x="737" y="480" textAnchor="middle" fill="#F5B700" fontFamily="var(--font-comic-body), 'Plus Jakarta Sans', sans-serif" fontSize="9.5" fontWeight="600">
                         Narasumber Perguruan Tinggi &amp; Beasiswa
                       </text>
 
                       {/* Stage info box */}
                       <rect x="635" y="495" width="205" height="55" fill="#FAF8F2" stroke="#141414" strokeWidth="1.5" rx="2" />
-                      <text x="643" y="513" fill="#BA1A1A" fontFamily="Plus Jakarta Sans, sans-serif" fontWeight="800" fontSize="11">
+                      <text x="737" y="513" textAnchor="middle" fill="#BA1A1A" fontFamily="var(--font-comic-display), Oswald, sans-serif" fontSize="10.5">
                         📍 POSISI: PALING BAWAH UJUNG DARI GEDUNG GK
                       </text>
-                      <text x="643" y="530" fill="#141414" fontFamily="Plus Jakarta Sans, sans-serif" fontSize="10.5" fontWeight="700">
+                      <text x="737" y="529" textAnchor="middle" fill="#141414" fontFamily="var(--font-comic-body), 'Plus Jakarta Sans', sans-serif" fontSize="9.5" fontWeight="600">
                         Mimbar Presentasi • Sound System • LED
                       </text>
-                      <text x="643" y="544" fill="#0B5E2E" fontFamily="Plus Jakarta Sans, sans-serif" fontSize="10" fontWeight="800">
+                      <text x="737" y="544" textAnchor="middle" fill="#0B5E2E" fontFamily="var(--font-comic-display), Oswald, sans-serif" fontSize="10">
                         ★ ARENA TALKSHOW UTAMA ESCAPE 2027 ★
                       </text>
                     </g>
@@ -557,7 +557,7 @@ export default function PetaKampusPage() {
                     {/* ================= PINTU 1: UJUNG VERTIKAL ATAS ================= */}
                     <g id="pintu-1-ujung-atas">
                       <rect x="670" y="50" width="135" height="30" fill="#F5B700" stroke="#141414" strokeWidth="3" rx="2" />
-                      <text x="678" y="70" fill="#141414" fontFamily="Plus Jakarta Sans, sans-serif" fontWeight="800" fontSize="11.5">
+                      <text x="737" y="70" textAnchor="middle" fill="#141414" fontFamily="var(--font-comic-display), Oswald, sans-serif" fontSize="11.5">
                         🚪 PINTU 1 (UJUNG ATAS)
                       </text>
                     </g>
@@ -565,7 +565,7 @@ export default function PetaKampusPage() {
                     {/* ================= PINTU 2: SAMPING TENGAH SEBELAH JALAN ================= */}
                     <g id="pintu-2-samping-tengah">
                       <rect x="596" y="260" width="32" height="110" fill="#F5B700" stroke="#141414" strokeWidth="3" rx="2" />
-                      <text x="616" y="352" fill="#141414" fontFamily="Plus Jakarta Sans, sans-serif" fontWeight="800" fontSize="10.5" transform="rotate(-90 616 352)">
+                      <text x="616" y="348" fill="#141414" fontFamily="var(--font-comic-display), Oswald, sans-serif" fontSize="10" transform="rotate(-90 616 348)">
                         🚪 PINTU 2 (SAMPING TENGAH)
                       </text>
                       <path d="M 575 315 L 605 315" stroke="#0B5E2E" strokeWidth="4" markerEnd="url(#arr-green)" />

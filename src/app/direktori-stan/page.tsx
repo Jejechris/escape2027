@@ -692,9 +692,9 @@ export default function DatabaseKampusPage() {
                 <button
                   key={cat.key}
                   onClick={() => setSelectedCategory(cat.key as CategoryFilter)}
-                  className={`comic-btn font-body font-bold text-xs uppercase px-4 py-2 border-2 border-[#141414] whitespace-nowrap transition-all cursor-pointer tracking-wide ${
+                  className={`comic-btn font-display text-xs uppercase px-3.5 py-1.5 border-2 border-[#141414] whitespace-nowrap transition-all cursor-pointer tracking-wider font-medium ${
                     isSelected
-                      ? "bg-[#0B5E2E] text-white shadow-[3px_3px_0px_#141414] -translate-y-0.5"
+                      ? "bg-[#0B5E2E] text-white shadow-[2px_2px_0px_#141414] -translate-y-0.5"
                       : "bg-[#FAF8F2] text-[#141414] hover:bg-[#F5B700] shadow-[2px_2px_0px_#141414]"
                   }`}
                 >
@@ -704,7 +704,7 @@ export default function DatabaseKampusPage() {
             })}
           </div>
 
-          <div className="text-xs font-body font-bold uppercase text-[#404940] flex justify-between items-center px-1 tracking-wider">
+          <div className="text-xs font-display uppercase text-[#404940] flex justify-between items-center px-1 tracking-wider">
             <span>Ditemukan {filteredAndSortedCampuses.length} kampus terverifikasi</span>
             <span>SMAN 16 Surabaya • Edisi XVI</span>
           </div>
@@ -720,56 +720,56 @@ export default function DatabaseKampusPage() {
             {filteredAndSortedCampuses.map((campus) => (
               <motion.article
                 key={campus.id}
-                whileHover={{ y: -5 }}
+                whileHover={{ y: -4 }}
                 transition={{ duration: 0.18 }}
                 className="bg-[#FAF8F2] border-comic-4 shadow-comic flex flex-col justify-between overflow-hidden relative group"
               >
                 <div>
                   {/* Card Header Strip */}
-                  <div className="bg-[#0B5E2E] text-white p-3 sm:p-3.5 border-b-2 border-[#141414] flex justify-between items-center">
-                    <span className="font-body text-xs sm:text-sm uppercase tracking-wider flex items-center gap-1.5 font-bold">
-                      <Building className="w-4 h-4 text-[#F5B700]" />
+                  <div className="bg-[#0B5E2E] text-white p-3 border-b-2 border-[#141414] flex justify-between items-center">
+                    <span className="font-display text-xs sm:text-sm uppercase tracking-wider flex items-center gap-1.5 font-medium">
+                      <Building className="w-3.5 h-3.5 text-[#F5B700]" />
                       <span>{campus.categoryLabel}</span>
                     </span>
-                    <span className="bg-[#F5B700] text-[#141414] font-body text-xs uppercase px-2.5 py-1 border border-[#141414] font-extrabold tracking-wide">
+                    <span className="bg-[#F5B700] text-[#141414] font-display text-xs uppercase px-2 py-0.5 border border-[#141414] font-semibold tracking-wider">
                       {campus.badge}
                     </span>
                   </div>
 
-                  <div className="p-5 sm:p-6 flex flex-col gap-4">
+                  <div className="p-4 sm:p-5 flex flex-col gap-3.5">
                     {/* Title & Location */}
                     <div>
-                      <div className="flex items-center gap-1 text-xs font-bold text-[#404940] uppercase tracking-wider font-body">
+                      <div className="flex items-center gap-1 text-[11px] font-bold text-[#404940] uppercase tracking-wider font-body">
                         <MapPin className="w-3.5 h-3.5 text-[#BA1A1A]" />
                         <span>{campus.location}</span>
                       </div>
-                      <h3 className="font-display text-xl sm:text-2xl uppercase text-[#141414] leading-tight mt-1">
+                      <h3 className="font-display text-xl uppercase text-[#141414] leading-tight mt-1">
                         {campus.name}
                       </h3>
                       {campus.nationalRank && (
-                        <div className="inline-block mt-2 bg-[#EAE5D9] text-[#141414] text-xs font-body font-bold px-3 py-1 border border-[#141414] shadow-comic-sm">
+                        <div className="inline-block mt-1.5 bg-[#EAE5D9] text-[#141414] text-[11px] font-body font-semibold px-2.5 py-1 border border-[#141414] shadow-comic-sm leading-snug">
                           {campus.nationalRank}
                         </div>
                       )}
                     </div>
 
                     {/* Telemetry Metric Grid */}
-                    <div className="grid grid-cols-2 gap-2 bg-white p-3.5 border-2 border-[#141414] shadow-[3px_3px_0px_#141414]">
+                    <div className="grid grid-cols-2 gap-2 bg-white p-3 border-2 border-[#141414] shadow-[2px_2px_0px_#141414]">
                       <div className="border-r border-[#141414] pr-2">
-                        <span className="block font-body text-xs uppercase text-[#404940] font-bold tracking-wider">ALUMNI SIXTEEN:</span>
-                        <span className="font-body font-extrabold text-lg sm:text-xl text-[#0B5E2E] leading-tight">
+                        <span className="block font-body text-[10px] uppercase text-[#404940] font-bold tracking-wider">ALUMNI SIXTEEN:</span>
+                        <span className="font-display text-base sm:text-lg text-[#0B5E2E] leading-tight font-semibold">
                           {campus.alumniSixteenCount} Mahasiswa
                         </span>
                       </div>
                       <div className="pl-2">
-                        <span className="block font-body text-xs uppercase text-[#404940] font-bold tracking-wider">TARGET UTBK:</span>
-                        <span className="font-body font-extrabold text-lg text-[#141414] leading-tight">
+                        <span className="block font-body text-[10px] uppercase text-[#404940] font-bold tracking-wider">TARGET UTBK:</span>
+                        <span className="font-display text-base sm:text-lg text-[#141414] leading-tight font-semibold">
                           {campus.utbkTargetScore}
                         </span>
                       </div>
-                      <div className="col-span-2 pt-2.5 border-t border-[#141414] flex justify-between items-center text-xs sm:text-sm font-bold font-body">
+                      <div className="col-span-2 pt-2 border-t border-[#141414] flex justify-between items-center text-xs font-bold font-body">
                         <span className="text-[#404940]">Nilai Rapor SNBP Aman:</span>
-                        <span className="font-body font-extrabold text-[#0B5E2E] text-base">{campus.snbpRaporTarget}</span>
+                        <span className="font-display font-semibold text-[#0B5E2E] text-base">{campus.snbpRaporTarget}</span>
                       </div>
                     </div>
 
@@ -808,10 +808,10 @@ export default function DatabaseKampusPage() {
                 </div>
 
                 {/* Card Action Button */}
-                <div className="p-5 sm:p-6 pt-0">
+                <div className="p-4 sm:p-5 pt-0">
                   <button
                     onClick={() => setSelectedCampusModal(campus)}
-                    className="w-full comic-btn bg-[#FAF8F2] text-[#141414] hover:bg-[#F5B700] font-body text-xs sm:text-sm uppercase py-3 border-2 border-[#141414] shadow-[3px_3px_0px_#141414] flex items-center justify-center gap-2 cursor-pointer font-bold tracking-wider"
+                    className="w-full comic-btn bg-[#FAF8F2] text-[#141414] hover:bg-[#F5B700] font-display text-xs sm:text-sm uppercase py-2.5 border-2 border-[#141414] shadow-[2px_2px_0px_#141414] flex items-center justify-center gap-2 cursor-pointer font-medium tracking-wider"
                   >
                     <span>Buka Arsip Lengkap &amp; Kuota</span>
                     <ChevronRight className="w-4 h-4" />
@@ -870,22 +870,22 @@ export default function DatabaseKampusPage() {
                   </div>
 
                   {/* Quick Telemetry Bar */}
-                  <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 bg-white p-3.5 border-2 border-[#141414] shadow-[2px_2px_0px_#141414] text-center">
+                  <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 bg-white p-3 border-2 border-[#141414] shadow-[2px_2px_0px_#141414] text-center">
                     <div>
-                      <span className="block font-body font-bold text-[11px] uppercase text-[#404940] tracking-wider">ALUMNI SIXTEEN:</span>
-                      <span className="font-body font-black text-xl text-[#0B5E2E]">{selectedCampusModal.alumniSixteenCount} Orang</span>
+                      <span className="block font-body font-bold text-[10px] uppercase text-[#404940] tracking-wider">ALUMNI SIXTEEN:</span>
+                      <span className="font-display font-semibold text-base sm:text-lg text-[#0B5E2E]">{selectedCampusModal.alumniSixteenCount} Orang</span>
                     </div>
                     <div>
-                      <span className="block font-body font-bold text-[11px] uppercase text-[#404940] tracking-wider">TARGET UTBK:</span>
-                      <span className="font-body font-black text-lg text-[#141414]">{selectedCampusModal.utbkTargetScore}</span>
+                      <span className="block font-body font-bold text-[10px] uppercase text-[#404940] tracking-wider">TARGET UTBK:</span>
+                      <span className="font-display font-semibold text-base sm:text-lg text-[#141414]">{selectedCampusModal.utbkTargetScore}</span>
                     </div>
                     <div>
-                      <span className="block font-body font-bold text-[11px] uppercase text-[#404940] tracking-wider">RAPOR SNBP:</span>
-                      <span className="font-body font-black text-lg text-[#0B5E2E]">{selectedCampusModal.snbpRaporTarget}</span>
+                      <span className="block font-body font-bold text-[10px] uppercase text-[#404940] tracking-wider">RAPOR SNBP:</span>
+                      <span className="font-display font-semibold text-base sm:text-lg text-[#0B5E2E]">{selectedCampusModal.snbpRaporTarget}</span>
                     </div>
                     <div>
-                      <span className="block font-body font-bold text-[11px] uppercase text-[#404940] tracking-wider">AKREDITASI:</span>
-                      <span className="font-body font-black text-lg text-[#141414]">{selectedCampusModal.accreditation.split(" ")[0]}</span>
+                      <span className="block font-body font-bold text-[10px] uppercase text-[#404940] tracking-wider">AKREDITASI:</span>
+                      <span className="font-display font-semibold text-base sm:text-lg text-[#141414]">{selectedCampusModal.accreditation.split(" ")[0]}</span>
                     </div>
                   </div>
 
@@ -958,14 +958,14 @@ export default function DatabaseKampusPage() {
                       href={selectedCampusModal.websiteUrl}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex-1 bg-[#0B5E2E] text-white font-body font-bold text-xs sm:text-sm uppercase py-3.5 text-center border-2 border-[#141414] shadow-[3px_3px_0px_#141414] hover:bg-[#1E8449] flex items-center justify-center gap-2 cursor-pointer tracking-wider"
+                      className="flex-1 bg-[#0B5E2E] text-white font-display text-xs sm:text-sm uppercase py-3 text-center border-2 border-[#141414] shadow-[2px_2px_0px_#141414] hover:bg-[#1E8449] flex items-center justify-center gap-2 cursor-pointer font-medium tracking-wider"
                     >
                       <ExternalLink className="w-3.5 h-3.5" />
                       <span>Buka Portal Resmi PMB {selectedCampusModal.shortName}</span>
                     </a>
                     <Link
                       href="/alumni"
-                      className="px-5 py-3.5 bg-[#F5B700] text-[#141414] font-body font-bold text-xs sm:text-sm uppercase text-center border-2 border-[#141414] shadow-[3px_3px_0px_#141414] hover:bg-white flex items-center justify-center gap-1.5 tracking-wider"
+                      className="px-5 py-3 bg-[#F5B700] text-[#141414] font-display text-xs sm:text-sm uppercase text-center border-2 border-[#141414] shadow-[2px_2px_0px_#141414] hover:bg-white flex items-center justify-center gap-1.5 font-medium tracking-wider"
                     >
                       <Users className="w-3.5 h-3.5" />
                       <span>Tanya Alumni Sixteen</span>

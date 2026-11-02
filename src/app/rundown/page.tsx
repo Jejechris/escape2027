@@ -179,7 +179,7 @@ export default function RundownPage() {
                 whileHover={{ y: -3, scale: 1.02 }}
                 whileTap={{ y: 2, scale: 0.98 }}
                 onClick={handleSaveCalendar}
-                className="bg-[#F5B700] text-[#141414] font-body font-bold text-xs sm:text-sm uppercase tracking-wide px-5 py-3 border-comic shadow-comic hover:bg-white active:translate-x-[2px] active:translate-y-[2px] transition-all flex items-center gap-2 cursor-pointer"
+                className="bg-[#F5B700] text-[#141414] font-display font-medium text-xs sm:text-sm uppercase tracking-wider px-4 py-2.5 border-comic shadow-comic hover:bg-white active:translate-x-[2px] active:translate-y-[2px] transition-all flex items-center gap-2 cursor-pointer"
               >
                 <span>📅 Simpan ke Google Calendar</span>
               </motion.button>
@@ -188,7 +188,7 @@ export default function RundownPage() {
                 whileHover={{ y: -3, scale: 1.02 }}
                 whileTap={{ y: 2, scale: 0.98 }}
                 onClick={() => window.print()}
-                className="bg-white text-[#141414] font-body font-bold text-xs sm:text-sm uppercase tracking-wide px-4 py-3 border-comic shadow-comic hover:bg-[#FAF8F2] active:translate-x-[2px] active:translate-y-[2px] transition-all flex items-center gap-1.5 cursor-pointer"
+                className="bg-white text-[#141414] font-display font-medium text-xs sm:text-sm uppercase tracking-wider px-4 py-2.5 border-comic shadow-comic hover:bg-[#FAF8F2] active:translate-x-[2px] active:translate-y-[2px] transition-all flex items-center gap-1.5 cursor-pointer"
               >
                 <span>🖨 Cetak / PDF Rundown</span>
               </motion.button>
@@ -203,7 +203,7 @@ export default function RundownPage() {
           <div className="flex flex-wrap items-center gap-2 sm:gap-3">
             <button
               onClick={() => setFilter("all")}
-              className={`font-body font-bold text-xs sm:text-sm uppercase tracking-wide px-5 py-2.5 border-comic transition-all cursor-pointer ${
+              className={`font-display text-xs sm:text-sm uppercase tracking-wider px-4 py-2 border-comic transition-all cursor-pointer font-medium ${
                 filter === "all"
                   ? "bg-[#0B5E2E] text-white shadow-comic translate-x-1"
                   : "bg-white text-[#141414] hover:bg-[#FAF8F2] shadow-comic-sm"
@@ -213,7 +213,7 @@ export default function RundownPage() {
             </button>
             <button
               onClick={() => setFilter("sektor-1")}
-              className={`font-body font-bold text-xs sm:text-sm uppercase tracking-wide px-5 py-2.5 border-comic transition-all cursor-pointer ${
+              className={`font-display text-xs sm:text-sm uppercase tracking-wider px-4 py-2 border-comic transition-all cursor-pointer font-medium ${
                 filter === "sektor-1"
                   ? "bg-[#0B5E2E] text-white shadow-comic translate-x-1"
                   : "bg-white text-[#141414] hover:bg-[#FAF8F2] shadow-comic-sm"
@@ -223,18 +223,18 @@ export default function RundownPage() {
             </button>
             <button
               onClick={() => setFilter("sektor-2")}
-              className={`font-body font-bold text-xs sm:text-sm uppercase tracking-wide px-5 py-2.5 border-comic transition-all cursor-pointer ${
+              className={`font-display text-xs sm:text-sm uppercase tracking-wider px-4 py-2 border-comic transition-all cursor-pointer font-medium ${
                 filter === "sektor-2"
                   ? "bg-[#0B5E2E] text-white shadow-comic translate-x-1"
                   : "bg-white text-[#141414] hover:bg-[#FAF8F2] shadow-comic-sm"
               }`}
             >
-              Sektor 2: Depan GK & Perpustakaan
+              Sektor 2: Depan GK &amp; Perpustakaan
             </button>
           </div>
 
           {/* Status Filter Badge */}
-          <div className="inline-flex items-center gap-2 bg-white border-2 border-[#141414] px-3 py-1 font-body font-bold text-xs uppercase tracking-wide shadow-comic-sm">
+          <div className="inline-flex items-center gap-2 bg-white border-2 border-[#141414] px-3 py-1 font-display text-xs uppercase tracking-wider shadow-comic-sm font-medium">
             <span className="w-2.5 h-2.5 bg-[#0B5E2E] rounded-full animate-pulse border border-[#141414]" />
             <span>WAKTU LOKAL: WIB (SURABAYA)</span>
           </div>
@@ -251,14 +251,14 @@ export default function RundownPage() {
         {/* Header Strip */}
         <div className="bg-[#0B5E2E] text-white px-5 sm:px-8 py-3 border-b-4 border-[#141414] flex flex-wrap justify-between items-center gap-2">
           <div className="flex items-center gap-3">
-            <span className="bg-[#F5B700] text-[#141414] font-body font-extrabold text-xs px-2.5 py-0.5 border border-[#141414] uppercase tracking-wide shadow-comic-sm">
+            <span className="bg-[#F5B700] text-[#141414] font-display font-semibold text-xs px-2.5 py-0.5 border border-[#141414] uppercase tracking-wider shadow-comic-sm">
               SOROTAN UTAMA
             </span>
-            <span className="font-body font-extrabold text-sm sm:text-base tracking-wide text-white">
+            <span className="font-display font-medium text-sm sm:text-base tracking-wider text-white">
               PANGGUNG GK (08.30 - 10.30 WIB)
             </span>
           </div>
-          <div className="font-body font-bold text-xs uppercase tracking-wider bg-[#141414] text-white px-3 py-1 border border-white">
+          <div className="font-display font-medium text-xs uppercase tracking-wider bg-[#141414] text-white px-3 py-1 border border-white">
             EPISODE #02 EXCLUSIVE
           </div>
         </div>
@@ -346,7 +346,7 @@ export default function RundownPage() {
                 whileHover={{ y: -2, scale: 1.02 }}
                 whileTap={{ y: 2, scale: 0.98 }}
                 onClick={handleBookSeat}
-                className="w-full bg-[#0B5E2E] text-white font-body font-bold text-sm sm:text-base uppercase tracking-wide py-3 border-comic shadow-comic hover:bg-[#1E8449] active:translate-x-[2px] active:translate-y-[2px] transition-all text-center cursor-pointer"
+                className="w-full bg-[#0B5E2E] text-white font-display font-medium text-sm sm:text-base uppercase tracking-wider py-2.5 border-comic shadow-comic hover:bg-[#1E8449] active:translate-x-[2px] active:translate-y-[2px] transition-all text-center cursor-pointer"
               >
                 🎟 Booking Kursi Sesi
               </motion.button>
@@ -357,7 +357,7 @@ export default function RundownPage() {
                     initial={{ opacity: 0, y: -10 }}
                     animate={{ opacity: 1, y: 0 }}
                     exit={{ opacity: 0, y: -10 }}
-                    className="p-2.5 bg-[#A7F4B5] border-2 border-[#141414] text-center font-body font-bold text-xs uppercase tracking-wide text-[#0B5E2E] shadow-comic-sm"
+                    className="p-2.5 bg-[#A7F4B5] border-2 border-[#141414] text-center font-display font-medium text-xs uppercase tracking-wider text-[#0B5E2E] shadow-comic-sm"
                   >
                     ✔ Kursi #{bookedSeats} Berhasil Dipesan! Tunjukkan Kartu Pelajar saat Masuk.
                   </motion.div>
@@ -411,11 +411,11 @@ export default function RundownPage() {
                     }`}
                   >
                     <div className="flex items-center justify-between gap-2 border-b-2 border-[#141414] pb-2 mb-3">
-                      <div className="bg-[#F5B700] text-[#141414] font-body font-bold text-xs px-2.5 py-0.5 border border-[#141414] uppercase shadow-comic-sm">
+                      <div className="bg-[#F5B700] text-[#141414] font-display font-medium text-xs px-2.5 py-0.5 border border-[#141414] uppercase shadow-comic-sm">
                         {item.time}
                       </div>
                       <span
-                        className={`font-body font-extrabold text-[10px] px-2 py-0.5 border border-[#141414] uppercase tracking-wide ${
+                        className={`font-display font-medium text-xs px-2 py-0.5 border border-[#141414] uppercase tracking-wider ${
                           item.badgeColor || "bg-[#FAF8F2] text-[#141414]"
                         }`}
                       >
@@ -423,7 +423,7 @@ export default function RundownPage() {
                       </span>
                     </div>
 
-                    <h4 className="font-body font-extrabold text-base uppercase text-[#141414] mb-2 leading-snug">
+                    <h4 className="font-display font-semibold text-base uppercase text-[#141414] mb-1.5 leading-snug">
                       {item.title}
                     </h4>
                     <p className="font-body text-xs text-[#404940] leading-relaxed font-medium">
@@ -480,11 +480,11 @@ export default function RundownPage() {
                     }`}
                   >
                     <div className="flex items-center justify-between gap-2 border-b-2 border-[#141414] pb-2 mb-3">
-                      <div className="bg-[#F5B700] text-[#141414] font-body font-bold text-xs px-2.5 py-0.5 border border-[#141414] uppercase shadow-comic-sm">
+                      <div className="bg-[#F5B700] text-[#141414] font-display font-medium text-xs px-2.5 py-0.5 border border-[#141414] uppercase shadow-comic-sm">
                         {item.time}
                       </div>
                       <span
-                        className={`font-body font-extrabold text-[10px] px-2 py-0.5 border border-[#141414] uppercase tracking-wide ${
+                        className={`font-display font-medium text-xs px-2 py-0.5 border border-[#141414] uppercase tracking-wider ${
                           item.badgeColor || "bg-[#FAF8F2] text-[#141414]"
                         }`}
                       >
@@ -492,7 +492,7 @@ export default function RundownPage() {
                       </span>
                     </div>
 
-                    <h4 className="font-body font-extrabold text-base uppercase text-[#141414] mb-2 leading-snug">
+                    <h4 className="font-display font-semibold text-base uppercase text-[#141414] mb-1.5 leading-snug">
                       {item.title}
                     </h4>
                     <p className="font-body text-xs text-[#404940] leading-relaxed font-medium">

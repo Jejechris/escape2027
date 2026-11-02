@@ -44,12 +44,12 @@ export default function Home() {
                   initial={{ scale: 0.95 }}
                   animate={{ scale: 1 }}
                   transition={{ duration: 0.4, type: "spring", stiffness: 200 }}
-                  className="font-display text-5xl sm:text-6xl lg:text-7xl uppercase tracking-wider text-[#0B5E2E] leading-none drop-shadow-[3px_3px_0px_#141414]"
+                  className="font-hero text-5xl sm:text-6xl lg:text-7xl uppercase tracking-wider text-[#0B5E2E] leading-none drop-shadow-[3px_3px_0px_#141414]"
                 >
                   ESCAPE 2027
                 </motion.h1>
-                <p className="font-display text-lg sm:text-2xl tracking-wide text-[#141414] uppercase">
-                  SIXTEEN CAREER & EDUCATION APPRECIATION EXPO
+                <p className="font-display text-base sm:text-xl tracking-wider text-[#141414] uppercase">
+                  SIXTEEN CAREER &amp; EDUCATION APPRECIATION EXPO
                 </p>
               </div>
 
@@ -75,7 +75,7 @@ export default function Home() {
                 <motion.div whileHover={{ y: -3, scale: 1.02 }} whileTap={{ y: 2, scale: 0.98 }}>
                   <Link
                     href="/rundown"
-                    className="bg-[#0B5E2E] text-white font-body font-bold text-sm sm:text-base uppercase tracking-wider px-6 py-3 border-comic shadow-comic hover:bg-[#1E8449] transition-colors flex items-center gap-2"
+                    className="bg-[#0B5E2E] text-white font-display font-medium text-xs sm:text-sm uppercase tracking-wider px-5 py-2.5 border-comic shadow-comic hover:bg-[#1E8449] transition-colors flex items-center gap-2"
                   >
                     <span>📅 Buka Jadwal Acara</span>
                   </Link>
@@ -84,7 +84,7 @@ export default function Home() {
                 <motion.div whileHover={{ y: -3, scale: 1.02 }} whileTap={{ y: 2, scale: 0.98 }}>
                   <Link
                     href="/direktori-stan"
-                    className="bg-white text-[#141414] font-body font-bold text-sm sm:text-base uppercase tracking-wider px-6 py-3 border-comic shadow-comic hover:bg-[#F5B700] transition-colors flex items-center gap-2"
+                    className="bg-white text-[#141414] font-display font-medium text-xs sm:text-sm uppercase tracking-wider px-5 py-2.5 border-comic shadow-comic hover:bg-[#F5B700] transition-colors flex items-center gap-2"
                   >
                     <span>🏛 Buka Database Kampus</span>
                   </Link>
@@ -297,7 +297,7 @@ export default function Home() {
               <div className="p-5 pt-0">
                 <Link
                   href="/direktori-stan"
-                  className="w-full block text-center bg-white text-[#141414] font-body font-bold text-sm uppercase tracking-wide py-2.5 border-comic shadow-comic-sm hover:bg-[#F5B700] active:translate-x-[1px] active:translate-y-[1px] transition-all"
+                  className="w-full block text-center bg-white text-[#141414] font-display font-medium text-xs sm:text-sm uppercase tracking-wider py-2.5 border-comic shadow-comic-sm hover:bg-[#F5B700] active:translate-x-[1px] active:translate-y-[1px] transition-all"
                 >
                   Jelajahi Stan Kampus →
                 </Link>
@@ -347,7 +347,7 @@ export default function Home() {
               <div className="p-5 pt-0 relative z-10">
                 <Link
                   href="/alumni"
-                  className="w-full block text-center bg-[#0B5E2E] text-white font-body font-bold text-sm uppercase tracking-wide py-2.5 border-comic shadow-comic-sm hover:bg-[#1E8449] active:translate-x-[1px] active:translate-y-[1px] transition-all"
+                  className="w-full block text-center bg-[#0B5E2E] text-white font-display font-medium text-xs sm:text-sm uppercase tracking-wider py-2.5 border-comic shadow-comic-sm hover:bg-[#1E8449] active:translate-x-[1px] active:translate-y-[1px] transition-all"
                 >
                   Daftar Mentorship Alumni →
                 </Link>
@@ -396,7 +396,7 @@ export default function Home() {
               <div className="p-5 pt-0">
                 <Link
                   href="/tanya-jawab"
-                  className="w-full block text-center bg-white text-[#141414] font-body font-bold text-sm uppercase tracking-wide py-2.5 border-comic shadow-comic-sm hover:bg-[#F5B700] active:translate-x-[1px] active:translate-y-[1px] transition-all"
+                  className="w-full block text-center bg-white text-[#141414] font-display font-medium text-xs sm:text-sm uppercase tracking-wider py-2.5 border-comic shadow-comic-sm hover:bg-[#F5B700] active:translate-x-[1px] active:translate-y-[1px] transition-all"
                 >
                   Jadwalkan Konsultasi →
                 </Link>

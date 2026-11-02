@@ -20,7 +20,8 @@
   --color-comic-yellow: #FFDEA0;
   --color-comic-red: #BA1A1A;
 
-  --font-display: var(--font-comic-display), Anton, Impact, sans-serif;
+  --font-hero: var(--font-comic-hero), Anton, Impact, sans-serif;
+  --font-display: var(--font-comic-display), Oswald, "Arial Narrow", sans-serif;
   --font-body: var(--font-comic-body), "Plus Jakarta Sans", sans-serif;
 
   --shadow-comic: 4px 4px 0px #141414;

@@ -1,11 +1,17 @@
 import type { Metadata } from "next";
-import { Anton, Plus_Jakarta_Sans } from "next/font/google";
+import { Anton, Oswald, Plus_Jakarta_Sans } from "next/font/google";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import "./globals.css";
 
-const comicDisplay = Anton({
+const comicHero = Anton({
   weight: "400",
+  subsets: ["latin"],
+  variable: "--font-comic-hero",
+  display: "swap",
+});
+
+const comicDisplay = Oswald({
   subsets: ["latin"],
   variable: "--font-comic-display",
   display: "swap",
@@ -34,7 +40,7 @@ export default function RootLayout({
   return (
     <html
       lang="id"
-      className={`${comicDisplay.variable} ${comicBody.variable} h-full antialiased`}
+      className={`${comicHero.variable} ${comicDisplay.variable} ${comicBody.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col bg-[#FAF8F2] text-[#141414] font-body selection:bg-[#F5B700] selection:text-[#141414]">
         <Navbar />

@@ -380,9 +380,9 @@ export default function AlumniPage() {
                 <button
                   key={cls}
                   onClick={() => setSelectedClass(cls)}
-                  className={`comic-btn font-body font-bold text-xs uppercase px-4 py-2 border-2 border-[#141414] whitespace-nowrap transition-all cursor-pointer tracking-wider ${
+                  className={`comic-btn font-display text-xs uppercase px-3.5 py-1.5 border-2 border-[#141414] whitespace-nowrap transition-all cursor-pointer tracking-wider font-medium ${
                     isSelected
-                      ? "bg-[#0B5E2E] text-[#FAF8F2] shadow-[3px_3px_0px_#141414] -translate-y-0.5"
+                      ? "bg-[#0B5E2E] text-[#FAF8F2] shadow-[2px_2px_0px_#141414] -translate-y-0.5"
                       : "bg-[#FAF8F2] text-[#141414] hover:bg-[#F5B700] shadow-[2px_2px_0px_#141414]"
                   }`}
                 >
@@ -392,7 +392,7 @@ export default function AlumniPage() {
             })}
           </div>
 
-          <div className="text-xs font-body font-bold uppercase text-[#404940] flex justify-between items-center px-1 tracking-wider">
+          <div className="text-xs font-display uppercase text-[#404940] flex justify-between items-center px-1 tracking-wider">
             <span>Ditemukan {filteredAlumni.length} alumni dari {selectedClass}</span>
             <span>SMAN 16 Surabaya • Edisi XVI</span>
           </div>
@@ -411,30 +411,30 @@ export default function AlumniPage() {
               >
                 <div>
                   {/* Header ribbon with CLASS badge & Campus */}
-                  <div className="bg-[#EAE5D9] border-b-2 border-[#141414] px-4 py-2.5 flex justify-between items-center">
-                    <span className="bg-[#141414] text-[#FAF8F2] text-xs sm:text-sm font-body uppercase px-3 py-1 border border-[#141414] font-extrabold shadow-comic-sm tracking-wider">
+                  <div className="bg-[#EAE5D9] border-b-2 border-[#141414] px-4 py-2 flex justify-between items-center">
+                    <span className="bg-[#141414] text-[#FAF8F2] text-xs font-display uppercase px-2.5 py-0.5 border border-[#141414] font-medium shadow-comic-sm tracking-wider">
                       KELAS {alumni.classGroup}
                     </span>
-                    <span className="bg-[#0B5E2E] text-white text-xs sm:text-sm font-body uppercase px-3 py-1 border border-[#141414] font-extrabold shadow-comic-sm tracking-wider">
+                    <span className="bg-[#0B5E2E] text-white text-xs font-display uppercase px-2.5 py-0.5 border border-[#141414] font-medium shadow-comic-sm tracking-wider">
                       {alumni.shortCampus}
                     </span>
                   </div>
 
-                  <div className="p-5 sm:p-6 flex flex-col gap-4">
-                    <div className="flex items-start gap-3.5">
+                  <div className="p-4 sm:p-5 flex flex-col gap-3.5">
+                    <div className="flex items-start gap-3">
                       <div
-                        className={`w-14 h-14 ${alumni.avatarBg} text-white border-2 border-[#141414] shadow-[3px_3px_0px_#141414] flex items-center justify-center font-body font-black text-lg flex-shrink-0`}
+                        className={`w-12 h-12 ${alumni.avatarBg} text-white border-2 border-[#141414] shadow-[2px_2px_0px_#141414] flex items-center justify-center font-display font-bold text-base flex-shrink-0`}
                       >
                         {alumni.avatarText}
                       </div>
                       <div className="flex-1 min-w-0">
-                        <h3 className="font-display text-xl sm:text-2xl uppercase text-[#141414] leading-tight">
+                        <h3 className="font-display text-lg sm:text-xl uppercase text-[#141414] leading-tight">
                           {alumni.name}
                         </h3>
-                        <p className="font-body text-sm sm:text-base text-[#0B5E2E] font-bold mt-1 leading-snug">
+                        <p className="font-body text-xs sm:text-sm text-[#0B5E2E] font-bold mt-0.5 leading-snug">
                           {alumni.major}
                         </p>
-                        <p className="font-body text-xs sm:text-sm text-[#404940] font-semibold mt-0.5">
+                        <p className="font-body text-[11px] sm:text-xs text-[#404940] font-semibold mt-0.5">
                           {alumni.campus} • {alumni.batchName}
                         </p>
                       </div>
@@ -442,14 +442,14 @@ export default function AlumniPage() {
 
                     {/* Prominent Noted & Tips/Trick dari Alumni */}
                     {alumni.quote && (
-                      <div className="bg-[#FEF08A] border-2 border-[#141414] p-4 shadow-comic-sm relative mt-1">
-                        <div className="flex items-center gap-1.5 mb-1.5">
-                          <span className="text-base">💡</span>
-                          <span className="font-body text-xs sm:text-sm uppercase tracking-wider text-[#141414] font-extrabold">
+                      <div className="bg-[#FEF08A] border-2 border-[#141414] p-3 shadow-comic-sm relative mt-0.5">
+                        <div className="flex items-center gap-1.5 mb-1">
+                          <span className="text-sm">💡</span>
+                          <span className="font-display text-xs uppercase tracking-wider text-[#141414] font-semibold">
                             NOTED TIPS &amp; TRIK DARI KAKAK {alumni.classGroup}:
                           </span>
                         </div>
-                        <p className="font-body text-xs sm:text-sm text-[#141414] font-semibold leading-relaxed italic">
+                        <p className="font-body text-xs text-[#141414] font-medium leading-relaxed italic">
                           &ldquo;{alumni.quote}&rdquo;
                         </p>
                       </div>
@@ -457,12 +457,12 @@ export default function AlumniPage() {
                   </div>
                 </div>
 
-                <div className="p-5 sm:p-6 pt-0">
+                <div className="p-4 sm:p-5 pt-0">
                   <button
                     onClick={() => setSelectedAlumniModal(alumni)}
-                    className="comic-btn w-full bg-[#FAF8F2] text-[#141414] font-body text-xs sm:text-sm uppercase py-3 border-2 border-[#141414] shadow-[3px_3px_0px_#141414] hover:bg-[#F5B700] flex items-center justify-center gap-2 cursor-pointer font-bold tracking-wider"
+                    className="comic-btn w-full bg-[#FAF8F2] text-[#141414] font-display text-xs uppercase py-2.5 border-2 border-[#141414] shadow-[2px_2px_0px_#141414] hover:bg-[#F5B700] flex items-center justify-center gap-1.5 cursor-pointer font-medium tracking-wider"
                   >
-                    <MessageSquare className="w-4 h-4 text-[#0B5E2E]" />
+                    <MessageSquare className="w-3.5 h-3.5 text-[#0B5E2E]" />
                     <span>Tanya Tips &amp; Pengalaman ({alumni.classGroup})</span>
                   </button>
                 </div>
@@ -490,7 +490,7 @@ export default function AlumniPage() {
               onClick={() => {
                 alert("Terima kasih atas solidaritas alumni Sixteen! Formulir mentor resmi terkoordinasi dengan Bimbingan Konseling SMAN 16 Surabaya.");
               }}
-              className="comic-btn bg-[#0B5E2E] text-[#FAF8F2] font-body font-bold text-xs sm:text-sm uppercase tracking-wide px-6 py-3 border-4 border-[#141414] shadow-[4px_4px_0px_#141414] hover:bg-[#1F6C3A] whitespace-nowrap cursor-pointer"
+              className="comic-btn bg-[#0B5E2E] text-[#FAF8F2] font-display text-xs sm:text-sm uppercase tracking-wider px-5 py-2.5 border-2 border-[#141414] shadow-[3px_3px_0px_#141414] hover:bg-[#1F6C3A] whitespace-nowrap cursor-pointer font-medium"
             >
               Daftar Sebagai Mentor Alumni &rarr;
             </button>
@@ -521,10 +521,10 @@ export default function AlumniPage() {
                     {selectedAlumniModal.avatarText}
                   </div>
                   <div>
-                    <span className="bg-[#0B5E2E] text-[#FAF8F2] font-body text-xs uppercase px-3 py-1 border border-[#141414] font-extrabold tracking-wider">
+                    <span className="bg-[#0B5E2E] text-[#FAF8F2] font-display text-xs uppercase px-2.5 py-0.5 border border-[#141414] font-medium tracking-wider">
                       KELAS {selectedAlumniModal.classGroup} • ALUMNI SIXTEEN
                     </span>
-                    <h3 className="font-display text-2xl uppercase text-[#141414] leading-tight mt-1">
+                    <h3 className="font-display text-xl sm:text-2xl uppercase text-[#141414] leading-tight mt-1">
                       {selectedAlumniModal.name}
                     </h3>
                     <p className="font-body text-sm text-[#0B5E2E] font-bold">
@@ -538,11 +538,11 @@ export default function AlumniPage() {
                   <div className="bg-[#FEF08A] border-2 border-[#141414] p-3.5 shadow-comic-sm">
                     <div className="flex items-center gap-1.5 mb-1">
                       <span className="text-sm">💡</span>
-                      <span className="font-body text-xs uppercase text-[#141414] font-extrabold tracking-wider">
+                      <span className="font-display text-xs uppercase text-[#141414] font-semibold tracking-wider">
                         NOTED DARI KAKAK {selectedAlumniModal.classGroup}:
                       </span>
                     </div>
-                    <p className="font-body text-xs sm:text-sm text-[#141414] font-semibold italic">
+                    <p className="font-body text-xs sm:text-sm text-[#141414] font-medium italic">
                       &ldquo;{selectedAlumniModal.quote}&rdquo;
                     </p>
                   </div>
@@ -565,7 +565,7 @@ export default function AlumniPage() {
                 ) : (
                   <form onSubmit={handleSendConsultation} className="space-y-3 pt-1">
                     <div>
-                      <label className="block font-body text-xs sm:text-sm uppercase text-[#141414] mb-1 font-bold tracking-wider">
+                      <label className="block font-body text-xs uppercase text-[#141414] mb-1 font-bold tracking-wider">
                         Pilih Topik Konsultasi:
                       </label>
                       <select
@@ -581,7 +581,7 @@ export default function AlumniPage() {
                     </div>
 
                     <div>
-                      <label className="block font-body text-xs sm:text-sm uppercase text-[#141414] mb-1 font-bold tracking-wider">
+                      <label className="block font-body text-xs uppercase text-[#141414] mb-1 font-bold tracking-wider">
                         Nama &amp; Kelasmu:
                       </label>
                       <input
@@ -593,7 +593,7 @@ export default function AlumniPage() {
                     </div>
 
                     <div>
-                      <label className="block font-body text-xs sm:text-sm uppercase text-[#141414] mb-1 font-bold tracking-wider">
+                      <label className="block font-body text-xs uppercase text-[#141414] mb-1 font-bold tracking-wider">
                         Pertanyaanmu:
                       </label>
                       <textarea
@@ -607,7 +607,7 @@ export default function AlumniPage() {
                     <div className="pt-2 flex gap-3">
                       <button
                         type="submit"
-                        className="comic-btn flex-1 bg-[#0B5E2E] text-[#FAF8F2] font-body text-xs sm:text-sm uppercase py-3.5 border-2 border-[#141414] shadow-[3px_3px_0px_#141414] hover:bg-[#1F6C3A] flex items-center justify-center gap-1.5 cursor-pointer font-bold tracking-wider"
+                        className="comic-btn flex-1 bg-[#0B5E2E] text-[#FAF8F2] font-display text-xs sm:text-sm uppercase py-3 border-2 border-[#141414] shadow-[2px_2px_0px_#141414] hover:bg-[#1F6C3A] flex items-center justify-center gap-1.5 cursor-pointer font-medium tracking-wider"
                       >
                         <Send className="w-4 h-4" />
                         <span>Kirim Pertanyaan</span>
@@ -615,7 +615,7 @@ export default function AlumniPage() {
                       <button
                         type="button"
                         onClick={() => setSelectedAlumniModal(null)}
-                        className="px-4 py-2.5 bg-white text-[#141414] font-body text-xs uppercase border-2 border-[#141414] shadow-[2px_2px_0px_#141414] hover:bg-[#F5B700] cursor-pointer font-bold tracking-wider"
+                        className="px-4 py-2.5 bg-white text-[#141414] font-display text-xs uppercase border-2 border-[#141414] shadow-[2px_2px_0px_#141414] hover:bg-[#F5B700] cursor-pointer font-medium tracking-wider"
                       >
                         Batal
                       </button>
