@@ -530,7 +530,7 @@ export default function Home() {
 
             <div className="mt-6 p-3 bg-[#F5B700] border-2 border-[#141414] shadow-comic-sm text-center">
               <p className="font-body font-extrabold text-xs sm:text-sm uppercase tracking-wide text-[#141414]">
-                ★ TOTAL 35 ALUMNI SIXTEEN SIAP MENGAWALMU! ★
+                ★ TOTAL 221 MAHASISWA SIXTEEN 64 TERDATA PDDIKTI DI 27 KAMPUS SIAP MENGAWALMU! ★
               </p>
             </div>
           </motion.div>
