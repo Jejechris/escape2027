@@ -87,17 +87,17 @@ export default function Home() {
                 </motion.div>
               </div>
 
-              {/* Comic Stamped Badges / Stats Section with Spring Hover */}
+              {/* Comic Stamped Badges / Stats Section with Spring Hover (100% Real PDDikti Data) */}
               <div className="grid grid-cols-3 gap-2 sm:gap-3 pt-2">
                 <motion.div
                   whileHover={{ y: -5, scale: 1.03 }}
                   className="bg-[#FAF8F2] border-2 border-[#141414] p-3 shadow-comic-sm flex flex-col justify-center items-center text-center cursor-default transition-shadow"
                 >
                   <span className="font-display text-3xl sm:text-4xl text-[#0B5E2E] leading-none">
-                    45+
+                    27
                   </span>
                   <span className="font-body font-extrabold text-[10px] sm:text-xs uppercase tracking-wide text-[#141414] mt-1">
-                    Kampus & Kedinasan
+                    PTN &amp; PTS Terdata
                   </span>
                 </motion.div>
 
@@ -106,10 +106,10 @@ export default function Home() {
                   className="bg-[#FAF8F2] border-2 border-[#141414] p-3 shadow-comic-sm flex flex-col justify-center items-center text-center cursor-default transition-shadow"
                 >
                   <span className="font-display text-3xl sm:text-4xl text-[#F5B700] leading-none drop-shadow-[1px_1px_0px_#141414]">
-                    2
+                    221
                   </span>
                   <span className="font-body font-extrabold text-[10px] sm:text-xs uppercase tracking-wide text-[#141414] mt-1">
-                    Zona Utama Expo
+                    Mahasiswa Terdata
                   </span>
                 </motion.div>
 
@@ -118,10 +118,10 @@ export default function Home() {
                   className="bg-[#FAF8F2] border-2 border-[#141414] p-3 shadow-comic-sm flex flex-col justify-center items-center text-center cursor-default transition-shadow"
                 >
                   <span className="font-display text-3xl sm:text-4xl text-[#0B5E2E] leading-none">
-                    1.500+
+                    109
                   </span>
                   <span className="font-body font-extrabold text-[10px] sm:text-xs uppercase tracking-wide text-[#141414] mt-1">
-                    Sixteeners & Wali
+                    Lolos Jalur SNBP
                   </span>
                 </motion.div>
               </div>
@@ -454,7 +454,7 @@ export default function Home() {
                     Sesi Stan Terbuka & Klinik Beasiswa
                   </p>
                   <p className="text-[#404940] text-xs font-medium">
-                    Eksplorasi 45+ Booth di Hall Basket & Gedung Serbaguna
+                    Eksplorasi Stan Kampus &amp; Gedung Kesenian (GK)
                   </p>
                 </div>
               </motion.div>
@@ -488,7 +488,7 @@ export default function Home() {
             </div>
           </motion.div>
 
-          {/* Testimonial / Speech Bubble Card (5 cols) */}
+          {/* Real Alumni Card (Angkatan 64) - Zero Mock Data (5 cols) */}
           <motion.div
             initial={{ opacity: 0, x: 20 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -498,42 +498,108 @@ export default function Home() {
           >
             <div className="space-y-4">
               <div className="inline-block bg-[#141414] text-white font-body font-bold text-xs uppercase tracking-wide px-2.5 py-1 border border-[#141414]">
-                KATA ALUMNI SIXTEEN
+                PROFIL MAHASISWA // ANGKATAN 64
               </div>
 
-              {/* Speech bubble container */}
-              <motion.div
-                whileHover={{ scale: 1.02 }}
-                className="bg-white border-comic p-5 shadow-comic relative cursor-default"
+              {/* Speech bubble container (Kutipan kosong / belum terisi sesuai data riil) */}
+              <div
+                className="bg-white border-comic p-5 shadow-comic relative min-h-[85px] flex items-center justify-center text-center"
               >
-                <p className="font-body text-xs sm:text-sm text-[#141414] font-semibold italic leading-relaxed">
-                  &ldquo;Expo ESCAPE di Sixteen waktu tahun 2024 jadi titik balik terpenting saya. Lewat stan alumni, saya tahu trik lolos SBMPTN tanpa les mahal dan sekarang bisa magang di BUMN!&rdquo;
+                <p className="font-body text-xs sm:text-sm text-[#737373] italic">
+                  (Kutipan alumni belum terisi)
                 </p>
                 {/* Comic Speech Bubble Triangle tail */}
                 <div className="absolute -bottom-3 left-6 w-0 h-0 border-l-[10px] border-l-transparent border-r-[10px] border-r-transparent border-t-[12px] border-t-[#141414]" />
-              </motion.div>
+              </div>
 
               <div className="pt-2 flex items-center gap-3">
-                <div className="w-12 h-12 bg-[#0B5E2E] text-white border-2 border-[#141414] flex items-center justify-center font-body font-extrabold text-base shadow-comic-sm">
-                  FAR
+                <div className="w-12 h-12 bg-[#0B5E2E] text-white border-2 border-[#141414] flex items-center justify-center font-body font-extrabold text-sm shadow-comic-sm">
+                  ABF
                 </div>
                 <div>
-                  <h4 className="font-body font-bold text-base uppercase text-[#141414] leading-tight">
-                    Faris Ramadhan, S.T.
+                  <h4 className="font-body font-bold text-sm sm:text-base uppercase text-[#141414] leading-tight">
+                    Ahmad Bais Fairuz Hukama
                   </h4>
                   <p className="font-body text-xs text-[#404940] font-medium">
-                    Alumni Sixteen 2022 // Mahasiswa Berprestasi ITS
+                    Peringkat #1 SMAN 16 (XII-7) • Universitas Airlangga (Ilmu Hukum) • SNBP
                   </p>
                 </div>
+              </div>
+
+              <div className="pt-1">
+                <Link
+                  href="/alumni"
+                  className="font-body font-bold text-xs text-[#0B5E2E] underline hover:text-[#1E8449]"
+                >
+                  Buka Direktori 221 Mahasiswa Angkatan 64 →
+                </Link>
               </div>
             </div>
 
             <div className="mt-6 p-3 bg-[#F5B700] border-2 border-[#141414] shadow-comic-sm text-center">
               <p className="font-body font-extrabold text-xs sm:text-sm uppercase tracking-wide text-[#141414]">
-                ★ TOTAL 221 MAHASISWA SIXTEEN 64 TERDATA PDDIKTI DI 27 KAMPUS SIAP MENGAWALMU! ★
+                ★ TOTAL 221 MAHASISWA ANGKATAN 64 TERDATA PDDIKTI DI 27 PERGURUAN TINGGI ★
               </p>
             </div>
           </motion.div>
+        </section>
+
+        {/* PRESENSI / REGISTRASI SECTION (Anchored by #presensi) */}
+        <section
+          id="presensi"
+          className="w-full bg-[#FAF8F2] border-comic-4 shadow-comic-lg p-6 sm:p-8 relative overflow-hidden"
+        >
+          <div className="flex flex-col sm:flex-row sm:items-center justify-between border-b-2 border-[#141414] pb-3 gap-2">
+            <div className="flex items-center gap-2">
+              <span className="bg-[#0B5E2E] text-white font-body font-extrabold text-xs px-2.5 py-1 border border-[#141414] uppercase tracking-wide shadow-comic-sm">
+                PRESENSI RESMI
+              </span>
+              <h3 className="font-display text-2xl sm:text-3xl uppercase text-[#141414]">
+                DAFTAR PRESENSI KEHADIRAN EXPO
+              </h3>
+            </div>
+            <span className="font-body font-bold text-xs bg-[#F5B700] text-[#141414] px-3 py-1 border border-[#141414] shadow-comic-sm uppercase tracking-wide">
+              GRATIS &amp; TERBUKA UMUM
+            </span>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mt-6">
+            <div className="bg-white border-2 border-[#141414] p-4 shadow-comic-sm">
+              <div className="w-8 h-8 bg-[#0B5E2E] text-white flex items-center justify-center font-display font-bold text-sm mb-2 border border-[#141414]">
+                1
+              </div>
+              <h4 className="font-display text-base uppercase text-[#141414]">
+                Waktu &amp; Tanggal
+              </h4>
+              <p className="font-body text-xs text-[#404940] mt-1 leading-relaxed">
+                Kamis, 21 Januari 2027 pukul 07.30 — 15.00 WIB di SMAN 16 Surabaya (Jl. Prapen Indah I).
+              </p>
+            </div>
+
+            <div className="bg-white border-2 border-[#141414] p-4 shadow-comic-sm">
+              <div className="w-8 h-8 bg-[#F5B700] text-[#141414] flex items-center justify-center font-display font-bold text-sm mb-2 border border-[#141414]">
+                2
+              </div>
+              <h4 className="font-display text-base uppercase text-[#141414]">
+                Lokasi Meja Check-in
+              </h4>
+              <p className="font-body text-xs text-[#404940] mt-1 leading-relaxed">
+                Meja registrasi &amp; check-in bertempat tepat di samping <strong>Pintu 2 Gedung Kesenian (GK)</strong>.
+              </p>
+            </div>
+
+            <div className="bg-white border-2 border-[#141414] p-4 shadow-comic-sm">
+              <div className="w-8 h-8 bg-[#0B5E2E] text-white flex items-center justify-center font-display font-bold text-sm mb-2 border border-[#141414]">
+                3
+              </div>
+              <h4 className="font-display text-base uppercase text-[#141414]">
+                Akses &amp; Perlengkapan
+              </h4>
+              <p className="font-body text-xs text-[#404940] mt-1 leading-relaxed">
+                Bawa kartu pelajar / identitas siswa untuk menerima gelang ID resmi dan buklet panduan denah stan.
+              </p>
+            </div>
+          </div>
         </section>
       </main>
     </>
