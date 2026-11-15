@@ -60,14 +60,14 @@ const POPULAR_CAMPUSES = [
   { label: "UB (2)", value: "UNIVERSITAS BRAWIJAYA" },
 ];
 
-const CARDS_PER_PAGE = 24;
+const CARDS_PER_PAGE = 30;
 
 export default function AlumniPage() {
   const [searchQuery, setSearchQuery] = useState("");
   const [selectedClass, setSelectedClass] = useState("all");
   const [selectedCampus, setSelectedCampus] = useState("all");
   const [selectedSnbpStatus, setSelectedSnbpStatus] = useState<"all" | "ELIGIBLE" | "NON ELIGIBLE">("all");
-  const [sortBy, setSortBy] = useState<"rank" | "name" | "campus">("rank");
+  const [sortBy, setSortBy] = useState<"name" | "rank" | "campus">("name");
   const [visibleCount, setVisibleCount] = useState(CARDS_PER_PAGE);
 
   // Modal State
@@ -109,22 +109,26 @@ export default function AlumniPage() {
 
       return true;
     }).sort((a, b) => {
+      if (sortBy === "name") {
+        return a.nama.localeCompare(b.nama, "id");
+      }
       if (sortBy === "rank") {
         return a.no_sekolah - b.no_sekolah;
       }
-      if (sortBy === "name") {
-        return a.nama.localeCompare(b.nama);
-      }
       if (sortBy === "campus") {
-        return a.perguruan_tinggi.localeCompare(b.perguruan_tinggi);
+        return a.perguruan_tinggi.localeCompare(b.perguruan_tinggi, "id");
       }
       return 0;
     });
   }, [searchQuery, selectedClass, selectedCampus, selectedSnbpStatus, sortBy]);
 
   const displayedStudents = useMemo(() => {
+    // If a specific class is selected, show the complete class roster (absen) without pagination cutoff
+    if (selectedClass !== "all") {
+      return filteredStudents;
+    }
     return filteredStudents.slice(0, visibleCount);
-  }, [filteredStudents, visibleCount]);
+  }, [filteredStudents, visibleCount, selectedClass]);
 
   const handleSendConsultation = (e: React.FormEvent) => {
     e.preventDefault();
@@ -233,11 +237,11 @@ export default function AlumniPage() {
                 <span className="text-[11px] font-display uppercase tracking-wider text-[#404940]">Urut:</span>
                 <select
                   value={sortBy}
-                  onChange={(e) => setSortBy(e.target.value as "rank" | "name" | "campus")}
+                  onChange={(e) => setSortBy(e.target.value as "name" | "rank" | "campus")}
                   className="bg-transparent font-body text-xs font-bold text-[#141414] focus:outline-none cursor-pointer"
                 >
+                  <option value="name">Nama Mahasiswa (A-Z Sesuai Absen)</option>
                   <option value="rank">Peringkat Sekolah (1-388)</option>
-                  <option value="name">Nama Mahasiswa (A-Z)</option>
                   <option value="campus">Perguruan Tinggi</option>
                 </select>
               </div>
@@ -330,7 +334,9 @@ export default function AlumniPage() {
           <div className="text-xs font-display uppercase text-[#404940] flex justify-between items-center px-1 tracking-wider border-t-2 border-[#141414] pt-2">
             <span>
               Menampilkan {displayedStudents.length} dari total {filteredStudents.length} mahasiswa terdata
-              {selectedClass !== "all" && ` (Kelas ${normalizeClassGroup(selectedClass)})`}
+              {selectedClass !== "all"
+                ? ` • Kelas ${normalizeClassGroup(selectedClass)} (Urut Absen 1-${filteredStudents.length})`
+                : ` • Urutan Abjad Nama (A-Z Sesuai Absen)`}
               {selectedCampus !== "all" && ` • ${getShortCampus(selectedCampus)}`}
             </span>
             <span className="hidden sm:inline">PDDikti Validated • Angkatan 64</span>
@@ -365,7 +371,7 @@ export default function AlumniPage() {
             </div>
           ) : (
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {displayedStudents.map((student) => {
+              {displayedStudents.map((student, index) => {
                 const shortCampus = getShortCampus(student.perguruan_tinggi);
                 const classLabel = normalizeClassGroup(student.kelas);
                 const avatarBg = getAvatarBg(student);
@@ -383,8 +389,17 @@ export default function AlumniPage() {
                           <span className="bg-[#141414] text-[#FAF8F2] text-xs font-display uppercase px-2.5 py-0.5 border border-[#141414] font-medium shadow-comic-sm tracking-wider">
                             KELAS {classLabel}
                           </span>
-                          <span className="text-[10px] font-mono font-bold text-[#404940]">
-                            #{student.no_sekolah}
+                          <span
+                            className="bg-[#F5B700] text-[#141414] text-[10px] font-mono font-extrabold px-1.5 py-0.5 border border-[#141414] shadow-comic-sm"
+                            title="Nomor Urut / Absen"
+                          >
+                            {selectedClass !== "all" ? `ABSEN #${index + 1}` : `NO. ${index + 1}`}
+                          </span>
+                          <span
+                            className="text-[10px] font-mono font-bold text-[#404940] bg-white px-1 py-0.2 border border-[#141414]"
+                            title="Peringkat Paralel Sekolah Angkatan 64"
+                          >
+                            Rank #{student.no_sekolah}
                           </span>
                         </div>
                         <span className="bg-[#0B5E2E] text-white text-xs font-display uppercase px-2.5 py-0.5 border border-[#141414] font-medium shadow-comic-sm tracking-wider shrink-0 font-bold">

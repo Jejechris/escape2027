@@ -47,7 +47,10 @@ export interface MahasiswaDatabase {
 }
 
 export const MAHASISWA_DB = rawData as unknown as MahasiswaDatabase;
-export const MAHASISWA_LIST: MahasiswaRecord[] = MAHASISWA_DB.data;
+// Pre-sorted alphabetically by name (A-Z sesuai absen) as requested
+export const MAHASISWA_LIST: MahasiswaRecord[] = [...MAHASISWA_DB.data].sort((a, b) =>
+  a.nama.localeCompare(b.nama, "id")
+);
 
 export const CAMPUS_SHORT_NAMES: Record<string, string> = {
   "UNIVERSITAS AIRLANGGA": "UNAIR",
