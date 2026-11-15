@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import RouteLockdownGuard from "@/components/RouteLockdownGuard";
 
 type SectorFilter = "all" | "sektor-1" | "sektor-2";
 
@@ -144,7 +145,11 @@ export default function RundownPage() {
   const showSektor2 = filter === "all" || filter === "sektor-2";
 
   return (
-    <main className="flex-1 max-w-7xl mx-auto w-full px-4 sm:px-6 py-6 sm:py-10 flex flex-col gap-8">
+    <RouteLockdownGuard
+      pageTitle="RUNDOWN ACARA ESCAPE 2027"
+      pageSubtitle="Jadwal Sesi & Gelar Wicara Sedang Difinalisasi oleh Panitia 64 & IKAPOS"
+    >
+      <main className="flex-1 max-w-7xl mx-auto w-full px-4 sm:px-6 py-6 sm:py-10 flex flex-col gap-8">
       {/* PAGE HERO & EDITORIAL BANNER */}
       <motion.section
         initial={{ opacity: 0, y: 20 }}
@@ -573,5 +578,6 @@ export default function RundownPage() {
         </div>
       </motion.section>
     </main>
+    </RouteLockdownGuard>
   );
 }

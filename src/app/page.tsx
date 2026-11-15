@@ -27,10 +27,10 @@ export default function Home() {
                   whileHover={{ scale: 1.05, rotate: 1 }}
                   className="bg-[#F5B700] text-[#141414] font-body font-extrabold text-xs sm:text-sm tracking-wide px-3 py-1 border-2 border-[#141414] shadow-comic-sm transform -rotate-1 cursor-default inline-block"
                 >
-                  EDISI XVI // 21 JANUARI 2027
+                  EDISI KE-64 // 21 JANUARI 2027
                 </motion.span>
                 <span className="bg-[#EAE5D9] text-[#404940] font-body font-bold text-xs uppercase tracking-wide px-2.5 py-1 border-2 border-[#141414] shadow-comic-sm">
-                  RESMI PANITIA OSIS & BK EXPO
+                  PANITIA 64 &amp; IKAPOS
                 </span>
               </div>
 
@@ -45,7 +45,7 @@ export default function Home() {
                   ESCAPE 2027
                 </motion.h1>
                 <p className="font-display text-base sm:text-xl tracking-wider text-[#141414] uppercase">
-                  SIXTEEN CAREER &amp; EDUCATION APPRECIATION EXPO
+                  EXHIBITION SIXTEEN CAMPUS EXPO
                 </p>
               </div>
 
@@ -228,7 +228,7 @@ export default function Home() {
                 &ldquo;Dalam terang siang, dalam gelap gulita malam, tiada keraguan memadamkan tekad Sixteeners. Kobarkan api semangat, jemput gerbang pendidikan tinggi!&rdquo;
               </blockquote>
               <p className="font-body text-xs text-[#A7F4B5] uppercase tracking-wider font-bold">
-                ★ SEMBOYAN RESMI EDISI ESCAPE XVI SMAN 16 SURABAYA ★
+                ★ SEMBOYAN RESMI EDISI KE-64 ESCAPE 2027 SMAN 16 SURABAYA ★
               </p>
             </div>
           </div>

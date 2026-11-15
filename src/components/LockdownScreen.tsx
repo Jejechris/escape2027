@@ -14,9 +14,15 @@ import {
 
 interface LockdownScreenProps {
   onBypassSuccess?: () => void;
+  pageTitle?: string;
+  pageSubtitle?: string;
 }
 
-export default function LockdownScreen({ onBypassSuccess }: LockdownScreenProps) {
+export default function LockdownScreen({
+  onBypassSuccess,
+  pageTitle,
+  pageSubtitle,
+}: LockdownScreenProps) {
   // Live Countdown to 21 Januari 2027, 07:30 WIB (UTC+7)
   const targetDate = new Date("2027-01-21T07:30:00+07:00").getTime();
   const [timeLeft, setTimeLeft] = useState({
@@ -111,8 +117,8 @@ export default function LockdownScreen({ onBypassSuccess }: LockdownScreenProps)
 
           {/* Compact Fancy Badge */}
           <div className="inline-flex items-center gap-1.5 bg-[#BA1A1A] text-white font-display text-xs uppercase tracking-wider px-3 py-1 border border-[#141414] shadow-comic-sm mb-4 font-medium">
-            <Wrench className="w-3.5 h-3.5 text-[#F5B700]" />
-            <span>SEDANG DALAM PROSES PEMBUATAN</span>
+            <Lock className="w-3.5 h-3.5 text-[#F5B700]" />
+            <span>{pageTitle ? "HALAMAN SEDANG DIKUNCI PANITIA" : "SEDANG DALAM PROSES PEMBUATAN"}</span>
           </div>
 
           {/* Logo with Smooth Glowing Pulse */}
@@ -149,11 +155,11 @@ export default function LockdownScreen({ onBypassSuccess }: LockdownScreenProps)
 
           {/* Title & Issue Tagline */}
           <div className="mt-4 space-y-1">
-            <h1 className="font-hero text-3xl sm:text-4xl uppercase tracking-wider text-[#0B5E2E] leading-tight drop-shadow-[2px_2px_0px_#141414]">
-              ESCAPE 2027
+            <h1 className="font-hero text-2xl sm:text-4xl uppercase tracking-wider text-[#0B5E2E] leading-tight drop-shadow-[2px_2px_0px_#141414]">
+              {pageTitle || "ESCAPE 2027"}
             </h1>
             <p className="font-display text-xs uppercase tracking-wider text-[#404940] font-semibold">
-              EXHIBITION SIXTEEN CAMPUS EXPO • SMAN 16 SURABAYA
+              {pageSubtitle || "EXHIBITION SIXTEEN CAMPUS EXPO • PANITIA 64 & IKAPOS"}
             </p>
           </div>
 

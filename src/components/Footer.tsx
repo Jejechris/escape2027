@@ -25,11 +25,11 @@ export default function Footer() {
                 </span>
               </div>
               <span className="font-body text-xs bg-[#F5B700] text-[#141414] px-2 py-0.5 border border-[#141414] font-extrabold uppercase tracking-wider">
-                ISSUE XVI
+                EDISI KE-64
               </span>
             </div>
             <p className="font-body text-xs sm:text-sm text-[#404940] leading-relaxed">
-              Exhibition Sixteen Campus Expo — Pameran edukasi dan karier resmi yang diselenggarakan oleh panitia kolaborasi siswa & bimbingan konseling SMAN 16 Surabaya. Memandu langkah generasi penerus menuju gerbang perguruan tinggi impian dengan kekuatan tekad sejati.
+              Exhibition Sixteen Campus Expo — Pameran edukasi dan karier resmi yang diselenggarakan oleh Panitia 64 berkolaborasi dengan IKAPOS (Ikatan Alumni SMAN 16 Surabaya) &amp; Bimbingan Konseling SMAN 16 Surabaya. Memandu langkah generasi penerus menuju gerbang perguruan tinggi impian dengan kekuatan tekad sejati.
             </p>
             <div className="inline-flex items-center gap-2 text-xs font-bold text-[#0B5E2E]">
               <span className="w-2 h-2 bg-[#0B5E2E] rounded-full inline-block" />

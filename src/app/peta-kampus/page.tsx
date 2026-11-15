@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import { motion } from "framer-motion";
+import RouteLockdownGuard from "@/components/RouteLockdownGuard";
 import {
   Map as MapIcon,
   Printer,
@@ -183,7 +184,11 @@ export default function PetaKampusPage() {
   };
 
   return (
-    <div className="w-full bg-[#FAF8F2] min-h-screen pb-16 selection:bg-[#F5B700] selection:text-[#141414]">
+    <RouteLockdownGuard
+      pageTitle="DENAH ACARA ESCAPE 2027"
+      pageSubtitle="Zonasi Gedung Kesenian & Stan Expo Sedang Difinalisasi oleh Panitia 64 & IKAPOS"
+    >
+      <div className="w-full bg-[#FAF8F2] min-h-screen pb-16 selection:bg-[#F5B700] selection:text-[#141414]">
       {/* ================= TOP COMIC ISSUE RIBBON ================= */}
       <section className="bg-[#F5B700] border-b-4 border-[#141414] py-2 px-4 shadow-[0px_3px_0px_#141414] relative overflow-hidden">
         <div className="max-w-7xl mx-auto flex items-center justify-between font-body font-bold text-xs sm:text-sm tracking-wide text-[#141414]">
@@ -801,5 +806,6 @@ export default function PetaKampusPage() {
         </section>
       </main>
     </div>
+    </RouteLockdownGuard>
   );
 }

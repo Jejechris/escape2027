@@ -7,11 +7,11 @@ import Image from "next/image";
 
 const NAV_ITEMS = [
   { label: "Beranda", href: "/" },
-  { label: "Rundown", href: "/rundown" },
+  { label: "Rundown", href: "/rundown", isLocked: true },
   { label: "Database Kampus", href: "/direktori-stan" },
-  { label: "Denah Acara", href: "/peta-kampus" },
+  { label: "Denah Acara", href: "/peta-kampus", isLocked: true },
   { label: "Alumni Sixteen", href: "/alumni" },
-  { label: "Tanya Jawab", href: "/tanya-jawab" },
+  { label: "Tanya Jawab", href: "/tanya-jawab", isLocked: true },
 ];
 
 export default function Navbar() {
@@ -61,7 +61,7 @@ export default function Navbar() {
             </div>
             <div className="hidden sm:flex flex-col text-left">
               <span className="font-body font-extrabold text-[10px] bg-[#F5B700] text-[#141414] px-1.5 py-0.2 border border-[#141414] tracking-wider uppercase shadow-[1px_1px_0px_#141414]">
-                EDISI XVI
+                EDISI KE-64
               </span>
               <span className="font-body text-[9px] font-bold text-[#404940] tracking-tight">
                 SMAN 16 SBY
@@ -77,13 +77,14 @@ export default function Navbar() {
                 <Link
                   key={item.href}
                   href={item.href}
-                  className={`font-display uppercase tracking-wider text-sm transition-all pb-0.5 font-medium ${
+                  className={`font-display uppercase tracking-wider text-sm transition-all pb-0.5 font-medium flex items-center gap-1 ${
                     isActive
                       ? "text-[#0B5E2E] border-b-4 border-[#0B5E2E]"
                       : "text-[#141414] hover:text-[#0B5E2E] hover:border-b-4 hover:border-[#0B5E2E]"
                   }`}
                 >
-                  {item.label}
+                  <span>{item.label}</span>
+                  {item.isLocked && <span className="text-[10px] text-[#BA1A1A]">🔒</span>}
                 </Link>
               );
             })}
@@ -92,10 +93,10 @@ export default function Navbar() {
           {/* Right Action / CTA & Mobile Hamburger */}
           <div className="flex items-center gap-3">
             <Link
-              href="/#tiket"
+              href="/#presensi"
               className="hidden sm:inline-flex bg-[#0B5E2E] text-white font-display text-xs sm:text-sm uppercase tracking-wider px-3.5 py-2 border-2 border-[#141414] shadow-comic hover:bg-[#1E8449] active:translate-x-[2px] active:translate-y-[2px] active:shadow-none transition-all items-center gap-1.5 font-medium whitespace-nowrap"
             >
-              <span>Daftar Tiket / Presensi</span>
+              <span>Daftar Presensi</span>
             </Link>
 
             {/* Mobile Hamburger Button */}
@@ -137,23 +138,24 @@ export default function Navbar() {
                     key={item.href}
                     href={item.href}
                     onClick={() => setMobileMenuOpen(false)}
-                    className={`px-3 py-2 border-2 border-[#141414] font-body font-bold text-sm sm:text-base uppercase tracking-wide transition-all ${
+                    className={`px-3 py-2 border-2 border-[#141414] font-body font-bold text-sm sm:text-base uppercase tracking-wide transition-all flex items-center justify-between ${
                       isActive
                         ? "bg-[#0B5E2E] text-white shadow-comic-sm translate-x-1"
                         : "bg-white text-[#141414] hover:bg-[#F0EEE8]"
                     }`}
                   >
-                    {item.label}
+                    <span>{item.label}</span>
+                    {item.isLocked && <span className="text-xs text-[#BA1A1A]">🔒 Terkunci</span>}
                   </Link>
                 );
               })}
 
               <Link
-                href="/#tiket"
+                href="/#presensi"
                 onClick={() => setMobileMenuOpen(false)}
                 className="mt-2 text-center bg-[#F5B700] text-[#141414] font-body font-bold text-sm sm:text-base uppercase tracking-wide px-4 py-2.5 border-2 border-[#141414] shadow-comic"
               >
-                Daftar Tiket / Presensi
+                Daftar Presensi
               </Link>
             </div>
           </div>
